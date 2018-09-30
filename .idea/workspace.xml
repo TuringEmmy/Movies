@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/home/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/home/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Movies.iml" afterPath="$PROJECT_DIR$/.idea/Movies.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views.py" afterPath="$PROJECT_DIR$/app/home/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -118,8 +114,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="24" />
-    <option name="width" value="594" />
-    <option name="height" value="456" />
+    <option name="width" value="1327" />
+    <option name="height" value="601" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -544,11 +540,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538295867600</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="edit a home.html page">
+      <created>1538297432184</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1538297432184</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="24" width="594" height="456" extended-state="6" />
+    <frame x="35" y="24" width="1327" height="601" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56884056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -581,7 +584,8 @@
     <MESSAGE value="add lib" />
     <MESSAGE value="database over" />
     <MESSAGE value="Add a front-end resource file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a front-end resource file" />
+    <MESSAGE value="edit a home.html page" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit a home.html page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
