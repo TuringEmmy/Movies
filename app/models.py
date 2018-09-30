@@ -42,7 +42,7 @@ class Userlog(db.Model):
     # 编号
     id = db.Column(db.Integer, primary_key=True)
     # 所属编号
-    user_id = db.Column(db.Integer,db.ForeignKey("user.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     # 登陆ip的字段
     ip = db.Column(db.String(100))
     # 登陆时间
@@ -63,7 +63,7 @@ class Tag(db.Model):
     addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     # 电影外检的关联
-    movies = db.relationship("Movie", backref="tig")
+    movies = db.relationship("Movie", backref="tag")
 
     def __repr__(self):
         return "<Tag %r>" % self.name
@@ -78,6 +78,8 @@ class Movie(db.Model):
     title = db.Column(db.String(255), unique=True)
     # 地址
     url = db.Column(db.String(255), unique=True)
+    # 简介
+    info = db.Column(db.String(255), unique=True)
     # 封面
     logo = db.Column(db.Text)
     # 星际
@@ -162,7 +164,7 @@ class Moviecol(db.Model):
 
 
 # 权限
-class  Auth(db.Model):
+class Auth(db.Model):
     __tablename__ = "auth"
     # 编号
     id = db.Column(db.Integer, primary_key=True)
@@ -250,8 +252,8 @@ class Oplog(db.Model):
 if __name__ == '__main__':
     # db.create_all()
 
-    role =Role(
-        name = "admin",
+    role = Role(
+        name="admin",
         auths=""
     )
     db.session.add(role)
