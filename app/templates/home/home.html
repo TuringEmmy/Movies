@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
     <title>微电影</title>
-    <link rel="shortcut icon" href="{{ url_for('static',filename='base/images/logo.png' }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='base/css/bootstrap.min.css' }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='base/css/bootstrap-movie.css' }}">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='base/images/logo.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='base/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='base/css/bootstrap-movie.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='base/css/animate.css') }}">
     <style>
         .navbar-brand > img {
@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="index.html" class="navbar-brand" style="width:250px;">
-                <img src="{{ url_for('static', filename='base/css/animate.css' }}" style="height:30px;">&nbsp;微电影
+                <img src="{{ url_for('static', filename='base/css/animate.css' )}}" style="height:30px;">&nbsp;微电影
             </a>
         </div>
         <!--小屏幕导航按钮和logo-->
@@ -57,13 +57,13 @@
                     <a class="curlink" href="index.html"><span class="glyphicon glyphicon-film"></span>&nbsp;电影</a>
                 </li>
                 <li>
-                    <a class="curlink" href="login.html"><span class="glyphicon glyphicon-log-in"></span>&nbsp;登录</a>
+                    <a class="curlink" href="{{ url_for('home.login') }}"><span class="glyphicon glyphicon-log-in"></span>&nbsp;登录</a>
                 </li>
                 <li>
                     <a class="curlink" href="register.html"><span class="glyphicon glyphicon-plus"></span>&nbsp;注册</a>
                 </li>
                 <li>
-                    <a class="curlink" href="logout.html"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a>
+                    <a class="curlink" href="{{ url_for('home.logout') }}"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a>
                 </li>
                 <li>
                     <a class="curlink" href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;会员</a>
@@ -87,7 +87,7 @@
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    ©&nbsp;2017&nbsp;flaskmovie.imooc.com&nbsp;京ICP备 13046642号-2
+                    ©&nbsp;2018.8&nbsp;TuringEmmy.movie.com&nbsp;京ICP备 199019911992号-1
                 </p>
             </div>
         </div>
