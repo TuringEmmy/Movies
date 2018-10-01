@@ -3,11 +3,11 @@ from . import home
 from flask import render_template, redirect, url_for
 
 
-# 主页
-@home.route("/")
-def index():
-    # return "<h1 style='color:green'>This is home</h1>"
-    return render_template("home/index.html")
+# # 主页
+# @home.route("/")
+# def index():
+#     # return "<h1 style='color:green'>This is home</h1>"
+#     return render_template("home/index.html")
 
 
 # 登陆
@@ -26,3 +26,13 @@ def logout():
 @home.route('/register/')
 def register():
     return render_template("home/register.html")
+
+@home.route("/")
+def loginlog():
+    # return "<h1 style='color:green'>This is home</h1>"
+    return render_template("home/index.html")
+
+# 注册
+@home.route('/animation/')
+def moviecol():
+    return render_template("home/animation.html")
