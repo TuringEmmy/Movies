@@ -60,7 +60,8 @@
                     <a class="curlink" href="{{ url_for('home.login') }}"><span class="glyphicon glyphicon-log-in"></span>&nbsp;登录</a>
                 </li>
                 <li>
-                    <a class="curlink" href="{{ url_for('home.register')}}"><span class="glyphicon glyphicon-plus"></span>&nbsp;注册</a>
+                    <a class="curlink" href="{{ url_for('home.regist') }}"><span
+                            class="glyphicon glyphicon-plus"></span>&nbsp;注册</a>
                 </li>
                 <li>
                     <a class="curlink" href="{{ url_for('home.logout') }}"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a>
@@ -76,15 +77,9 @@
 </nav>
 <!--导航-->
 <!--内容-->
-<div class="container" style="margin-top:76px">
+{% block  content %}
 
-
-    {% block content %}
-
-    {% endblock %}
-
-
-</div>
+{% endblock %}
 <!--内容-->
 <!--底部-->
 <footer>

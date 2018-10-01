@@ -23,16 +23,24 @@ def logout():
 
 
 # 注册
-@home.route('/register/')
-def register():
-    return render_template("home/register.html")
+@home.route('/regist/')
+def regist():
+    return render_template("home/regist.html")
 
+
+@home.route('/moviecol/')
+def moviecol():
+    return render_template("home/moviecol.html")
+
+
+# 列表
 @home.route("/")
-def loginlog():
+def index():
     # return "<h1 style='color:green'>This is home</h1>"
     return render_template("home/index.html")
 
-# 注册
+
+# 动画
 @home.route('/animation/')
-def moviecol():
+def animation():
     return render_template("home/animation.html")
