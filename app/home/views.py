@@ -66,7 +66,13 @@ def index():
 def animation():
     return render_template("home/animation.html")
 
+# 搜索页面
 @home.route('/search/')
 def search():
     return render_template("home/search.html")
 
+
+# 电影详情
+@home.route('/play/')
+def paly():
+    return render_template("home/play.html")
