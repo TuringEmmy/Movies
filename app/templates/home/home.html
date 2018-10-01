@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="index.html" class="navbar-brand" style="width:250px;">
-                <img src="{{ url_for('static', filename='base/css/animate.css' )}}" style="height:30px;">&nbsp;微电影
+                <img src="{{ url_for('static', filename='base/images/logo.png')}}" style="height:30px;">&nbsp;微电影
             </a>
         </div>
         <!--小屏幕导航按钮和logo-->
@@ -77,8 +77,13 @@
 <!--导航-->
 <!--内容-->
 <div class="container" style="margin-top:76px">
+
+
     {% block content %}
+
     {% endblock %}
+
+
 </div>
 <!--内容-->
 <!--底部-->
