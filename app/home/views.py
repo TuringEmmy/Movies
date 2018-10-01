@@ -27,10 +27,31 @@ def logout():
 def regist():
     return render_template("home/regist.html")
 
+# 用户
+@home.route('/user/')
+def user():
+    return render_template("home/user.html")
 
+# 修改密码
+@home.route('/pwd/')
+def pwd():
+    return render_template("home/pwd.html")
+
+# 评论记录
+@home.route('/comments/')
+def comments():
+    return render_template("home/comments.html")
+
+# 登陆日志
+@home.route('/loginlog/')
+def loginlog():
+    return render_template("home/loginlog.html")
+
+# 电影收藏
 @home.route('/moviecol/')
 def moviecol():
     return render_template("home/moviecol.html")
+
 
 
 # 列表
