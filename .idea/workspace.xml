@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/home/play.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views.py" afterPath="$PROJECT_DIR$/app/home/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -779,7 +777,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538405207561</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="movie play page">
+      <created>1538406344375</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1538406344375</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -843,7 +848,8 @@
     <MESSAGE value="search page" />
     <MESSAGE value="user page" />
     <MESSAGE value="vip page" />
-    <option name="LAST_COMMIT_MESSAGE" value="vip page" />
+    <MESSAGE value="movie play page" />
+    <option name="LAST_COMMIT_MESSAGE" value="movie play page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
