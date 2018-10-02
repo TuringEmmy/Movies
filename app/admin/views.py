@@ -21,3 +21,14 @@ def logout():
 @admin.route('/pwd/')
 def pwd():
     return render_template("admin/pwd.html")
+
+
+# 修改密码页面
+@admin.route('/tag/add')
+def tag_add():
+    return render_template("admin/tag_add.html")
+
+# 修改密码页面
+@admin.route('/tag/list')
+def tag_list():
+    return render_template("admin/tag_list.html")
