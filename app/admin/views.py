@@ -24,43 +24,47 @@ def pwd():
 
 
 # 标签添加页面
-@admin.route('/tag/add')
+@admin.route('/tag/add/')
 def tag_add():
     return render_template("admin/tag_add.html")
 
 # 标签列表页面
-@admin.route('/tag/list')
+@admin.route('/tag/list/')
 def tag_list():
     return render_template("admin/tag_list.html")
 
 # 添加电影
-@admin.route('/movie/add')
+@admin.route('/movie/add/')
 def movie_add():
     return render_template("admin/movie_add.html")
 
 # 电影列表
-@admin.route('/movie/list')
+@admin.route('/movie/list/')
 def movie_list():
     return render_template("admin/movie_list.html")
 
 # 预告添加
-@admin.route('/preview/add')
+@admin.route('/preview/add/')
 def preview_add():
     return render_template("admin/preview_add.html")
 
 # 预告列表
-@admin.route('/preview/list')
+@admin.route('/preview/list/')
 def preview_list():
     return render_template("admin/preview_list.html")
 
 
 # 会员列表
-@admin.route('/user/list')
+@admin.route('/user/list/')
 def user_list():
     return render_template("admin/user_list.html")
 
 # 查看会员
-@admin.route('/user/view')
+@admin.route('/user/view/')
 def user_view():
     return render_template("admin/user_view.html")
 
+# 查看会员
+@admin.route('/comment/list/')
+def comment_list():
+    return render_template("admin/coment_list.html")
