@@ -64,7 +64,12 @@ def user_list():
 def user_view():
     return render_template("admin/user_view.html")
 
-# 查看会员
+# 电影评论
 @admin.route('/comment/list/')
 def comment_list():
     return render_template("admin/coment_list.html")
+
+# 电影收藏
+@admin.route('/moviecol/list/')
+def moviecol_list():
+    return render_template("admin/moviecol_list.html")
