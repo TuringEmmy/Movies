@@ -111,3 +111,13 @@ def auth_add():
 def auth_list():
     return render_template("admin/auth_list.html")
 
+
+# 权限添加
+@admin.route('/admin/add/')
+def admin_add():
+    return render_template("admin/admin_add.html")
+
+# 权限列表
+@admin.route('/admin/list/')
+def admin_list():
+    return render_template("admin/admin_list.html")
