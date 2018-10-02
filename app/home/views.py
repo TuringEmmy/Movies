@@ -74,5 +74,5 @@ def search():
 
 # 电影详情
 @home.route('/play/')
-def paly():
+def play():
     return render_template("home/play.html")
