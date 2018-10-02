@@ -73,3 +73,18 @@ def comment_list():
 @admin.route('/moviecol/list/')
 def moviecol_list():
     return render_template("admin/moviecol_list.html")
+
+# 操作日志
+@admin.route('/oplog/list/')
+def oplog_list():
+    return render_template("admin/oplog_list.html")
+
+# 管理员登陆日至
+@admin.route('/adminloginlog/list/')
+def adminloginlog_list():
+    return render_template("admin/adminloginlog_list.html")
+
+# 会员员登陆日至
+@admin.route('/userloginlog/list/')
+def userloginlog_list():
+    return render_template("admin/userloginlog_list.html")
