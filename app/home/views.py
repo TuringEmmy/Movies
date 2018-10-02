@@ -27,31 +27,35 @@ def logout():
 def regist():
     return render_template("home/regist.html")
 
+
 # 用户
 @home.route('/user/')
 def user():
     return render_template("home/user.html")
+
 
 # 修改密码
 @home.route('/pwd/')
 def pwd():
     return render_template("home/pwd.html")
 
+
 # 评论记录
 @home.route('/comments/')
 def comments():
     return render_template("home/comments.html")
+
 
 # 登陆日志
 @home.route('/loginlog/')
 def loginlog():
     return render_template("home/loginlog.html")
 
+
 # 电影收藏
 @home.route('/moviecol/')
 def moviecol():
     return render_template("home/moviecol.html")
-
 
 
 # 列表
@@ -66,6 +70,7 @@ def index():
 def animation():
     return render_template("home/animation.html")
 
+
 # 搜索页面
 @home.route('/search/')
 def search():
@@ -76,3 +81,10 @@ def search():
 @home.route('/play/')
 def play():
     return render_template("home/play.html")
+
+
+# 404页面
+# 注意这个页面不是在蓝图的页面进行的,而是初始化文件当中进行的
+# @home.errorhandler(404)
+# def page_not_found(error):
+#     return render_template("home/404.html"), 404
