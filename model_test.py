@@ -1,5 +1,15 @@
+# coding=utf-8
+# coding=utf-8
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from app import db
+import pymysql
+
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:mysql@127.0.0.1:3306/movies"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
+
+db = SQLAlchemy(app)
 
 
 # 会员
@@ -13,7 +23,7 @@ class User(db.Model):
     info = db.Column(db.Text)  # 个性简介
     face = db.Column(db.String(255), unique=True)  # 头像
     # 注册时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     uuid = db.Column(db.String(255), unique=True)  # 唯一标识符
 
     # 会员日志外交按关联
@@ -26,10 +36,6 @@ class User(db.Model):
     def __repr__(self):
         return "<User %r >" % self.name
 
-    def check_pwd(self, pwd):
-        from werkzeug.security import check_password_hash
-        return check_password_hash(self.pwd, pwd)
-
 
 # 会员登陆日志
 class Userlog(db.Model):
@@ -41,7 +47,7 @@ class Userlog(db.Model):
     # 登陆ip的字段
     ip = db.Column(db.String(100))
     # 登陆时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def __repr__(self):
         return "<Userlog %r>" % self.id
@@ -55,7 +61,7 @@ class Tag(db.Model):
     # 标签
     name = db.Column(db.String(100), unique=True)
     # 添加时间按
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     # 电影外检的关联
     movies = db.relationship("Movie", backref="tag")
@@ -116,7 +122,7 @@ class Preview(db.Model):
     # 封面
     logo = db.Column(db.Text)
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def __repr__(self):
         return "< Preview %r>" % self.title
@@ -134,7 +140,7 @@ class Comment(db.Model):
     # 所属的用户
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def __repr__(self):
         return "<Comment %r>" % self.id
@@ -152,7 +158,7 @@ class Moviecol(db.Model):
     # 所属的用户
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def __repr__(self):
         return "<Moviecol %r>" % self.id
@@ -168,7 +174,7 @@ class Auth(db.Model):
     # 地址
     url = db.Column(db.String(255), unique=True)
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def __repr__(self):
         return "<Auth %r>" % self.name
@@ -183,10 +189,9 @@ class Role(db.Model):
     name = db.Column(db.String(100), unique=True)
     # 添加时间
     auths = db.Column(db.String(600))
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     # 管理员外键关系管理链
     admins = db.relationship("Admin", backref="role")
-
     def __repr__(self):
         return "Role %r" % self.name
 
@@ -211,12 +216,6 @@ class Admin(db.Model):
     def __repr__(self):
         return "<Admin %r" % self.name
 
-    # 验证密码啊正确返回True,错误返回False
-    def check_pwd(self, pwd):
-        from werkzeug.security import check_password_hash
-        # print(self.pwd, pwd)
-        return check_password_hash(self.pwd, pwd)
-
 
 # 管理员登陆日志
 class Adminlog(db.Model):
@@ -228,7 +227,7 @@ class Adminlog(db.Model):
     # 登陆ip的字段
     ip = db.Column(db.String(100))
     # 登陆时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def __repr__(self):
         return "<Adminlog %r>" % self.id
@@ -244,7 +243,7 @@ class Oplog(db.Model):
     # 登陆ip的字段
     ip = db.Column(db.String(100))
     # 登陆时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     # 操作的原因
     reason = db.Column(db.String(600))
 
@@ -257,17 +256,17 @@ if __name__ == '__main__':
 
     role = Role(
         name="admin",
-        auths=""
+        auths="open"
     )
     db.session.add(role)
     db.session.commit()
-    # from werkzeug.security import generate_password_hash
-    #
-    # admin = Admin(
-    #     name="turing",
-    #     pwd=generate_password_hash("turingemmy"),
-    #     is_super=0,
-    #     role_id=1
-    # )
-    # db.session.add(admin)
-    # db.session.commit()
+    from werkzeug.security import generate_password_hash
+    admin = Admin(
+        name="turing",
+
+        pwd=generate_password_hash("turingemmy"),
+        is_super=0,
+        role_id=1
+    )
+    db.session.add(admin)
+    db.session.commit()
