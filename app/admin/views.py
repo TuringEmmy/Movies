@@ -90,11 +90,18 @@ def tag_add():
     return render_template("admin/tag_add.html", form=form)
 
 
-# 标签列表页面
-@admin.route('/tag/list/')
+# 标签列表页面;<int:page>为路由规则,传入整形,分页用到
+@admin.route('/tag/list/<int:page>',methods=["GET"])
 @admin_login_req
-def tag_list():
-    return render_template("admin/tag_list.html")
+def tag_list(page=None):
+    # 查询,分页,显示
+    if page is None:
+        page=1
+    # 按照时间添加顺序进行添加
+    page_data =Tag.query.order_by(
+        Tag.addtime.desc()
+    ).paginate(page=page,per_page=1)
+    return render_template("admin/tag_list.html",page_data=page_data)
 
 
 # 添加电影

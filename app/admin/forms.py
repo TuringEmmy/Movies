@@ -68,7 +68,7 @@ class TagForm(FlaskForm):
             "placeholder": "请输入管理员名称！"
         }
     )
-    submit =SubmitField(
+    submit = SubmitField(
         label="添加",
         validators=[
             DataRequired("请输入标签!")
