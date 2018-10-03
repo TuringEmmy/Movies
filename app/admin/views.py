@@ -4,17 +4,18 @@ from flask import render_template, redirect, url_for, flash, session, request
 # flash用于登录页面错误返回
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
-from app.admin.forms import LoginForm
-from app.models import Admin
+from app.admin.forms import LoginForm, TagForm
+from app.models import Admin, Tag
 # 登陆的装饰器
 from functools import wraps
+from app import db
 
 
 # 登陆装饰器
 def admin_login_req(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if session["admin"] in session:
+        if "admin" not in session:
             return redirect(url_for("admin.login", next=request.url))
         return f(*args, **kwargs)
 
@@ -40,7 +41,7 @@ def login():
         # print(admin.check_pwd(data["pwd"]))
         if not admin.check_pwd(data["pwd"]):
             # 闪现
-            flash("密码错误!",'err')
+            flash("密码错误!", 'err')
             # 密码错误的时候,重定向到lohin页面
             return redirect(url_for("admin.login"))
         session["admin"] = data["account"]
@@ -65,10 +66,28 @@ def pwd():
 
 
 # 标签添加页面
-@admin.route('/tag/add/')
+@admin.route('/tag/add/', methods=["GET", "POST"])
 @admin_login_req
 def tag_add():
-    return render_template("admin/tag_add.html")
+    form = TagForm()
+    if form.validate_on_submit():
+        # 获取数据
+        data = form.data
+        tag = Tag.query.filter_by(name=data["name"]).count()
+        if tag == 1:
+            flash("名称已经存在了!","err")
+            return redirect(url_for("admin.tag_add"))
+        # 存入数据库
+        tag = Tag(
+            name=data["name"]
+        )
+        db.session.add(tag)
+        db.session.commit()
+        # 入库成功之后,出现信息
+        flash("添加成功", "ok")
+        # 添加成功之后,依然跳转到标签添加的页面
+        redirect(url_for("admin.tag_add"))
+    return render_template("admin/tag_add.html", form=form)
 
 
 # 标签列表页面
