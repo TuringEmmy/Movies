@@ -100,7 +100,7 @@ def tag_list(page=None):
     # 按照时间添加顺序进行添加
     page_data =Tag.query.order_by(
         Tag.addtime.desc()
-    ).paginate(page=page,per_page=1)
+    ).paginate(page=page,per_page=10)
     return render_template("admin/tag_list.html",page_data=page_data)
 
 
