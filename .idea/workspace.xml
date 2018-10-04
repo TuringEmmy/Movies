@@ -56,8 +56,8 @@
       <file leaf-file-name="user_list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/user_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="84" column="77" lean-forward="true" selection-start-line="84" selection-start-column="77" selection-end-line="84" selection-end-column="77" />
+            <state relative-caret-position="168">
+              <caret line="83" column="13" lean-forward="true" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -613,13 +613,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00013" summary="manage form style">
-      <created>1538299554425</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1538299554425</updated>
-    </task>
     <task id="LOCAL-00014" summary="manage form style">
       <created>1538321036491</created>
       <option name="number" value="00014" />
@@ -956,7 +949,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538661754654</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Comment begin&#10;module&#9;&#9;Comment&#10;form&#9;&#9;no&#10;requestMethod&#9;GET&#10;requestControl&#9;@admin_login_req">
+      <created>1538663567388</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1538663567388</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1008,7 +1008,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="BG  moviecol page" />
     <MESSAGE value="BG  3 logs  page" />
     <MESSAGE value="BG  role and auth  page bulid in Oct 2 afternoon" />
     <MESSAGE value="BG  user npage ,all" />
@@ -1033,7 +1032,8 @@
     <MESSAGE value="User will begin&#10;module&#9;&#9;User&#10;form&#9;&#9;no&#10;requestMethod&#9;GET,POST&#10;requestControl&#9;@admin_login_req" />
     <MESSAGE value="UserList is appeared in webPage&#10;" />
     <MESSAGE value="del and view in userList-Page over" />
-    <option name="LAST_COMMIT_MESSAGE" value="del and view in userList-Page over" />
+    <MESSAGE value="Comment begin&#10;module&#9;&#9;Comment&#10;form&#9;&#9;no&#10;requestMethod&#9;GET&#10;requestControl&#9;@admin_login_req" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment begin&#10;module&#9;&#9;Comment&#10;form&#9;&#9;no&#10;requestMethod&#9;GET&#10;requestControl&#9;@admin_login_req" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1380,8 +1380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/user_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="84" column="77" lean-forward="true" selection-start-line="84" selection-start-column="77" selection-end-line="84" selection-end-column="77" />
+        <state relative-caret-position="168">
+          <caret line="83" column="13" lean-forward="true" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
           <folding />
         </state>
       </provider>
