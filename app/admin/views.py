@@ -4,8 +4,8 @@ from flask import render_template, redirect, url_for, flash, session, request
 # flash用于登录页面错误返回
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
-from app.admin.forms import LoginForm, TagForm, MovieForm
-from app.models import Admin, Tag, Movie
+from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm
+from app.models import Admin, Tag, Movie, Preview
 # 登陆的装饰器
 from functools import wraps
 from app import db, app
@@ -32,7 +32,8 @@ def admin_login_req(f):
 def change_filename(filename):
     # 将文件名filename进行分割
     fileinfo = os.path.splitext(filename)
-    filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S") + str(uuid.uuid4().hex) + fileinfo[-1]  # fileinfo[-1]代表后缀
+    filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S") + str(uuid.uuid4().hex) + fileinfo[
+        -1]  # fileinfo[-1]代表后缀
     return filename
 
 
@@ -291,11 +292,31 @@ def movie_edit(id=None):
     return render_template("admin/movie_edit.html", form=form, movie=movie)
 
 
+# -------------------------------Preview-------------------------------------
 # 预告添加
-@admin.route('/preview/add/')
+@admin.route('/preview/add/', methods=["GET", "POST"])
 @admin_login_req
 def preview_add():
-    return render_template("admin/preview_add.html")
+    # 实例化form表单
+    form = PreviewForm()
+    if form.validate_on_submit():
+        data = form.data
+        file_logo = secure_filename(form.logo.data.filename)
+        if not os.path.exists(app.config["UP_DIR"]):
+            os.makedirs(app.config["UP_DIR"])
+            os.chmod(app.config["UP_DIR"], "rw")
+        logo = change_filename(file_logo)
+        form.logo.data.save(app.config["UP_DIR"] + logo)
+        preview = Preview(
+            title=data["title"],
+            logo=logo
+        )
+        # 保存数据
+        db.session.add(preview)
+        db.session.commit()
+        flash("修改预告成功", "ok")
+        return redirect(url_for("admin.preview_add"))
+    return render_template("admin/preview_add.html", form=form)
 
 
 # 预告列表

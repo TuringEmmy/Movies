@@ -5,7 +5,7 @@ from wtforms import StringField, PasswordField, SubmitField, FileField, TextArea
 # 调用验证器
 from wtforms.validators import DataRequired, ValidationError
 # 登陆表单验证,使用Admin数据模型
-from app.models import Admin, Tag
+from app.models import Admin, Tag, Preview
 
 tags = Tag.query.all()
 
@@ -58,7 +58,7 @@ class LoginForm(FlaskForm):
             raise ValidationError("账号不存在!")
 
 
-# -----------------------------tagManager----------------------------
+# -----------------------------tagManager------------------------------
 class TagForm(FlaskForm):
     name = StringField(
         label="名称",
@@ -181,6 +181,35 @@ class MovieForm(FlaskForm):
     )
     submit = SubmitField(
         label="提交",
+        render_kw={
+            "class": "btn btn-primary"
+        }
+    )
+
+
+# -----------------------------------Preview---------------------------
+class PreviewForm(FlaskForm):
+    title = StringField(
+        label="预告标题",
+        validators=[
+            DataRequired("请输入预告标题!")
+        ],
+        description='片名',
+        render_kw={
+            "class": "form-control",
+            "id": "input_title",
+            "placeholder": "请输入预告标题！"
+        }
+    )
+    logo = FileField(
+        label="预告封面",
+        validators=[
+            DataRequired("请上传封面！")
+        ],
+        description="预告封面",
+    )
+    submit = SubmitField(
+        label="添加",
         render_kw={
             "class": "btn btn-primary"
         }
