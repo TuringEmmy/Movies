@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views.py" afterPath="$PROJECT_DIR$/app/admin/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/admin/preview_list.html" afterPath="$PROJECT_DIR$/app/templates/admin/preview_list.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +48,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="330" column="25" lean-forward="false" selection-start-line="330" selection-start-column="25" selection-end-line="330" selection-end-column="25" />
+            <state relative-caret-position="118">
+              <caret line="341" column="42" lean-forward="false" selection-start-line="341" selection-start-column="42" selection-end-line="341" selection-end-column="42" />
               <folding>
                 <element signature="e#15#34#0" expanded="true" />
                 <element signature="e#479#703#0" expanded="false" />
@@ -65,6 +66,7 @@
                 <element signature="e#6352#6581#0" expanded="false" />
                 <element signature="e#6701#8559#0" expanded="false" />
                 <element signature="e#8742#9460#0" expanded="false" />
+                <element signature="e#9588#9806#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -73,26 +75,9 @@
       <file leaf-file-name="preview_list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/preview_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="45" column="122" lean-forward="false" selection-start-line="45" selection-start-column="102" selection-end-line="45" selection-end-column="122" />
-              <folding>
-                <element signature="e#2214#2235#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grid.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="68" column="63" lean-forward="false" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
-              <folding>
-                <element signature="e#63#519#0#HTML" expanded="false" />
-                <element signature="e#288#509#0#HTML" expanded="false" />
-                <element signature="e#524#1171#0#HTML" expanded="false" />
-                <element signature="e#1176#1883#0#HTML" expanded="false" />
-              </folding>
+            <state relative-caret-position="122">
+              <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,8 +85,8 @@
       <file leaf-file-name="movie_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="39" />
+            <state relative-caret-position="180">
+              <caret line="39" column="36" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <marker date="1538639665232" expanded="false" signature="3560:3566" ph=" " />
               </folding>
@@ -183,8 +168,8 @@
         <option value="$PROJECT_DIR$/app/admin/forms.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/preview_add.html" />
         <option value="$PROJECT_DIR$/app/note" />
-        <option value="$PROJECT_DIR$/app/admin/views.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/grid.html" />
+        <option value="$PROJECT_DIR$/app/admin/views.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/preview_list.html" />
       </list>
     </option>
@@ -198,8 +183,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="24" />
-    <option name="width" value="993" />
-    <option name="height" value="566" />
+    <option name="width" value="1327" />
+    <option name="height" value="601" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -641,13 +626,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00007" summary="Add a front-end resource file">
-      <created>1538295867600</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1538295867600</updated>
-    </task>
     <task id="LOCAL-00008" summary="edit a home.html page">
       <created>1538297432184</created>
       <option name="number" value="00008" />
@@ -984,11 +962,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538655510931</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Preview List  over, but picture is too big&#10;&#10;battle it,just &lt;style=&quot;width: 150px;&gt; in preview_list.html">
+      <created>1538655698423</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1538655698428</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="24" width="993" height="566" extended-state="6" />
+    <frame x="35" y="24" width="1327" height="601" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45846477" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -997,7 +982,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27813163" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25889328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24954462" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45916796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1036,7 +1021,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="BG bullit index.html" />
     <MESSAGE value="BG bullit pwd.html" />
     <MESSAGE value="BG bullit control panel" />
     <MESSAGE value="BG bullit tag panel" />
@@ -1061,7 +1045,8 @@
     <MESSAGE value="Preview begin&#10;module&#9;&#9;Preview&#10;form&#9;&#9;PreviewForm&#10;requestMethod&#9;GET,POST&#10;requestControl&#9;@admin_login_req" />
     <MESSAGE value="add Preview over" />
     <MESSAGE value="Preview List  over, but picture is too big" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preview List  over, but picture is too big" />
+    <MESSAGE value="Preview List  over, but picture is too big&#10;&#10;battle it,just &lt;style=&quot;width: 150px;&gt; in preview_list.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preview List  over, but picture is too big&#10;&#10;battle it,just &lt;style=&quot;width: 150px;&gt; in preview_list.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1344,10 +1329,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="68" column="63" lean-forward="false" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+          <folding>
+            <element signature="e#63#519#0#HTML" expanded="false" />
+            <element signature="e#288#509#0#HTML" expanded="false" />
+            <element signature="e#524#1171#0#HTML" expanded="false" />
+            <element signature="e#1176#1883#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="330" column="25" lean-forward="false" selection-start-line="330" selection-start-column="25" selection-end-line="330" selection-end-column="25" />
+        <state relative-caret-position="118">
+          <caret line="341" column="42" lean-forward="false" selection-start-line="341" selection-start-column="42" selection-end-line="341" selection-end-column="42" />
           <folding>
             <element signature="e#15#34#0" expanded="true" />
             <element signature="e#479#703#0" expanded="false" />
@@ -1364,40 +1362,26 @@
             <element signature="e#6352#6581#0" expanded="false" />
             <element signature="e#6701#8559#0" expanded="false" />
             <element signature="e#8742#9460#0" expanded="false" />
+            <element signature="e#9588#9806#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="39" />
+        <state relative-caret-position="180">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="39" selection-end-column="36" />
           <folding>
             <marker date="1538639665232" expanded="false" signature="3560:3566" ph=" " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="68" column="63" lean-forward="false" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
-          <folding>
-            <element signature="e#63#519#0#HTML" expanded="false" />
-            <element signature="e#288#509#0#HTML" expanded="false" />
-            <element signature="e#524#1171#0#HTML" expanded="false" />
-            <element signature="e#1176#1883#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/preview_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="45" column="122" lean-forward="false" selection-start-line="45" selection-start-column="102" selection-end-line="45" selection-end-column="122" />
-          <folding>
-            <element signature="e#2214#2235#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="122">
+          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>

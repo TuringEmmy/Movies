@@ -331,6 +331,17 @@ def preview_list(page=None):
     return render_template("admin/preview_list.html", page_data=page_data)
 
 
+# 预告列表<delete Button>
+@admin.route('/preview/del/<int:id>/', methods=["PPOST", "GET"])
+@admin_login_req
+def preview_del(id=None):
+    preview = Preview.query.get_or_404(int(id))
+    db.session.delete(preview)
+    db.session.commit()
+    flash("删除预告成功", "ok")
+    return redirect(url_for("admin.preview_list", page=1))
+
+
 # 会员列表
 @admin.route('/user/list/')
 @admin_login_req
