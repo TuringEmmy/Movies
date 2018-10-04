@@ -32,8 +32,7 @@ def admin_login_req(f):
 def change_filename(filename):
     # 将文件名filename进行分割
     fileinfo = os.path.splitext(filename)
-    filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S") + str(uuid.uuid4().hex) + fileinfo[
-        -1]  # fileinfo[-1]代表后缀
+    filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S") + str(uuid.uuid4().hex) + fileinfo[-1]  # fileinfo[-1]代表后缀
     return filename
 
 
@@ -161,6 +160,7 @@ def tag_edit(id=None):
     return render_template("admin/tag_edit.html", form=form, tag=tag)
 
 
+# --------------------------------------电影模块--------------------------
 # 添加电影
 @admin.route('/movie/add/', methods=["POST", "GET"])
 @admin_login_req
@@ -224,7 +224,7 @@ def movie_list(page=None):
 
 
 # 删除电影
-@admin.route('/movie/del/<int:id>',methods=["GET"])
+@admin.route('/movie/del/<int:id>', methods=["GET"])
 @admin_login_req
 def movie_del(id=None):
     # 获取电影的id
@@ -237,22 +237,58 @@ def movie_del(id=None):
     return redirect(url_for("admin.movie_list", page=1))
 
 
+# 编辑修改电影
+@admin.route('/movie/edit/<int:id>', methods=["POST", "GET"])
+@admin_login_req
+def movie_edit(id=None):
+    form = MovieForm()
+    # 这个是编辑的，所以url和logo肯定有的，所以不用查询
+    form.url.validators = []
+    form.logo.validators = []
+    movie = Movie.query.get_or_404(int(id))
+    # 编写验证逻辑
 
+    if request.method == "GET":
+        form.info.data = movie.info
+        form.tag_id.data = movie.tag_id
+        form.star.data = movie.star
+    if form.validate_on_submit():
+        data = form.data
+        # 注意Movie，是大写的
+        movie_count = Movie.query.filter_by(title=data["title"]).count()
+        if movie_count == 1 and movie.title != data["title"]:
+            flash("片名已经存在！", "err")
+            return redirect(url_for("admin.movie_edit", id=id))
 
+        if not os.path.exists(app.config["UP_DIR"]):
+            # 创建文件目录
+            os.makedirs(app.config["UP_DIR"])
+            # 增加读写的权限
+            os.chmod(app.config["UP_DIR"], "rw")
+            # --------------url
+        if form.url.data.filename != "":  # 不为空，说明更改过了图片
+            file_url = secure_filename(form.url.data.filename)
+            movie.url = change_filename(file_url)
+            form.url.data.save(app.config["UP_DIR"] + movie.url)
 
+            # --------------logo
+        if form.logo.data.filename != "":  # 不为空，说明更改过了logo
+            file_logo = secure_filename(form.logo.data.filename)
+            movie.logo = change_filename(file_logo)
+            form.logo.data.save(app.config["UP_DIR"] + movie.logo)
 
-
-
-
-
-
-
-
-
-
-
-
-
+        movie.star = data["star"]
+        movie.tag_id = data["tag_id"]
+        movie.info = data["info"]
+        movie.title = data["title"]
+        movie.area = data["area"]
+        movie.length = data["length"]
+        movie.release_time = data["release_time"]
+        db.session.add(movie)
+        db.session.commit()
+        flash("修改电影成功！", "ok")
+        return redirect(url_for("admin.movie_edit", id=id))
+    return render_template("admin/movie_edit.html", form=form, movie=movie)
 
 
 # 预告添加
@@ -260,6 +296,7 @@ def movie_del(id=None):
 @admin_login_req
 def preview_add():
     return render_template("admin/preview_add.html")
+
 
 # 预告列表
 @admin.route('/preview/list/')
