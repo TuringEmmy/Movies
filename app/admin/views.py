@@ -320,10 +320,15 @@ def preview_add():
 
 
 # 预告列表
-@admin.route('/preview/list/')
+@admin.route('/preview/list/<int:page>/', methods=["PPOST", "GET"])
 @admin_login_req
-def preview_list():
-    return render_template("admin/preview_list.html")
+def preview_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Preview.query.order_by(
+        Preview.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/preview_list.html", page_data=page_data)
 
 
 # 会员列表
