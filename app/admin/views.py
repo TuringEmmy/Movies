@@ -421,6 +421,16 @@ def comment_list(page=None):
     ).paginate(page=page, per_page=10)
     return render_template("admin/comment_list.html", page_data=page_data)
 
+# 评论列表<delete Button>
+@admin.route('/comment/del/<int:id>/', methods=["GET"])
+@admin_login_req
+def comment_del(id=None):
+    comment = Comment.query.get_or_404(int(id))
+    db.session.delete(comment)
+    db.session.commit()
+    flash("删除评论成功", "ok")
+    return redirect(url_for("admin.comment_list", page=1))
+
 
 # 电影收藏
 @admin.route('/moviecol/list/')
