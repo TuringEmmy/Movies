@@ -207,11 +207,20 @@ def movie_add():
 
 
 # 电影列表
-@admin.route('/movie/list/')
+@admin.route('/movie/list/<int:page>', methods=["GET"])
 @admin_login_req
-@admin_login_req
-def movie_list():
-    return render_template("admin/movie_list.html")
+def movie_list(page=None):
+    if page is None:
+        page = 1
+    # join(Tag)这个是关联标签
+    # filter_by是单表查询
+    # filter是多表关联
+    page_data = Movie.query.join(Tag).filter(
+        Tag.id == Movie.tag_id
+    ).order_by(
+        Movie.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/movie_list.html",page_data=page_data)
 
 
 # 预告添加
