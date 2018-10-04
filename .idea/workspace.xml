@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views.py" afterPath="$PROJECT_DIR$/app/admin/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/admin/movie_add.html" afterPath="$PROJECT_DIR$/app/templates/admin/movie_add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models.py" afterPath="$PROJECT_DIR$/app/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Movies$views.coverage" NAME="views Coverage Results" MODIFIED="1538297694884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/home" />
     <SUITE FILE_PATH="coverage/Movies$models.coverage" NAME="models Coverage Results" MODIFIED="1538546320949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/Movies$manager.coverage" NAME="manager Coverage Results" MODIFIED="1538633961379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Movies$manager.coverage" NAME="manager Coverage Results" MODIFIED="1538634782253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Movies$te.coverage" NAME="te Coverage Results" MODIFIED="1538547152328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -26,11 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="180" column="22" lean-forward="false" selection-start-line="180" selection-start-column="22" selection-end-line="180" selection-end-column="22" />
+            <state relative-caret-position="105">
+              <caret line="204" column="51" lean-forward="true" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="51" />
               <folding>
                 <element signature="e#15#34#0" expanded="true" />
                 <element signature="e#457#681#0" expanded="false" />
@@ -39,7 +38,6 @@
                 <element signature="e#1794#1878#0" expanded="false" />
                 <element signature="e#2083#2660#0" expanded="false" />
                 <element signature="e#2798#3038#0" expanded="false" />
-                <element signature="e#3176#3487#0" expanded="false" />
                 <element signature="e#3601#4291#0" expanded="false" />
               </folding>
             </state>
@@ -61,8 +59,8 @@
       <file leaf-file-name="tag_add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/tag_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="27" column="40" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="27" selection-end-column="40" />
+            <state relative-caret-position="42">
+              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -71,10 +69,9 @@
       <file leaf-file-name="movie_add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state relative-caret-position="244">
+              <caret line="144" column="38" lean-forward="false" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="38" />
               <folding>
-                <element signature="e#955#1334#0#HTML" expanded="false" />
                 <element signature="e#1404#2147#0#HTML" expanded="false" />
                 <element signature="e#1990#2007#0#HTML" expanded="true" />
                 <element signature="e#2176#3034#0#HTML" expanded="false" />
@@ -90,7 +87,6 @@
                 <element signature="e#7641#7658#0#HTML" expanded="true" />
                 <element signature="e#7827#8576#0#HTML" expanded="false" />
                 <element signature="e#8419#8436#0#HTML" expanded="true" />
-                <element signature="e#8605#9469#0#HTML" expanded="false" />
                 <element signature="e#9312#9329#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -100,7 +96,7 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="234">
               <caret line="178" column="38" lean-forward="false" selection-start-line="178" selection-start-column="38" selection-end-line="178" selection-end-column="38" />
               <folding>
                 <element signature="e#15#46#0" expanded="true" />
@@ -116,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
-              <caret line="82" column="38" lean-forward="true" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+              <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
               <folding>
                 <element signature="e#82#995#0" expanded="false" />
                 <element signature="e#1033#1388#0" expanded="false" />
@@ -132,7 +128,7 @@
                 <element signature="e#4541#4936#0" expanded="false" />
                 <element signature="e#4969#5753#0" expanded="false" />
                 <element signature="e#5793#6140#0" expanded="false" />
-                <element signature="e#6174#7012#0" expanded="false" />
+                <element signature="e#6174#7015#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -210,11 +206,11 @@
         <option value="$PROJECT_DIR$/app/templates/admin/tad_edit.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/tag_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/tag_edit.html" />
-        <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/admin/forms.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/movie_add.html" />
         <option value="$PROJECT_DIR$/app/admin/views.py" />
+        <option value="$PROJECT_DIR$/app/admin/forms.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
       </list>
     </option>
   </component>
@@ -227,8 +223,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="24" />
-    <option name="width" value="770" />
-    <option name="height" value="635" />
+    <option name="width" value="1327" />
+    <option name="height" value="601" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -330,11 +326,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Movies" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1021,20 +1035,27 @@
       <option name="project" value="LOCAL" />
       <updated>1538623508182</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="movie add over&#10;">
+      <created>1538634040613</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1538634040613</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="24" width="770" height="635" extended-state="6" />
+    <frame x="35" y="24" width="1327" height="601" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27548638" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23579766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17962962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19169961" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24954462" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45916796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1073,7 +1094,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="search page" />
     <MESSAGE value="user page" />
     <MESSAGE value="vip page" />
     <MESSAGE value="movie play page" />
@@ -1098,7 +1118,8 @@
     <MESSAGE value="tag list :&lt;return redirect(url_for(&quot;admin.tag_edit&quot;, id=id))&gt; find bug is 'id = id'" />
     <MESSAGE value="movie bengin&#10;module&#9;&#9;Movie&#10;form&#9;&#9;MovieForm&#10;requestMethod&#9;GET,POST&#10;requestControl&#9;@admin_login_req" />
     <MESSAGE value="movie complished&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="movie complished&#10;" />
+    <MESSAGE value="movie add over&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="movie add over&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1328,40 +1349,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/tag_add.html">
+    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="27" column="40" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="27" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="105">
+          <caret line="204" column="51" lean-forward="true" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="51" />
+          <folding>
+            <element signature="e#15#34#0" expanded="true" />
+            <element signature="e#457#681#0" expanded="false" />
+            <element signature="e#995#1037#0" expanded="false" />
+            <element signature="e#1116#1721#0" expanded="false" />
+            <element signature="e#1794#1878#0" expanded="false" />
+            <element signature="e#2083#2660#0" expanded="false" />
+            <element signature="e#2798#3038#0" expanded="false" />
+            <element signature="e#3601#4291#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/tag_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="82" column="38" lean-forward="true" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
-          <folding>
-            <element signature="e#82#995#0" expanded="false" />
-            <element signature="e#1033#1388#0" expanded="false" />
-            <element signature="e#1418#1773#0" expanded="false" />
-            <element signature="e#2807#3201#0" expanded="false" />
-            <element signature="e#3235#3665#0" expanded="false" />
-            <element signature="e#3700#4132#0" expanded="false" />
-            <element signature="e#4163#4510#0" expanded="false" />
-            <element signature="e#4541#4936#0" expanded="false" />
-            <element signature="e#4969#5753#0" expanded="false" />
-            <element signature="e#5793#6140#0" expanded="false" />
-            <element signature="e#6174#7012#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="42">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="244">
+          <caret line="144" column="38" lean-forward="false" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="38" />
           <folding>
-            <element signature="e#955#1334#0#HTML" expanded="false" />
             <element signature="e#1404#2147#0#HTML" expanded="false" />
             <element signature="e#1990#2007#0#HTML" expanded="true" />
             <element signature="e#2176#3034#0#HTML" expanded="false" />
@@ -1377,7 +1394,6 @@
             <element signature="e#7641#7658#0#HTML" expanded="true" />
             <element signature="e#7827#8576#0#HTML" expanded="false" />
             <element signature="e#8419#8436#0#HTML" expanded="true" />
-            <element signature="e#8605#9469#0#HTML" expanded="false" />
             <element signature="e#9312#9329#0#HTML" expanded="true" />
           </folding>
         </state>
@@ -1385,7 +1401,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="234">
           <caret line="178" column="38" lean-forward="false" selection-start-line="178" selection-start-column="38" selection-end-line="178" selection-end-column="38" />
           <folding>
             <element signature="e#15#46#0" expanded="true" />
@@ -1400,20 +1416,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
+    <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="180" column="22" lean-forward="false" selection-start-line="180" selection-start-column="22" selection-end-line="180" selection-end-column="22" />
+        <state relative-caret-position="259">
+          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
           <folding>
-            <element signature="e#15#34#0" expanded="true" />
-            <element signature="e#457#681#0" expanded="false" />
-            <element signature="e#995#1037#0" expanded="false" />
-            <element signature="e#1116#1721#0" expanded="false" />
-            <element signature="e#1794#1878#0" expanded="false" />
-            <element signature="e#2083#2660#0" expanded="false" />
-            <element signature="e#2798#3038#0" expanded="false" />
-            <element signature="e#3176#3487#0" expanded="false" />
-            <element signature="e#3601#4291#0" expanded="false" />
+            <element signature="e#82#995#0" expanded="false" />
+            <element signature="e#1033#1388#0" expanded="false" />
+            <element signature="e#1418#1773#0" expanded="false" />
+            <element signature="e#2807#3201#0" expanded="false" />
+            <element signature="e#3235#3665#0" expanded="false" />
+            <element signature="e#3700#4132#0" expanded="false" />
+            <element signature="e#4163#4510#0" expanded="false" />
+            <element signature="e#4541#4936#0" expanded="false" />
+            <element signature="e#4969#5753#0" expanded="false" />
+            <element signature="e#5793#6140#0" expanded="false" />
+            <element signature="e#6174#7015#0" expanded="false" />
           </folding>
         </state>
       </provider>

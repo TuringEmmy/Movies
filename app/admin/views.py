@@ -202,7 +202,7 @@ def movie_add():
         db.session.add(movie)
         db.session.commit()
         flash("添加电影成功！", "ok")
-        return redirect("admin.movie_add")
+        return redirect(url_for("admin.movie_add"))
     return render_template("admin/movie_add.html", form=form)
 
 
