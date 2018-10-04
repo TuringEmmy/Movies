@@ -12,18 +12,19 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 db = SQLAlchemy(app)
 
 
+
 # 会员
 class User(db.Model):
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key=True)  # 编号
     name = db.Column(db.String(100), unique=True)
-    pwd = db.Column(db.String(100))
+    pwd = db.Column(db.String(100))  # 密码
     email = db.Column(db.String(100), unique=True)
     phone = db.Column(db.String(11), unique=True)
     info = db.Column(db.Text)  # 个性简介
     face = db.Column(db.String(255), unique=True)  # 头像
     # 注册时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
     uuid = db.Column(db.String(255), unique=True)  # 唯一标识符
 
     # 会员日志外交按关联
@@ -36,6 +37,10 @@ class User(db.Model):
     def __repr__(self):
         return "<User %r >" % self.name
 
+    def check_pwd(self, pwd):
+        from werkzeug.security import check_password_hash
+        return check_password_hash(self.pwd, pwd)
+
 
 # 会员登陆日志
 class Userlog(db.Model):
@@ -47,7 +52,7 @@ class Userlog(db.Model):
     # 登陆ip的字段
     ip = db.Column(db.String(100))
     # 登陆时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     def __repr__(self):
         return "<Userlog %r>" % self.id
@@ -61,7 +66,7 @@ class Tag(db.Model):
     # 标签
     name = db.Column(db.String(100), unique=True)
     # 添加时间按
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     # 电影外检的关联
     movies = db.relationship("Movie", backref="tag")
@@ -80,9 +85,9 @@ class Movie(db.Model):
     # 地址
     url = db.Column(db.String(255), unique=True)
     # 简介
-    info = db.Column(db.String(255), unique=True)
+    info = db.Column(db.Text)
     # 封面
-    logo = db.Column(db.Text)
+    logo = db.Column(db.String(255), unique=True)
     # 星际
     star = db.Column(db.SmallInteger)
     # 播放量
@@ -98,7 +103,7 @@ class Movie(db.Model):
     # 播放量
     length = db.Column(db.String(100))
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     # 评论外键关联
     conmments = db.relationship("Comment", backref="movie")
@@ -117,12 +122,10 @@ class Preview(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     # 标题
     title = db.Column(db.String(255), unique=True)
-    # 地址
-    url = db.Column(db.String(255), unique=True)
     # 封面
-    logo = db.Column(db.Text)
+    logo = db.Column(db.String(255), unique=True)
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     def __repr__(self):
         return "< Preview %r>" % self.title
@@ -140,7 +143,7 @@ class Comment(db.Model):
     # 所属的用户
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     def __repr__(self):
         return "<Comment %r>" % self.id
@@ -158,7 +161,7 @@ class Moviecol(db.Model):
     # 所属的用户
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     def __repr__(self):
         return "<Moviecol %r>" % self.id
@@ -174,7 +177,7 @@ class Auth(db.Model):
     # 地址
     url = db.Column(db.String(255), unique=True)
     # 添加时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     def __repr__(self):
         return "<Auth %r>" % self.name
@@ -187,11 +190,12 @@ class Role(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     # 名称
     name = db.Column(db.String(100), unique=True)
-    # 添加时间
+    # 角色权限
     auths = db.Column(db.String(600))
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
     # 管理员外键关系管理链
     admins = db.relationship("Admin", backref="role")
+
     def __repr__(self):
         return "Role %r" % self.name
 
@@ -206,7 +210,7 @@ class Admin(db.Model):
     is_super = db.Column(db.SmallInteger)
     # 所属角色
     role_id = db.Column(db.ForeignKey("role.id"))
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     # 管理员登陆日志外键关联
     adminlogs = db.relationship("Adminlog", backref="admin")
@@ -216,6 +220,12 @@ class Admin(db.Model):
     def __repr__(self):
         return "<Admin %r" % self.name
 
+    # 验证密码啊正确返回True,错误返回False
+    def check_pwd(self, pwd):
+        from werkzeug.security import check_password_hash
+        # print(self.pwd, pwd)
+        return check_password_hash(self.pwd, pwd)
+
 
 # 管理员登陆日志
 class Adminlog(db.Model):
@@ -223,11 +233,11 @@ class Adminlog(db.Model):
     # 编号
     id = db.Column(db.Integer, primary_key=True)
     # 所属编号
-    admin_id = db.Column(db.ForeignKey("admin.id"))
+    admin_id = db.Column(db.Integer, db.ForeignKey("admin.id"))
     # 登陆ip的字段
     ip = db.Column(db.String(100))
     # 登陆时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
 
     def __repr__(self):
         return "<Adminlog %r>" % self.id
@@ -239,16 +249,36 @@ class Oplog(db.Model):
     # 编号
     id = db.Column(db.Integer, primary_key=True)
     # 所属编号
-    admin_id = db.Column(db.ForeignKey("admin.id"))
+    admin_id = db.Column(db.Integer, db.ForeignKey("admin.id"))
     # 登陆ip的字段
     ip = db.Column(db.String(100))
     # 登陆时间
-    addtime = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    addtime = db.Column(db.DateTime, index=True, default=datetime.now)
     # 操作的原因
     reason = db.Column(db.String(600))
 
     def __repr__(self):
         return "<Oplog %r>" % self.id
+
+        # if __name__ == '__main__':
+        # db.create_all()
+        #
+        # role = Role(
+        #     name="admin",
+        #     auths=""
+        # )
+        # db.session.add(role)
+        # db.session.commit()
+        # from werkzeug.security import generate_password_hash
+        #
+        # admin = Admin(
+        #     name="turing",
+        #     pwd=generate_password_hash("turingemmy"),
+        #     is_super=0,
+        #     role_id=1
+        # )
+        # db.session.add(admin)
+        # db.session.commit()
 
 
 if __name__ == '__main__':

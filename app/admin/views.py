@@ -5,7 +5,7 @@ from flask import render_template, redirect, url_for, flash, session, request
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
 from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm
-from app.models import Admin, Tag, Movie, Preview, User
+from app.models import Admin, Tag, Movie, Preview, User, Comment
 # 登陆的装饰器
 from functools import wraps
 from app import db, app
@@ -390,6 +390,7 @@ def user_view(id=None):
     user = User.query.get_or_404(int(id))
     return render_template("admin/user_view.html", user=user)
 
+
 # 用户列表<delete Button>
 @admin.route('/user/del/<int:id>/', methods=["GET"])
 @admin_login_req
@@ -400,12 +401,25 @@ def user_del(id=None):
     flash("删除会员成功", "ok")
     return redirect(url_for("admin.user_list", page=1))
 
+
+# ----------------------------------Comment--------------------------------------------
 # 电影评论
-@admin.route('/comment/list/')
+@admin.route('/comment/list/<int:page>/', methods=["GET"])
 @admin_login_req
-@admin_login_req
-def comment_list():
-    return render_template("admin/coment_list.html")
+def comment_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Comment.query.join(
+        Movie
+    ).join(
+        User
+    ).filter(
+        Movie.id == Comment.movie_id,
+        User.id == Comment.user_id
+    ).order_by(
+        Comment.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/comment_list.html", page_data=page_data)
 
 
 # 电影收藏
