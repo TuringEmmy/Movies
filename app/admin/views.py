@@ -4,8 +4,8 @@ from flask import render_template, redirect, url_for, flash, session, request
 # flash用于登录页面错误返回
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
-from app.admin.forms import LoginForm, TagForm
-from app.models import Admin, Tag
+from app.admin.forms import LoginForm, TagForm, MovieForm
+from app.models import Admin, Tag, Movie
 # 登陆的装饰器
 from functools import wraps
 from app import db
@@ -150,7 +150,9 @@ def tag_edit(id=None):
 @admin.route('/movie/add/')
 @admin_login_req
 def movie_add():
-    return render_template("admin/movie_add.html")
+    form = MovieForm()
+
+    return render_template("admin/movie_add.html", form=form)
 
 
 # 电影列表
