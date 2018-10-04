@@ -75,7 +75,7 @@ def tag_add():
         data = form.data
         tag = Tag.query.filter_by(name=data["name"]).count()
         if tag == 1:
-            flash("名称已经存在了!","err")
+            flash("名称已经存在了!", "err")
             return redirect(url_for("admin.tag_add"))
         # 存入数据库
         tag = Tag(
@@ -91,17 +91,59 @@ def tag_add():
 
 
 # 标签列表页面;<int:page>为路由规则,传入整形,分页用到
-@admin.route('/tag/list/<int:page>',methods=["GET"])
+@admin.route('/tag/list/<int:page>', methods=["GET"])
 @admin_login_req
 def tag_list(page=None):
     # 查询,分页,显示
     if page is None:
-        page=1
+        page = 1
     # 按照时间添加顺序进行添加
-    page_data =Tag.query.order_by(
+    page_data = Tag.query.order_by(
         Tag.addtime.desc()
-    ).paginate(page=page,per_page=10)
-    return render_template("admin/tag_list.html",page_data=page_data)
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/tag_list.html", page_data=page_data)
+
+
+# 标签删除;<int:page>为路由规则,传入整形,分页用到
+@admin.route('/tag/del/<int:id>', methods=["GET", "POST"])
+@admin_login_req
+def tag_del(id=None):
+    # 根据逐渐 进行南宁查询
+    # tage = Tag.query.get(id)
+    # 下面的方法啊插叙un错误字段，可以直接跳转到404页面
+    tag = Tag.query.filter_by(id=id).first_or_404()
+    db.session.delete(tag)
+    db.session.commit()
+    # 消息闪现
+    flash("删除标签成功", 'ok')
+    # 注意：一定要假return，否则会报错，说没有response
+    return redirect(url_for("admin.tag_list", page=1))
+
+
+# 编辑标签
+@admin.route('/tag/edit/<int:id>', methods=["GET", "POST"])
+@admin_login_req
+def tag_edit(id=None):
+    form = TagForm()
+    tag = Tag.query.get_or_404(id)
+    if form.validate_on_submit():
+        # 获取数据
+        data = form.data
+        tag_count = Tag.query.filter_by(name=data["name"]).count()
+        if tag.name != data["name"] and tag_count == 1:
+            flash("标签已经存在了!", "err")
+            # 这行代码要传入id，害的我调试了一下午
+            return redirect(url_for("admin.tag_edit", id=id))
+        # 直接修改即可
+        tag.name = data["name"]
+
+        db.session.add(tag)
+        db.session.commit()
+        # 入库成功之后,出现信息
+        flash("修改标签成功", "ok")
+        # 添加成功之后,依然跳转到标签添加的页面
+        redirect(url_for("admin.tag_edit", id=id))
+    return render_template("admin/tag_edit.html", form=form, tag=tag)
 
 
 # 添加电影

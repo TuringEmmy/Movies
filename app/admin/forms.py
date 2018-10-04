@@ -69,7 +69,7 @@ class TagForm(FlaskForm):
         }
     )
     submit = SubmitField(
-        label="添加",
+        label="编辑",
         validators=[
             DataRequired("请输入标签!")
         ],
