@@ -374,6 +374,7 @@ def preview_edit(id):
 @admin.route('/user/list/')
 @admin_login_req
 def user_list():
+    
     return render_template("admin/user_list.html")
 
 
