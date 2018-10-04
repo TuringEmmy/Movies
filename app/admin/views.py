@@ -387,8 +387,18 @@ def user_list(page=None):
 @admin.route('/user/view/<int:id>', methods=["GET"])
 @admin_login_req
 def user_view(id=None):
-    return render_template("admin/user_view.html")
+    user = User.query.get_or_404(int(id))
+    return render_template("admin/user_view.html", user=user)
 
+# 用户列表<delete Button>
+@admin.route('/user/del/<int:id>/', methods=["GET"])
+@admin_login_req
+def user_del(id=None):
+    user = User.query.get_or_404(int(id))
+    db.session.delete(user)
+    db.session.commit()
+    flash("删除会员成功", "ok")
+    return redirect(url_for("admin.user_list", page=1))
 
 # 电影评论
 @admin.route('/comment/list/')
