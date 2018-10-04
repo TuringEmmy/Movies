@@ -314,7 +314,7 @@ def preview_add():
         # 保存数据
         db.session.add(preview)
         db.session.commit()
-        flash("修改预告成功", "ok")
+        flash("添加预告成功", "ok")
         return redirect(url_for("admin.preview_add"))
     return render_template("admin/preview_add.html", form=form)
 
@@ -340,6 +340,34 @@ def preview_del(id=None):
     db.session.commit()
     flash("删除预告成功", "ok")
     return redirect(url_for("admin.preview_list", page=1))
+
+
+# 预告列表<修改>
+@admin.route('/preview/edit/<int:id>', methods=["GET", "POST"])
+@admin_login_req
+def preview_edit(id):
+    # 实例化form表单
+    form = PreviewForm()
+    form.logo.validators = []
+    preview = Preview.query.get_or_404(int(id))
+    if request.method == "GET":
+        form.title.data = preview.title
+    if form.validate_on_submit():
+        data = form.data
+
+        # -----logo
+        if form.logo.data.filename != "":  # 不为空，说明更改过了logo
+            file_logo = secure_filename(form.logo.data.filename)
+            preview.logo = change_filename(file_logo)
+            form.logo.data.save(app.config["UP_DIR"] + preview.logo)
+        # -------logo
+
+        preview.title = data["title"]
+        db.session.add(preview)
+        db.session.commit()
+        flash("修改预告成功", "ok")
+        return redirect(url_for("admin.preview_edit", id=id))
+    return render_template("admin/preview_edit.html", form=form, preview=preview)
 
 
 # 会员列表
