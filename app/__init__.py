@@ -1,12 +1,14 @@
 # coding=utf-8
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-
+import os
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:mysql@127.0.0.1:3306/movies"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 app.config["SECRET_KEY"] = "turingemmmytyuringemmy"
 
+# 设置上传路径,tatic/uploads次文件线面存放图片，视频信息
+app.config["UP_DIR"]= os.path.join(os.path.abspath(os.path.dirname(__file__)),"static/uploads/")
 app.debug = True
 db = SQLAlchemy(app)
 
