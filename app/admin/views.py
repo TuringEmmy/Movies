@@ -220,7 +220,39 @@ def movie_list(page=None):
     ).order_by(
         Movie.addtime.desc()
     ).paginate(page=page, per_page=10)
-    return render_template("admin/movie_list.html",page_data=page_data)
+    return render_template("admin/movie_list.html", page_data=page_data)
+
+
+# 删除电影
+@admin.route('/movie/del/<int:id>',methods=["GET"])
+@admin_login_req
+def movie_del(id=None):
+    # 获取电影的id
+    movie = Movie.query.get_or_404(int(id))
+    db.session.delete(movie)
+    db.session.commit()
+    # 注意：电影删除后，相关的评论要消失
+    # 闪现，提示删除成功
+    flash("删除电影成功", "ok")
+    return redirect(url_for("admin.movie_list", page=1))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # 预告添加
@@ -228,7 +260,6 @@ def movie_list(page=None):
 @admin_login_req
 def preview_add():
     return render_template("admin/preview_add.html")
-
 
 # 预告列表
 @admin.route('/preview/list/')
