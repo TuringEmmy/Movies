@@ -457,7 +457,7 @@ def moviecol_list(page=None):
 @admin.route('/moviecol/del/<int:id>/', methods=["PPOST", "GET"])
 @admin_login_req
 def moviecol_del(id=None):
-    moviecol = Preview.query.get_or_404(int(id))
+    moviecol = Moviecol.query.get_or_404(int(id))
     db.session.delete(moviecol)
     db.session.commit()
     flash("删除收藏成功", "ok")
