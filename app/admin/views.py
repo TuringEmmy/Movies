@@ -5,7 +5,7 @@ from flask import render_template, redirect, url_for, flash, session, request
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
 from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm, PwdForm
-from app.models import Admin, Tag, Movie, Preview, User, Comment, Moviecol
+from app.models import Admin, Tag, Movie, Preview, User, Comment, Moviecol, Oplog, Adminlog, Userlog
 # 登陆的装饰器
 from functools import wraps
 from app import db, app
@@ -71,6 +71,8 @@ def login():
             # 密码错误的时候,重定向到lohin页面
             return redirect(url_for("admin.login"))
         session["admin"] = data["account"]
+        # 还要保存icu你session,对应下面的登出函数的admin_id的销毁
+        session["admin_id"] = admin.id
         return redirect(request.args.get("next") or url_for("admin.index"))
     return render_template("admin/login.html", form=form)
 
@@ -81,6 +83,7 @@ def login():
 def logout():
     # 退出是删除账号
     session.pop("admin", None)
+    session.pop("admin_id", None)
     return redirect(url_for('admin.login'))
 
 
@@ -124,6 +127,21 @@ def tag_add():
         # 入库成功之后,出现信息
         flash("添加成功", "ok")
         # 添加成功之后,依然跳转到标签添加的页面
+        # ------------------------------------------
+        # ---标签添加日志（用户id,ip,原因）
+        # ------------------------------------------
+        oplog = Oplog(
+            admin_id=session["admin_id"],
+            # 获取ip地址
+            ip=request.remote_addr,
+            reason="添加标签%s" % data["name"]
+        )
+        # 并将添加标签的相应信息添加导致数据库
+        db.session.add(oplog)
+        db.session.commit()
+        # ------------------------------------------
+        # ---标签添加日志（用户id,ip,原因）
+        # ------------------------------------------
         redirect(url_for("admin.tag_add"))
     return render_template("admin/tag_add.html", form=form)
 
@@ -487,11 +505,21 @@ def moviecol_del(id=None):
     return redirect(url_for("admin.moviecol_list", page=1))
 
 
+# ---------------------------------log---------------------------------
 # 操作日志
-@admin.route('/oplog/list/')
+@admin.route('/oplog/list/<int:page>', methods=["GET"])
 @admin_login_req
-def oplog_list():
-    return render_template("admin/oplog_list.html")
+def oplog_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Oplog.query.join(
+        Admin
+    ).filter(
+        Admin.id == Oplog.admin_id,
+    ).order_by(
+        Oplog.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/oplog_list.html", page_data=page_data)
 
 
 # 管理员登陆日至
