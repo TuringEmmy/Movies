@@ -596,7 +596,7 @@ def auth_add():
 
 
 # 权限列表
-@admin.route('/auth/list/<int:page>', methods=["GET"])
+@admin.route('/auth/list/<int:page>/', methods=["GET"])
 @admin_login_req
 def auth_list(page=None):
     if page is None:
@@ -608,7 +608,7 @@ def auth_list(page=None):
 
 
 # 权限列表
-@admin.route('/auth/del/<int:id>', methods=["GET"])
+@admin.route('/auth/del/<int:id>/', methods=["GET"])
 @admin_login_req
 def auth_del(id=None):
     if id is None:
@@ -617,14 +617,14 @@ def auth_del(id=None):
     db.session.delete(auth)
     db.session.commit()
     flash("删除标签成功", "ok")
-    return render_template("admin/auth_list.html", page=1)
+    return redirect(url_for("admin.auth_list", page=1))
 
 
 # 权限添加
 @admin.route('/admin/add/')
 @admin_login_req
 def admin_add():
-    return render_template("admin/admin_add.html")
+    return render_template("adminadmin_add.html")
 
 
 # 权限列表
