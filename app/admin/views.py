@@ -596,9 +596,28 @@ def auth_add():
 
 
 # 权限列表
-@admin.route('/auth/list/')
-def auth_list():
-    return render_template("admin/auth_list.html")
+@admin.route('/auth/list/<int:page>', methods=["GET"])
+@admin_login_req
+def auth_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Auth.query.order_by(
+        Auth.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/auth_list.html", page_data=page_data)
+
+
+# 权限列表
+@admin.route('/auth/del/<int:id>', methods=["GET"])
+@admin_login_req
+def auth_del(id=None):
+    if id is None:
+        id = 1
+    auth = Auth.query.filter_by(id=id).first_or_404()
+    db.session.delete(auth)
+    db.session.commit()
+    flash("删除标签成功", "ok")
+    return render_template("admin/auth_list.html", page=1)
 
 
 # 权限添加
