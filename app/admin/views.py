@@ -562,7 +562,7 @@ def userloginlog_list(page=None):
     ).paginate(page=page, per_page=10)
     return render_template("admin/userloginlog_list.html", page_data=page_data)
 
-
+# ------------------------------------Role-----------------------------------------
 # 角色添加
 @admin.route('/role/add/')
 @admin_login_req

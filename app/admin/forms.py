@@ -1,7 +1,7 @@
 # coding=utf-8
 from flask_wtf import FlaskForm
 # FileField用于电影管理的url,TextAreaField文本框,星际选择SelectField
-from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, SelectField
+from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, SelectField, SelectMultipleField
 # 调用验证器
 from wtforms.validators import DataRequired, ValidationError
 # 登陆表单验证,使用Admin数据模型
@@ -274,15 +274,15 @@ class AuthForm(FlaskForm):
             "placeholder": "请输入权限名称！"
         }
     )
-    url=StringField(
+    url = StringField(
         label="权限地址",
         validators=[
             DataRequired("请输入权限地址！")
         ],
         description="权限地址",
         render_kw={
-            "class":"form-control",
-            "placeholder":"请输入权限地址！"
+            "class": "form-control",
+            "placeholder": "请输入权限地址！"
         }
     )
     submit = SubmitField(
@@ -290,4 +290,36 @@ class AuthForm(FlaskForm):
         render_kw={
             "class": "btn btn-primary"
         }
+    )
+
+
+# ---------------------------------RoleForm---------------------------------
+class RoleForm(FlaskForm):
+    name = StringField(
+        label="角色名称",
+        validators=[
+            DataRequired("请输入角色名称!")
+        ],
+        description='角色名称',
+        render_kw={
+            "class": "form-control",
+            "id": "input_name",
+            "placeholder": "请输入角色名称！"
+        }
+    )
+    auths = SelectMultipleField(
+        label="权限列表",
+        validators=[
+            DataRequired("请选择权限列表")
+        ],
+        description="权限列表",
+        render_kw={
+            "class": "form-control"
+        },
+        submit=SubmitField(
+            "编辑",
+            render_kw={
+                "class": "btn btn-primary"
+            }
+        )
     )
