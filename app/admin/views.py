@@ -453,6 +453,16 @@ def moviecol_list(page=None):
     return render_template("admin/moviecol_list.html", page_data=page_data)
 
 
+# 电影收藏<delete Button>
+@admin.route('/moviecol/del/<int:id>/', methods=["PPOST", "GET"])
+@admin_login_req
+def moviecol_del(id=None):
+    moviecol = Preview.query.get_or_404(int(id))
+    db.session.delete(moviecol)
+    db.session.commit()
+    flash("删除收藏成功", "ok")
+    return redirect(url_for("admin.moviecol_list", page=1))
+
 
 # 操作日志
 @admin.route('/oplog/list/')
