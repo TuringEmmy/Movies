@@ -19,7 +19,10 @@
     </div>
     <div class="login-box-body">
         {#    消息闪现#}
-        {% for msg in get_flashed_messages() %}
+        {% for msg in get_flashed_messages(category_filter=["ok"]) %}
+            <p class="login-box-msg" style="color:green">{{ msg }}</p>
+        {% endfor %}
+        {% for msg in get_flashed_messages(category_filter=["err"]) %}
             <p class="login-box-msg" style="color:red">{{ msg }}</p>
         {% endfor %}
         <form action="" method="post" id="form-data">
