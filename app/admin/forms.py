@@ -257,3 +257,5 @@ class PwdForm(FlaskForm):
         ).first()
         if not admin.check_pwd(pwd):
             raise ValidationError("旧密码错误！")
+
+# -------------------------------AuthForm--------------------------------

@@ -547,11 +547,20 @@ def adminloginlog_list(page=None):
     return render_template("admin/adminloginlog_list.html", page_data=page_data)
 
 
-# 会员员登陆日至
-@admin.route('/userloginlog/list/')
+# 会员员登陆日志
+@admin.route('/userloginlog/list/<int:page>', methods=["GET"])
 @admin_login_req
-def userloginlog_list():
-    return render_template("admin/userloginlog_list.html")
+def userloginlog_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Userlog.query.join(
+        User
+    ).filter(
+        User.id == Userlog.user_id,
+    ).order_by(
+        Userlog.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/userloginlog_list.html", page_data=page_data)
 
 
 # 角色添加
