@@ -5,7 +5,7 @@ from flask import render_template, redirect, url_for, flash, session, request
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
 from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm
-from app.models import Admin, Tag, Movie, Preview, User, Comment
+from app.models import Admin, Tag, Movie, Preview, User, Comment, Moviecol
 # 登陆的装饰器
 from functools import wraps
 from app import db, app
@@ -194,7 +194,7 @@ def movie_add():
             logo=logo,
             star=int(data["star"]),
             playnum=0,
-            commentum=0,
+            commentnum=0,
             tag_id=int(data["tag_id"]),
             area=data["area"],
             release_time=data["release_time"],
@@ -421,6 +421,7 @@ def comment_list(page=None):
     ).paginate(page=page, per_page=10)
     return render_template("admin/comment_list.html", page_data=page_data)
 
+
 # 评论列表<delete Button>
 @admin.route('/comment/del/<int:id>/', methods=["GET"])
 @admin_login_req
@@ -433,11 +434,24 @@ def comment_del(id=None):
 
 
 # 电影收藏
-@admin.route('/moviecol/list/')
+@admin.route('/moviecol/list/<int:page>/', methods=["GET"])
 @admin_login_req
 @admin_login_req
-def moviecol_list():
-    return render_template("admin/moviecol_list.html")
+def moviecol_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Moviecol.query.join(
+        Movie
+    ).join(
+        User
+    ).filter(
+        Movie.id == Moviecol.movie_id,
+        User.id == Moviecol.user_id
+    ).order_by(
+        Moviecol.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/moviecol_list.html", page_data=page_data)
+
 
 
 # 操作日志
