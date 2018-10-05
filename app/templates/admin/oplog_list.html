@@ -39,20 +39,20 @@
                                 <th>操作IP</th>
                             </tr>
                             {% for v in page_data.items %}
-                            <tr>
-                                <td>{{ v.id }}</td>
-                                <td>{{ v.admin.name }}</td>
-                                <td>{{ v.addtime }}</td>
-                                <td>{{ v.reason }}</td>
-                                <td>{{ v.ip }}</td>
-                            </tr>
+                                <tr>
+                                    <td>{{ v.id }}</td>
+                                    <td>{{ v.admin.name }}</td>
+                                    <td>{{ v.addtime }}</td>
+                                    <td>{{ v.reason }}</td>
+                                    <td>{{ v.ip }}</td>
+                                </tr>
                             {% endfor %}
                             </tbody>
                         </table>
                     </div>
                     <div class="box-footer clearfix">
                         <ul class="pagination pagination-sm no-margin pull-right">
-                           {{ pg.page(page_data,"admin.moviecol_list") }}
+                            {{ pg.page(page_data,"admin.oplog_list") }}
                         </ul>
                     </div>
                 </div>
