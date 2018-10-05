@@ -77,6 +77,7 @@ def logout():
 @admin.route('/pwd/')
 @admin_login_req
 def pwd():
+    
     return render_template("admin/pwd.html")
 
 
