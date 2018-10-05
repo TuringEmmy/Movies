@@ -620,6 +620,23 @@ def auth_del(id=None):
     return redirect(url_for("admin.auth_list", page=1))
 
 
+# 编辑权限
+@admin.route("/auth/edit/<int:id>/", methods=["GET", "POST"])
+@admin_login_req
+def auth_edit(id=None):
+    form = AuthForm()
+    auth = Auth.query.get_or_404(id)
+    if form.validate_on_submit():
+        data = form.data
+        auth.url = data["url"]
+        auth.name = data["name"]
+        db.session.add(auth)
+        db.session.commit()
+        flash("修改标签成功", "ok")
+        redirect(url_for("admin.auth_edit", id=id))
+    return render_template("admin/auth_edit.html", form=form, auth=auth)
+
+
 # 权限添加
 @admin.route('/admin/add/')
 @admin_login_req

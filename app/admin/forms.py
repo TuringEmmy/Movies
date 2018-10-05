@@ -263,11 +263,11 @@ class PwdForm(FlaskForm):
 # -------------------------------AuthForm--------------------------------
 class AuthForm(FlaskForm):
     name = StringField(
-        label="权限",
+        label="权限名称",
         validators=[
             DataRequired("请输入权限名称!")
         ],
-        description='权限',
+        description='权限名称',
         render_kw={
             "class": "form-control",
             "id": "input_name",
@@ -279,13 +279,14 @@ class AuthForm(FlaskForm):
         validators=[
             DataRequired("请输入权限地址！")
         ],
+        description="权限地址",
         render_kw={
             "class":"form-control",
             "placeholder":"请输入权限地址！"
         }
     )
     submit = SubmitField(
-        label="添加权限",
+        "编辑",
         render_kw={
             "class": "btn btn-primary"
         }
