@@ -4,8 +4,8 @@ from flask import render_template, redirect, url_for, flash, session, request
 # flash用于登录页面错误返回
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
-from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm, PwdForm
-from app.models import Admin, Tag, Movie, Preview, User, Comment, Moviecol, Oplog, Adminlog, Userlog
+from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm, PwdForm, AuthForm
+from app.models import Admin, Tag, Movie, Preview, User, Comment, Moviecol, Oplog, Adminlog, Userlog, Auth
 # 登陆的装饰器
 from functools import wraps
 from app import db, app
@@ -577,11 +577,22 @@ def role_list():
     return render_template("admin/role_list.html")
 
 
+# -----------------------------------------Auth--------------------------------------------------
 # 权限添加
-@admin.route('/auth/add/')
+@admin.route('/auth/add/', methods=["GET", "POST"])
 @admin_login_req
 def auth_add():
-    return render_template("admin/auth_add.html")
+    form = AuthForm()
+    if form.validate_on_submit():
+        data = form.data
+        auth = Auth(
+            name=data["name"],
+            url=data["url"]
+        )
+        db.session.add(auth)
+        db.session.commit()
+        flash("添加权限成功", "ok")
+    return render_template("admin/auth_add.html", form=form)
 
 
 # 权限列表

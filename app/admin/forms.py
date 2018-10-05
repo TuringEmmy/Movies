@@ -215,6 +215,7 @@ class PreviewForm(FlaskForm):
         }
     )
 
+
 # -----------------------------PssswordModify--------------------------
 class PwdForm(FlaskForm):
     old_pwd = PasswordField(
@@ -239,23 +240,53 @@ class PwdForm(FlaskForm):
             "placeholder": "请输入新密码!",
         }
     )
-    submit=SubmitField(
+    submit = SubmitField(
         "确认修改",
         render_kw={
-            "class":"btn btn-primary",
+            "class": "btn btn-primary",
         }
     )
 
-    def validata_old_pwd(self,field):
+    def validata_old_pwd(self, field):
         # 获取密码
         from flask import session
-        pwd =field.data
+        pwd = field.data
         # 获取管理员
-        name =session["admin"]
-        admin=Admin.query.filter_by(
-            name =name
+        name = session["admin"]
+        admin = Admin.query.filter_by(
+            name=name
         ).first()
         if not admin.check_pwd(pwd):
             raise ValidationError("旧密码错误！")
 
+
 # -------------------------------AuthForm--------------------------------
+class AuthForm(FlaskForm):
+    name = StringField(
+        label="权限",
+        validators=[
+            DataRequired("请输入权限名称!")
+        ],
+        description='权限',
+        render_kw={
+            "class": "form-control",
+            "id": "input_name",
+            "placeholder": "请输入权限名称！"
+        }
+    )
+    url=StringField(
+        label="权限地址",
+        validators=[
+            DataRequired("请输入权限地址！")
+        ],
+        render_kw={
+            "class":"form-control",
+            "placeholder":"请输入权限地址！"
+        }
+    )
+    submit = SubmitField(
+        label="添加权限",
+        render_kw={
+            "class": "btn btn-primary"
+        }
+    )

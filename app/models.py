@@ -161,8 +161,9 @@ class Auth(db.Model):
     __tablename__ = "auth"
     # 编号
     id = db.Column(db.Integer, primary_key=True)
-    # 标题
-    title = db.Column(db.String(255), unique=True)
+    # # 标题
+    # title = db.Column(db.String(255), unique=True)
+    name = db.Column(db.String(100), unique=True)  # 名称
     # 地址
     url = db.Column(db.String(255), unique=True)
     # 添加时间
