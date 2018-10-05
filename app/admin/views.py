@@ -17,6 +17,17 @@ import uuid
 import datetime
 
 
+# 上下文处理器，封装全局变量
+@admin.context_processor
+def tpl_extra():
+    data = dict(
+        # 用于用户页面的当前时间显示
+        online_time=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    )
+    # 数据直接传输到admin.html页面
+    return data
+
+
 # 登陆装饰器
 def admin_login_req(f):
     @wraps(f)
@@ -79,15 +90,15 @@ def logout():
 def pwd():
     form = PwdForm()
     if form.validate_on_submit():
-        data=form.data
+        data = form.data
         # 查询admin
-        admin=Admin.query.filter_by(name=session['admin']).first()
+        admin = Admin.query.filter_by(name=session['admin']).first()
         # 引入生成密码的包
         from werkzeug.security import generate_password_hash
-        admin.pwd=generate_password_hash(data["new_pwd"])
+        admin.pwd = generate_password_hash(data["new_pwd"])
         db.session.add(admin)
         db.session.commit()
-        flash("修改密码成功！请重新登录!","ok")
+        flash("修改密码成功！请重新登录!", "ok")
         redirect(url_for("admin.logout"))
     return render_template("admin/pwd.html", form=form)
 

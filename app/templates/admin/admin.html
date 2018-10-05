@@ -48,7 +48,8 @@
                                      class="img-circle" alt="User Image">
                                 <p>
                                     {{ session['admin'] }}
-                                    <small>2018-10-02</small>
+{#                                    直接使用view.py模块的上下文装饰器即可#}
+                                    <small>{{ online_time }}</small>
                                 </p>
                             </li>
                             <li class="user-footer">
