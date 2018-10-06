@@ -206,3 +206,6 @@ class UserdetailForm(FlaskForm):
         }
 
     )
+# ---------------------------------Password-------------------------------------------
+class PwdForm(FlaskForm):
+    
