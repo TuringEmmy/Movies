@@ -1,6 +1,14 @@
 # coding=utf-8
 from . import home
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, flash
+from app.home.forms import RegistForm
+from app.models import User
+
+# 导入密码加密的工具
+from werkzeug.security import generate_password_hash
+from app import db
+# uuid的使用
+import uuid
 
 
 # # 主页
@@ -22,10 +30,24 @@ def logout():
     return redirect(url_for("home.login"))
 
 
-# 注册
-@home.route('/regist/')
+# 会员注册
+@home.route('/regist/', methods=["POST", "GET"])
 def regist():
-    return render_template("home/regist.html")
+    form = RegistForm()
+    # 获取前段数据
+    if form.validate_on_submit():
+        data = form.data
+        user = User(
+            name=data["name"],
+            email=data["email"],
+            phone=data["phone"],
+            pwd=generate_password_hash(data["pwd"]),
+            uuid=uuid.uuid4().hex
+        )
+        db.session.add(user)
+        db.session.commit()
+        flash("注册成功", "ok")
+    return render_template("home/regist.html", form=form)
 
 
 # 用户
@@ -81,7 +103,6 @@ def search():
 @home.route('/play/')
 def play():
     return render_template("home/play.html")
-
 
 # 404页面
 # 注意这个页面不是在蓝图的页面进行的,而是初始化文件当中进行的
