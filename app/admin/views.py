@@ -624,7 +624,12 @@ def role_edit(id=None):
         form.auths.data = list(map(lambda v: int(v), auths.split(",")))
     if form.validate_on_submit():
         data = form.data
-        flash("修改预告成功", "ok")
+        # 操作存入数据库当中
+        role.name = data["name"]
+        role.auths= ",".join(map(lambda v:str(v), data["auths"]))
+        db.session.add(role)
+        db.session.commit()
+        flash("修改角色成功", "ok")
     return render_template("admin/role_edit.html", form=form, role=role)
 
 

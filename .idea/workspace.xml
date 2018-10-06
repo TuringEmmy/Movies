@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/admin/role_edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views.py" afterPath="$PROJECT_DIR$/app/admin/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/admin/role_list.html" afterPath="$PROJECT_DIR$/app/templates/admin/role_list.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="627" column="68" lean-forward="true" selection-start-line="627" selection-start-column="68" selection-end-line="627" selection-end-column="68" />
+            <state relative-caret-position="79">
+              <caret line="626" column="19" lean-forward="true" selection-start-line="626" selection-start-column="19" selection-end-line="626" selection-end-column="19" />
               <folding>
                 <element signature="e#15#34#0" expanded="true" />
                 <element signature="e#3451#4566#0" expanded="false" />
@@ -38,10 +36,10 @@
                 <element signature="e#10769#11487#0" expanded="false" />
                 <element signature="e#12274#13083#0" expanded="false" />
                 <element signature="e#17950#18159#0" expanded="false" />
-                <element signature="e#19328#19642#0" expanded="false" />
-                <element signature="e#19755#19964#0" expanded="false" />
-                <element signature="e#20071#20288#0" expanded="false" />
-                <element signature="e#20405#20794#0" expanded="false" />
+                <element signature="e#19504#19818#0" expanded="false" />
+                <element signature="e#19931#20140#0" expanded="false" />
+                <element signature="e#20247#20464#0" expanded="false" />
+                <element signature="e#20581#20970#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -177,8 +175,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="24" />
-    <option name="width" value="1327" />
-    <option name="height" value="601" />
+    <option name="width" value="826" />
+    <option name="height" value="561" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -638,13 +636,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00025" summary="movie play page">
-      <created>1538406358894</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1538406358894</updated>
-    </task>
     <task id="LOCAL-00026" summary="movie play page">
       <created>1538445098661</created>
       <option name="number" value="00026" />
@@ -981,11 +972,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538793403243</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="button with del and edit in role_list is over">
+      <created>1538795984458</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1538795984458</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="24" width="1327" height="601" extended-state="6" />
+    <frame x="35" y="24" width="826" height="561" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.292607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -994,7 +992,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35177866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38197425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249226" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45916796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1033,7 +1031,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="movie complished&#10;" />
     <MESSAGE value="movie add over&#10;" />
     <MESSAGE value="movie add over[bug]&#10;&lt;return redirect(url_for(&quot;admin.movie_add&quot;))&gt;&#10;ignore add&quot;url_for&quot;&#10;" />
     <MESSAGE value="movie list appear,but not edit and delete" />
@@ -1058,7 +1055,8 @@
     <MESSAGE value="solve view.py in function role_add()  bug &#10;&lt;print(data)&gt; is not appear in recnentry." />
     <MESSAGE value="solve view.py in function role_add()  bug &#10;&lt;print(data)&gt; is not appear in recnentry.&#10;and then asve in database" />
     <MESSAGE value="role lis is ok ,just need button in del and edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="role lis is ok ,just need button in del and edit" />
+    <MESSAGE value="button with del and edit in role_list is over" />
+    <option name="LAST_COMMIT_MESSAGE" value="button with del and edit in role_list is over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1381,8 +1379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="627" column="68" lean-forward="true" selection-start-line="627" selection-start-column="68" selection-end-line="627" selection-end-column="68" />
+        <state relative-caret-position="79">
+          <caret line="626" column="19" lean-forward="true" selection-start-line="626" selection-start-column="19" selection-end-line="626" selection-end-column="19" />
           <folding>
             <element signature="e#15#34#0" expanded="true" />
             <element signature="e#3451#4566#0" expanded="false" />
@@ -1390,10 +1388,10 @@
             <element signature="e#10769#11487#0" expanded="false" />
             <element signature="e#12274#13083#0" expanded="false" />
             <element signature="e#17950#18159#0" expanded="false" />
-            <element signature="e#19328#19642#0" expanded="false" />
-            <element signature="e#19755#19964#0" expanded="false" />
-            <element signature="e#20071#20288#0" expanded="false" />
-            <element signature="e#20405#20794#0" expanded="false" />
+            <element signature="e#19504#19818#0" expanded="false" />
+            <element signature="e#19931#20140#0" expanded="false" />
+            <element signature="e#20247#20464#0" expanded="false" />
+            <element signature="e#20581#20970#0" expanded="false" />
           </folding>
         </state>
       </provider>
