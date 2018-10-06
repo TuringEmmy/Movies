@@ -695,7 +695,7 @@ def auth_edit(id=None):
 
 # ---------------------------------AdminManage---------------------------------------------
 # 添加管理员
-@admin.route('/admin/add/',methods=["GET","POST"])
+@admin.route('/admin/add/', methods=["GET", "POST"])
 @admin_login_req
 def admin_add():
     form = AdminForm()
@@ -716,7 +716,16 @@ def admin_add():
 
 
 # 管理员列表
-@admin.route('/admin/list/')
+@admin.route('/admin/list/<int:page>', methods=["GET"])
 @admin_login_req
-def admin_list():
-    return render_template("admin/admin_list.html")
+def admin_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Admin.query.join(
+        Role
+    ).filter(
+        Role.id==Admin.role_id
+    ).order_by(
+        Admin.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/admin_list.html", page_data=page_data)
