@@ -584,10 +584,15 @@ def role_add():
 
 
 # 角色列表
-@admin.route('/role/list/')
+@admin.route('/role/list/<int:page>/',methods=["GET"])
 @admin_login_req
-def role_list():
-    return render_template("admin/role_list.html")
+def role_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Role.query.order_by(
+        Role.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("admin/role_list.html",page_data=page_data)
 
 
 # -----------------------------------------Auth--------------------------------------------------
