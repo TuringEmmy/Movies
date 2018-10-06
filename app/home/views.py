@@ -273,6 +273,7 @@ def animation():
 @home.route('/search/')
 @user_login_req
 def search():
+    
     return render_template("home/search.html")
 
 
