@@ -102,3 +102,34 @@ class RegistForm(FlaskForm):
         if user == 1:
             raise ValidationError("电话已经存在！")
 
+class LoginForm(FlaskForm):
+    name = StringField(
+        label='账号',
+        validators=[
+            # 验证账号不能为空
+            DataRequired("请输入账号")
+        ],
+        description='账号',
+        # 附加选项
+        render_kw={
+            "class": "form-control input-lg",
+            "placeholder": "请输入账号!",
+        }
+    )
+    pwd = PasswordField(
+        label="密码",
+        validators=[
+            DataRequired("请输入密码")
+        ],
+        description="密码",
+        render_kw={
+            "class": "form-control input-lg",
+            "placeholder": "请输入密码!",
+        }
+    )
+    submit = SubmitField(
+        "登陆",
+        render_kw={
+            "class": "btn btn-lg btn-success btn-block",
+        }
+    )

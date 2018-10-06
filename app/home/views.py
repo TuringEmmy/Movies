@@ -1,14 +1,28 @@
 # coding=utf-8
 from . import home
-from flask import render_template, redirect, url_for, flash
-from app.home.forms import RegistForm
-from app.models import User
+from flask import render_template, redirect, url_for, flash, session, request
+from app.home.forms import RegistForm, LoginForm
+from app.models import User, Userlog
 
 # 导入密码加密的工具
 from werkzeug.security import generate_password_hash
 from app import db
 # uuid的使用
 import uuid
+
+# 进行登陆的装饰器
+from functools import wraps
+
+
+# 登陆装饰器
+def user_login_req(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "user" not in session:
+            return redirect(url_for("home.login", next=request.url))
+        return f(*args, **kwargs)
+
+    return decorated_function
 
 
 # # 主页
@@ -19,14 +33,35 @@ import uuid
 
 
 # 登陆
-@home.route("/login/")
+@home.route("/login/", methods=["POST", "GET"])
 def login():
-    return render_template("home/login.html")
+    form = LoginForm()
+    if form.validate_on_submit():
+        data = form.data
+        user = User.query.filter_by(name=data["name"]).first()
+        if not user.check_password(data["pwd"]):
+            flash("密码错误！", "err")
+            return redirect(url_for("home.login"))
+        # 如果正确，就启动session机制,还要使用UserLog
+        session["user"] = user.name
+        session["user_id"] = user.id
+        # 处理完毕之后一定要记得处理登陆日志
+        userlog = Userlog(
+            user_id=user.id,
+            ip=request.remote_addr
+        )
+        db.session.add(userlog)
+        db.session.commit()
+        # 登陆成功之后，进行跳转
+        return redirect(url_for("home.user"))
+    return render_template("home/login.html", form=form)
 
 
 # 退出
 @home.route("/logout/")
 def logout():
+    session.pop("user", None)
+    session.pop("user_id", None)
     return redirect(url_for("home.login"))
 
 
