@@ -29,15 +29,15 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1189">
-              <caret line="645" column="28" lean-forward="true" selection-start-line="645" selection-start-column="28" selection-end-line="645" selection-end-column="28" />
+            <state relative-caret-position="64">
+              <caret line="575" column="30" lean-forward="true" selection-start-line="575" selection-start-column="30" selection-end-line="575" selection-end-column="30" />
               <folding>
                 <element signature="e#15#34#0" expanded="true" />
                 <element signature="e#3318#4433#0" expanded="false" />
                 <element signature="e#6236#7553#0" expanded="false" />
                 <element signature="e#10494#11212#0" expanded="false" />
                 <element signature="e#11999#12808#0" expanded="false" />
-                <element signature="e#17440#17486#0" expanded="false" />
+                <element signature="e#17424#17470#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -153,8 +153,8 @@
         <option value="$PROJECT_DIR$/app/templates/admin/login.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/admin.html" />
         <option value="$PROJECT_DIR$/app/admin/forms.py" />
-        <option value="$PROJECT_DIR$/app/admin/views.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/role_add.html" />
+        <option value="$PROJECT_DIR$/app/admin/views.py" />
       </list>
     </option>
   </component>
@@ -628,13 +628,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00022" summary="vip page">
-      <created>1538404903006</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1538404903006</updated>
-    </task>
     <task id="LOCAL-00023" summary="vip page">
       <created>1538405207561</created>
       <option name="number" value="00023" />
@@ -971,12 +964,19 @@
       <option name="project" value="LOCAL" />
       <updated>1538709678912</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="solve view.py in function role_add()  bug &#10;&lt;print(data)&gt; is not appear in recnentry.">
+      <created>1538792675100</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1538792675102</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="24" width="1327" height="601" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21634242" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -984,7 +984,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5118577" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5118577" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249226" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45916796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1023,7 +1023,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tag list div page complished" />
     <MESSAGE value="tag list :&lt;return redirect(url_for(&quot;admin.tag_edit&quot;, id=id))&gt; find bug is 'id = id'" />
     <MESSAGE value="movie bengin&#10;module&#9;&#9;Movie&#10;form&#9;&#9;MovieForm&#10;requestMethod&#9;GET,POST&#10;requestControl&#9;@admin_login_req" />
     <MESSAGE value="movie complished&#10;" />
@@ -1048,7 +1047,8 @@
     <MESSAGE value="moviecol  in button del is over" />
     <MESSAGE value="modify password &#10;module&#9;&#9;&#9;&#9;Admin&#10;form&#9;&#9;&#9;&#9;PwdForm&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@admin_login_req" />
     <MESSAGE value="modify password is over" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify password is over" />
+    <MESSAGE value="solve view.py in function role_add()  bug &#10;&lt;print(data)&gt; is not appear in recnentry." />
+    <option name="LAST_COMMIT_MESSAGE" value="solve view.py in function role_add()  bug &#10;&lt;print(data)&gt; is not appear in recnentry." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1362,15 +1362,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1189">
-          <caret line="645" column="28" lean-forward="true" selection-start-line="645" selection-start-column="28" selection-end-line="645" selection-end-column="28" />
+        <state relative-caret-position="64">
+          <caret line="575" column="30" lean-forward="true" selection-start-line="575" selection-start-column="30" selection-end-line="575" selection-end-column="30" />
           <folding>
             <element signature="e#15#34#0" expanded="true" />
             <element signature="e#3318#4433#0" expanded="false" />
             <element signature="e#6236#7553#0" expanded="false" />
             <element signature="e#10494#11212#0" expanded="false" />
             <element signature="e#11999#12808#0" expanded="false" />
-            <element signature="e#17440#17486#0" expanded="false" />
+            <element signature="e#17424#17470#0" expanded="false" />
           </folding>
         </state>
       </provider>

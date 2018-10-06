@@ -572,14 +572,14 @@ def role_add():
     if form.validate_on_submit():
         data = form.data
         print(data)
-        # role = Role(
-        #     name=data["name"],
-        #     # auths=",".join(data["auths"])
-        #     auths=",".join(map(lambda v: str(v), data["auths"]))
-        # )
-        # db.session.add(role)
-        # db.session.commit()
-        # flash("添加角色成功", "ok")
+        role = Role(
+            name=data["name"],
+            # auths=",".join(data["auths"])
+            auths=",".join(map(lambda v: str(v), data["auths"]))
+        )
+        db.session.add(role)
+        db.session.commit()
+        flash("添加角色成功", "ok")
     return render_template("admin/role_add.html", form=form)
 
 
