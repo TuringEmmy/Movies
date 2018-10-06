@@ -1,15 +1,18 @@
 # coding=utf-8
 from . import home
 from flask import render_template, redirect, url_for, flash, session, request
-from app.home.forms import RegistForm, LoginForm
+from app.home.forms import RegistForm, LoginForm, UserdetailForm
 from app.models import User, Userlog
 
 # 导入密码加密的工具
 from werkzeug.security import generate_password_hash
-from app import db
+# 引入安全的名称,用于用户页面的头像
+from werkzeug.utils import secure_filename
+from app import db, app
 # uuid的使用
 import uuid
-
+import os
+import datetime
 # 进行登陆的装饰器
 from functools import wraps
 
@@ -24,6 +27,12 @@ def user_login_req(f):
 
     return decorated_function
 
+
+# 修改文件名称
+def change_filename(filename):
+    fileinfo=os.path.splitext(filename)
+    filename=datetime.datetime.now().strftime("%Y%m%d%H%M%S")+str(uuid.uuid4().hex)+fileinfo[-1]
+    return filename
 
 # # 主页
 # @home.route("/")
@@ -86,9 +95,51 @@ def regist():
 
 
 # 用户
-@home.route('/user/')
+@home.route('/user/', methods=["POST", "GET"])
 def user():
-    return render_template("home/user.html")
+    form = UserdetailForm()
+    # user是为了，修改用户信息的原始值
+    user = User.query.get(int(session["user_id"]))
+    form.face.validators = []
+    if request.method == "GET":
+        form.name.data = user.name
+        form.email.data = user.email
+        form.phone.data = user.phone
+        form.info.data = user.info
+    if form.validate_on_submit():
+        data = form.data
+        file_face=secure_filename(form.face.data.filename)
+        if not os.path.exists(app.config["FC_DIR"]):
+            os.makedirs(app.config["FC_DIR"])
+            os.chmod(app.config["FC_DIR"],'rw')
+        user.face=change_filename(file_face)
+        form.face.data.save(app.config["FC_DIR"]+user.face)
+
+        # 前提是不能重复
+        name_count=User.query.filter_by(name=data["name"]).count()
+        if data["name"]!=user.name and name_count==1:
+            flash("昵称已经存在","err")
+            return redirect(url_for("home.user"))
+        user.name=data["name"]
+
+        email_count = User.query.filter_by(email=data["email"]).count()
+        if data["email"] != user.email and email_count == 1:
+            flash("邮箱已经存在", "err")
+            return redirect(url_for("home.user"))
+        user.email = data["email"]
+
+        phone_count = User.query.filter_by(phone=data["phone"]).count()
+        if data["phone"] != user.phone and phone_count == 1:
+            flash("电话已经存在", "err")
+            return redirect(url_for("home.user"))
+        user.phone = data["phone"]
+
+        user.info = data["info"]
+        db.session.add(user)
+        db.session.commit()
+        flash("修改资料成功","ok")
+        return redirect(url_for("home.user"))
+    return render_template("home/user.html", form=form, user=user)
 
 
 # 修改密码
