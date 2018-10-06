@@ -24,7 +24,7 @@
                             <td style="width:90%;">
                                 {% for v in tags %}
                                     <a class="label label-info"
-                                       href="{{ url_for('home.index') }}?tag_id={{ v.id }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num={{ choice['comment_num'] }}"><span
+                                       href="{{ url_for('home.index',page=1) }}?tag_id={{ v.id }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num={{ choice['comment_num'] }}"><span
                                             class="glyphicon glyphicon-tag"></span>&nbsp;{{ v.name }}
                                     </a>
                                     &nbsp;
@@ -37,7 +37,7 @@
                                 {% for v in range(1,6) %}
 
                                     <a class="label label-warning"
-                                       href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ v }}&time={{ choice['time'] }}&play_num=1&comment_num={{ choice['comment_num'] }}"><span
+                                       href="{{ url_for('home.index',page=1) }}?tag_id={{ choice['tag_id'] }}&star={{ v }}&time={{ choice['time'] }}&play_num=1&comment_num={{ choice['comment_num'] }}"><span
                                             class="glyphicon glyphicon-star"></span>&nbsp;{{ v }}星</a>
                                 {% endfor %}
                             </td>
@@ -46,12 +46,12 @@
                             <td>上映时间</td>
                             <td>
                                 <a class="label label-default"
-                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time=1&play_num=2&comment_num={{ choice['comment_num'] }}"><span
+                                   href="{{ url_for('home.index',page=1) }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time=1&play_num=2&comment_num={{ choice['comment_num'] }}"><span
                                         class="glyphicon glyphicon-time"></span>&nbsp;最近</span>
                                 </a>
                                 <a class="label label-default"><span
                                         class="glyphicon glyphicon-time"
-                                        href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time=1&play_num=2&comment_num={{ choice['comment_num'] }}"></span>&nbsp;&nbsp;更早</span>
+                                        href="{{ url_for('home.index',page=1) }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time=1&play_num=2&comment_num={{ choice['comment_num'] }}"></span>&nbsp;&nbsp;更早</span>
                                 </a>
                             </td>
                         </tr>
@@ -59,25 +59,24 @@
                             <td>播放数量</td>
                             <td>
                                 <a class="label label-success"
-                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num=1&comment_num={{ choice['comment_num'] }}><span class="
-                                   glyphicon glyphicon-arrow-down" "></span>&nbsp;&nbsp;从高到底</span>
+                                   href="{{ url_for('home.index',page=1) }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num=1&comment_num={{ choice['comment_num'] }}"><span class="
+                                   glyphicon glyphicon-arrow-down" ></span>&nbsp;&nbsp;从高到底</span>
                                 </a>
                                 &nbsp;
                                 <a class="label label-danger"
-                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num=2&comment_num={{ choice['comment_num'] }}><span
-                                        class=" glyphicon glyphicon-arrow-up" "></span>&nbsp;&nbsp;从低到高</a>
+                                   href="{{ url_for('home.index',page=1) }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num=2&comment_num={{ choice['comment_num'] }}"><span class=" glyphicon glyphicon-arrow-up" ></span>&nbsp;&nbsp;从低到高</a>
                             </td>
                         </tr>
                         <tr>
                             <td>评论数量</td>
                             <td>
                                 <a class="label label-success"
-                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num=1"><span
+                                   href="{{ url_for('home.index',page=1) }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num=1"><span
                                         class="glyphicon glyphicon-arrow-down"></span>&nbsp;从高到底</span>
                                 </a>
                                 &nbsp;
                                 <a class="label label-danger"
-                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num=2"><span
+                                   href="{{ url_for('home.index',page=1) }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num=2"><span
                                         class="glyphicon glyphicon-arrow-up"></span>&nbsp;从低到高</a>
                             </td>
                         </tr>

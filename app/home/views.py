@@ -2,7 +2,7 @@
 from . import home
 from flask import render_template, redirect, url_for, flash, session, request
 from app.home.forms import RegistForm, LoginForm, UserdetailForm, PwdForm
-from app.models import User, Userlog, Preview, Tag
+from app.models import User, Userlog, Preview, Tag, Movie
 
 # 导入密码加密的工具
 from werkzeug.security import generate_password_hash
@@ -201,14 +201,56 @@ def moviecol():
 
 
 # 首页对标签进行筛选
-@home.route("/")
-def index():
+@home.route("/<int:page>/",methods=["GET"])
+def index(page=None):
     tags = Tag.query.all()
+    page_data = Movie.query
+    # 标签
     tag_id = request.args.get("tag_id", 0)
+    if int(tag_id) != 0:
+        page_data = page_data.filter_by(tag_id=int(tag_id))
+    # 星际
     star = request.args.get("star", 0)
+    if int(star) != 0:
+        page_data = page_data.filter_by(star=int(star))
+    # 时间
     time = request.args.get("time", 0)
+    if int(time) != 0:
+        if int(time) == 1:
+            # 升序
+            page_data = page_data.order_by(
+                Movie.addtime.desc()
+            )
+            # 降序
+        else:
+            page_data = page_data.order_by(
+                Movie.addtime.asc()
+            )
+    # 播放量
     play_num = request.args.get("play_num", 0)
+    if int(play_num) != 0:
+        if int(play_num) == 1:
+            page_data = page_data.order_by(
+                Movie.playnum.desc()
+            )
+        else:
+            page_data = page_data.order_by(
+                Movie.playnum.asc()
+            )
+    # 评论量
     comment_num = request.args.get("comment_num", 0)
+    if comment_num != 0:
+        if int(comment_num) == 1:
+            page_data = page_data.order_by(
+                Movie.commentum.desc()
+            )
+        else:
+            page_data = page_data.order_by(
+                Movie.commentum.asc()
+            )
+    if page is None:
+        page=1
+    page_data = page_data.paginate(page=page, per_page=10)
     choice = dict(
         tag_id=tag_id,
         star=star,
@@ -216,7 +258,7 @@ def index():
         play_num=play_num,
         comment_num=comment_num
     )
-    return render_template("home/index.html", tags=tags, choice=choice)
+    return render_template("home/index.html", tags=tags, choice=choice, page_data=page_data)
 
 
 # 动画:上映预告
