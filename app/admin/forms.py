@@ -3,12 +3,13 @@ from flask_wtf import FlaskForm
 # FileField用于电影管理的url,TextAreaField文本框,星际选择SelectField
 from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, SelectField, SelectMultipleField
 # 调用验证器
-from wtforms.validators import DataRequired, ValidationError
+from wtforms.validators import DataRequired, ValidationError, EqualTo
 # 登陆表单验证,使用Admin数据模型
-from app.models import Admin, Tag, Preview, Auth
+from app.models import Admin, Tag, Auth, Role
 
 tags = Tag.query.all()
 auth_list = Auth.query.all()
+role_list = Role.query.all()
 
 
 # -----------------------------loginManager----------------------------
@@ -321,6 +322,64 @@ class RoleForm(FlaskForm):
     )
     submit = SubmitField(
         "添加",
+        render_kw={
+            "class": "btn btn-primary",
+        }
+    )
+
+
+# --------------------------------------AdminForm-----------------------------
+class AdminForm(FlaskForm):
+    """Admin Manager From"""
+    name = StringField(
+        label='管理员名称',
+        validators=[
+            # 验证账号不能为空
+            DataRequired("请输入管理员名称")
+        ],
+        description='管理员名称',
+        # 附加选项
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入管理员名称!"
+        }
+
+    )
+    # 定义密码框
+    pwd = PasswordField(
+        label="管理员密码",
+        validators=[
+            DataRequired("请输入管理员密码")
+        ],
+        description="管理员密码",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入管理员密码!"
+        }
+    )
+    reppwd = PasswordField(
+        label="管理员重复密码",
+        validators=[
+            DataRequired("请输入管理员重复密码"),
+            EqualTo("pwd", message="两次密码不一致！")
+        ],
+        description="管理员重复密码",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入管理员重复密码!"
+        }
+    )
+    role_id = SelectField(
+        label="所属角色",
+        coerce=int,
+        choices=[(v.id, v.name) for v in role_list],
+        render_kw={
+            "class": "form-control",
+        }
+    )
+    # 登陆按钮
+    submit = SubmitField(
+        "编辑",
         render_kw={
             "class": "btn btn-primary",
         }

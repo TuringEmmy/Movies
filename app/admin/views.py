@@ -4,7 +4,7 @@ from flask import render_template, redirect, url_for, flash, session, request
 # flash用于登录页面错误返回
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
-from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm, PwdForm, AuthForm, RoleForm
+from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm, PwdForm, AuthForm, RoleForm, AdminForm
 from app.models import Admin, Tag, Movie, Preview, User, Comment, Moviecol, Oplog, Adminlog, Userlog, Auth, Role
 # 登陆的装饰器
 from functools import wraps
@@ -695,10 +695,24 @@ def auth_edit(id=None):
 
 # ---------------------------------AdminManage---------------------------------------------
 # 添加管理员
-@admin.route('/admin/add/')
+@admin.route('/admin/add/',methods=["GET","POST"])
 @admin_login_req
 def admin_add():
-    return render_template("adminadmin_add.html")
+    form = AdminForm()
+    from werkzeug.security import generate_password_hash
+    if form.validate_on_submit():
+        data = form.data
+        admin = Admin(
+            name=data["name"],
+            pwd=generate_password_hash(data["pwd"]),
+            role_id=data["role_id"],
+            # 1 代表普通管理员
+            is_super=1
+        )
+        db.session.add(admin)
+        db.session.commit()
+        flash("添加管理员成功", "ok")
+    return render_template("admin/admin_add.html", form=form)
 
 
 # 管理员列表

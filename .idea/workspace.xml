@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/forms.py" afterPath="$PROJECT_DIR$/app/admin/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views.py" afterPath="$PROJECT_DIR$/app/admin/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/admin/admin_add.html" afterPath="$PROJECT_DIR$/app/templates/admin/admin_add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/admin/role_add.html" afterPath="$PROJECT_DIR$/app/templates/admin/role_add.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,21 +30,20 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="698" column="14" lean-forward="false" selection-start-line="698" selection-start-column="14" selection-end-line="698" selection-end-column="14" />
+            <state relative-caret-position="199">
+              <caret line="710" column="9" lean-forward="true" selection-start-line="710" selection-start-column="9" selection-end-line="710" selection-end-column="9" />
               <folding>
                 <element signature="e#15#34#0" expanded="true" />
-                <element signature="e#3451#4566#0" expanded="false" />
-                <element signature="e#6440#7757#0" expanded="false" />
-                <element signature="e#10769#11487#0" expanded="false" />
-                <element signature="e#12274#13083#0" expanded="false" />
-                <element signature="e#17950#18159#0" expanded="false" />
-                <element signature="e#18278#18496#0" expanded="false" />
-                <element signature="e#18616#19270#0" expanded="false" />
-                <element signature="e#19506#19820#0" expanded="false" />
-                <element signature="e#19933#20142#0" expanded="false" />
-                <element signature="e#20249#20466#0" expanded="false" />
-                <element signature="e#20583#20972#0" expanded="false" />
+                <element signature="e#3462#4577#0" expanded="false" />
+                <element signature="e#6451#7768#0" expanded="false" />
+                <element signature="e#10780#11498#0" expanded="false" />
+                <element signature="e#12285#13094#0" expanded="false" />
+                <element signature="e#17961#18170#0" expanded="false" />
+                <element signature="e#18289#18507#0" expanded="false" />
+                <element signature="e#18627#19281#0" expanded="false" />
+                <element signature="e#19517#19831#0" expanded="false" />
+                <element signature="e#19944#20153#0" expanded="false" />
+                <element signature="e#20260#20477#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -50,17 +52,30 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
+            <state relative-caret-position="155">
+              <caret line="383" column="37" lean-forward="false" selection-start-line="383" selection-start-column="37" selection-end-line="383" selection-end-column="37" />
               <folding>
-                <element signature="e#520#1565#0" expanded="false" />
-                <element signature="e#1667#2063#0" expanded="false" />
-                <element signature="e#2170#4536#0" expanded="false" />
-                <element signature="e#4639#5186#0" expanded="false" />
-                <element signature="e#5291#6239#0" expanded="false" />
-                <element signature="e#6344#6993#0" expanded="false" />
-                <element signature="e#7101#7763#0" expanded="false" />
+                <element signature="e#15#46#0" expanded="true" />
+                <element signature="e#555#1600#0" expanded="false" />
+                <element signature="e#1289#1359#0" expanded="false" />
+                <element signature="e#1429#1600#0" expanded="false" />
+                <element signature="e#1702#2098#0" expanded="false" />
+                <element signature="e#2205#4571#0" expanded="false" />
+                <element signature="e#4674#5221#0" expanded="false" />
+                <element signature="e#5326#6274#0" expanded="false" />
+                <element signature="e#6379#7028#0" expanded="false" />
+                <element signature="e#7136#7798#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,7 +126,6 @@
         <option value="$PROJECT_DIR$/app/templates/admin/auth_add.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/auth_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/admin_list.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/admin_add.html" />
         <option value="$PROJECT_DIR$/request.txt" />
         <option value="$PROJECT_DIR$/te.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/tag_add.html" />
@@ -136,12 +150,13 @@
         <option value="$PROJECT_DIR$/app/templates/admin/pwd.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/login.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/admin.html" />
-        <option value="$PROJECT_DIR$/app/admin/forms.py" />
-        <option value="$PROJECT_DIR$/app/templates/admin/role_add.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/grid.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/tag_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/role_edit.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/role_list.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/role_add.html" />
+        <option value="$PROJECT_DIR$/app/admin/forms.py" />
+        <option value="$PROJECT_DIR$/app/templates/admin/admin_add.html" />
         <option value="$PROJECT_DIR$/app/admin/views.py" />
       </list>
     </option>
@@ -155,8 +170,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="24" />
-    <option name="width" value="826" />
-    <option name="height" value="561" />
+    <option name="width" value="1327" />
+    <option name="height" value="601" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -616,13 +631,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00027" summary="movie play page in every page,you can click play button to play movie">
-      <created>1538445135233</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1538445135233</updated>
-    </task>
     <task id="LOCAL-00028" summary="404 page accomplished">
       <created>1538446425031</created>
       <option name="number" value="00028" />
@@ -959,21 +967,28 @@
       <option name="project" value="LOCAL" />
       <updated>1538796233708</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="admin manager begin &#10;module&#9;&#9;&#9;&#9;Admin&#10;form&#9;&#9;&#9;&#9;AdminForm&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@admin_login_req&#10;">
+      <created>1538796455598</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1538796455599</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="24" width="826" height="561" extended-state="6" />
+    <frame x="35" y="24" width="1327" height="601" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29209185" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18988326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38197425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24872449" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35177866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24761905" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45916796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35130972" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1011,7 +1026,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="movie add over[bug]&#10;&lt;return redirect(url_for(&quot;admin.movie_add&quot;))&gt;&#10;ignore add&quot;url_for&quot;&#10;" />
     <MESSAGE value="movie list appear,but not edit and delete" />
     <MESSAGE value="movie list in button del over" />
     <MESSAGE value="movie edit over,but not default url" />
@@ -1036,7 +1050,8 @@
     <MESSAGE value="role lis is ok ,just need button in del and edit" />
     <MESSAGE value="button with del and edit in role_list is over" />
     <MESSAGE value="button w and edit in role_list  for database is over" />
-    <option name="LAST_COMMIT_MESSAGE" value="button w and edit in role_list  for database is over" />
+    <MESSAGE value="admin manager begin &#10;module&#9;&#9;&#9;&#9;Admin&#10;form&#9;&#9;&#9;&#9;AdminForm&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@admin_login_req&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin manager begin &#10;module&#9;&#9;&#9;&#9;Admin&#10;form&#9;&#9;&#9;&#9;AdminForm&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@admin_login_req&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1087,13 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1290,17 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/role_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="62" column="14" lean-forward="true" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
-          <folding>
-            <element signature="e#1533#1550#0#HTML" expanded="true" />
-            <element signature="e#2094#2111#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1349,39 +1346,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/role_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
+        <state relative-caret-position="155">
+          <caret line="383" column="37" lean-forward="false" selection-start-line="383" selection-start-column="37" selection-end-line="383" selection-end-column="37" />
           <folding>
-            <element signature="e#520#1565#0" expanded="false" />
-            <element signature="e#1667#2063#0" expanded="false" />
-            <element signature="e#2170#4536#0" expanded="false" />
-            <element signature="e#4639#5186#0" expanded="false" />
-            <element signature="e#5291#6239#0" expanded="false" />
-            <element signature="e#6344#6993#0" expanded="false" />
-            <element signature="e#7101#7763#0" expanded="false" />
+            <element signature="e#15#46#0" expanded="true" />
+            <element signature="e#555#1600#0" expanded="false" />
+            <element signature="e#1289#1359#0" expanded="false" />
+            <element signature="e#1429#1600#0" expanded="false" />
+            <element signature="e#1702#2098#0" expanded="false" />
+            <element signature="e#2205#4571#0" expanded="false" />
+            <element signature="e#4674#5221#0" expanded="false" />
+            <element signature="e#5326#6274#0" expanded="false" />
+            <element signature="e#6379#7028#0" expanded="false" />
+            <element signature="e#7136#7798#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="698" column="14" lean-forward="false" selection-start-line="698" selection-start-column="14" selection-end-line="698" selection-end-column="14" />
+        <state relative-caret-position="199">
+          <caret line="710" column="9" lean-forward="true" selection-start-line="710" selection-start-column="9" selection-end-line="710" selection-end-column="9" />
           <folding>
             <element signature="e#15#34#0" expanded="true" />
-            <element signature="e#3451#4566#0" expanded="false" />
-            <element signature="e#6440#7757#0" expanded="false" />
-            <element signature="e#10769#11487#0" expanded="false" />
-            <element signature="e#12274#13083#0" expanded="false" />
-            <element signature="e#17950#18159#0" expanded="false" />
-            <element signature="e#18278#18496#0" expanded="false" />
-            <element signature="e#18616#19270#0" expanded="false" />
-            <element signature="e#19506#19820#0" expanded="false" />
-            <element signature="e#19933#20142#0" expanded="false" />
-            <element signature="e#20249#20466#0" expanded="false" />
-            <element signature="e#20583#20972#0" expanded="false" />
+            <element signature="e#3462#4577#0" expanded="false" />
+            <element signature="e#6451#7768#0" expanded="false" />
+            <element signature="e#10780#11498#0" expanded="false" />
+            <element signature="e#12285#13094#0" expanded="false" />
+            <element signature="e#17961#18170#0" expanded="false" />
+            <element signature="e#18289#18507#0" expanded="false" />
+            <element signature="e#18627#19281#0" expanded="false" />
+            <element signature="e#19517#19831#0" expanded="false" />
+            <element signature="e#19944#20153#0" expanded="false" />
+            <element signature="e#20260#20477#0" expanded="false" />
           </folding>
         </state>
       </provider>
