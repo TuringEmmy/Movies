@@ -5,9 +5,10 @@ from wtforms import StringField, PasswordField, SubmitField, FileField, TextArea
 # 调用验证器
 from wtforms.validators import DataRequired, ValidationError
 # 登陆表单验证,使用Admin数据模型
-from app.models import Admin, Tag, Preview
+from app.models import Admin, Tag, Preview, Auth
 
 tags = Tag.query.all()
+auth_list = Auth.query.all()
 
 
 # -----------------------------loginManager----------------------------
@@ -293,7 +294,7 @@ class AuthForm(FlaskForm):
     )
 
 
-# ---------------------------------RoleForm---------------------------------
+# ---------------------------------RoleForm------------------------------
 class RoleForm(FlaskForm):
     name = StringField(
         label="角色名称",
@@ -303,7 +304,6 @@ class RoleForm(FlaskForm):
         description='角色名称',
         render_kw={
             "class": "form-control",
-            "id": "input_name",
             "placeholder": "请输入角色名称！"
         }
     )
@@ -312,14 +312,16 @@ class RoleForm(FlaskForm):
         validators=[
             DataRequired("请选择权限列表")
         ],
+        coerce=int,
+        choices=[(v.id, v.name) for v in auth_list],
         description="权限列表",
         render_kw={
-            "class": "form-control"
-        },
-        submit=SubmitField(
-            "编辑",
-            render_kw={
-                "class": "btn btn-primary"
-            }
-        )
+            "class": "form-control",
+        }
+    )
+    submit = SubmitField(
+        "添加",
+        render_kw={
+            "class": "btn btn-primary",
+        }
     )

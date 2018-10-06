@@ -4,8 +4,8 @@ from flask import render_template, redirect, url_for, flash, session, request
 # flash用于登录页面错误返回
 # 登陆正确就要,进行sessiond的保存
 # 处理登陆
-from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm, PwdForm, AuthForm
-from app.models import Admin, Tag, Movie, Preview, User, Comment, Moviecol, Oplog, Adminlog, Userlog, Auth
+from app.admin.forms import LoginForm, TagForm, MovieForm, PreviewForm, PwdForm, AuthForm, RoleForm
+from app.models import Admin, Tag, Movie, Preview, User, Comment, Moviecol, Oplog, Adminlog, Userlog, Auth, Role
 # 登陆的装饰器
 from functools import wraps
 from app import db, app
@@ -562,12 +562,25 @@ def userloginlog_list(page=None):
     ).paginate(page=page, per_page=10)
     return render_template("admin/userloginlog_list.html", page_data=page_data)
 
+
 # ------------------------------------Role-----------------------------------------
 # 角色添加
-@admin.route('/role/add/')
+@admin.route('/role/add/', methods=["GET", "POST"])
 @admin_login_req
 def role_add():
-    return render_template("admin/role_add.html")
+    form = RoleForm()
+    if form.validate_on_submit():
+        data = form.data
+        print(data)
+        # role = Role(
+        #     name=data["name"],
+        #     # auths=",".join(data["auths"])
+        #     auths=",".join(map(lambda v: str(v), data["auths"]))
+        # )
+        # db.session.add(role)
+        # db.session.commit()
+        # flash("添加角色成功", "ok")
+    return render_template("admin/role_add.html", form=form)
 
 
 # 角色列表
