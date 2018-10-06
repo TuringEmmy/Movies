@@ -626,7 +626,7 @@ def role_edit(id=None):
         data = form.data
         # 操作存入数据库当中
         role.name = data["name"]
-        role.auths= ",".join(map(lambda v:str(v), data["auths"]))
+        role.auths = ",".join(map(lambda v: str(v), data["auths"]))
         db.session.add(role)
         db.session.commit()
         flash("修改角色成功", "ok")
@@ -693,14 +693,15 @@ def auth_edit(id=None):
     return render_template("admin/auth_edit.html", form=form, auth=auth)
 
 
-# 权限添加
+# ---------------------------------AdminManage---------------------------------------------
+# 添加管理员
 @admin.route('/admin/add/')
 @admin_login_req
 def admin_add():
     return render_template("adminadmin_add.html")
 
 
-# 权限列表
+# 管理员列表
 @admin.route('/admin/list/')
 @admin_login_req
 def admin_list():

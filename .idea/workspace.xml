@@ -27,8 +27,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="626" column="19" lean-forward="true" selection-start-line="626" selection-start-column="19" selection-end-line="626" selection-end-column="19" />
+            <state relative-caret-position="95">
+              <caret line="698" column="14" lean-forward="false" selection-start-line="698" selection-start-column="14" selection-end-line="698" selection-end-column="14" />
               <folding>
                 <element signature="e#15#34#0" expanded="true" />
                 <element signature="e#3451#4566#0" expanded="false" />
@@ -36,10 +36,12 @@
                 <element signature="e#10769#11487#0" expanded="false" />
                 <element signature="e#12274#13083#0" expanded="false" />
                 <element signature="e#17950#18159#0" expanded="false" />
-                <element signature="e#19504#19818#0" expanded="false" />
-                <element signature="e#19931#20140#0" expanded="false" />
-                <element signature="e#20247#20464#0" expanded="false" />
-                <element signature="e#20581#20970#0" expanded="false" />
+                <element signature="e#18278#18496#0" expanded="false" />
+                <element signature="e#18616#19270#0" expanded="false" />
+                <element signature="e#19506#19820#0" expanded="false" />
+                <element signature="e#19933#20142#0" expanded="false" />
+                <element signature="e#20249#20466#0" expanded="false" />
+                <element signature="e#20583#20972#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -48,39 +50,17 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preview_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/preview_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="39" column="69" lean-forward="false" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="role_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/role_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="44" column="62" lean-forward="true" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="role_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/role_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="62" column="51" lean-forward="false" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="19">
+              <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
+              <folding>
+                <element signature="e#520#1565#0" expanded="false" />
+                <element signature="e#1667#2063#0" expanded="false" />
+                <element signature="e#2170#4536#0" expanded="false" />
+                <element signature="e#4639#5186#0" expanded="false" />
+                <element signature="e#5291#6239#0" expanded="false" />
+                <element signature="e#6344#6993#0" expanded="false" />
+                <element signature="e#7101#7763#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -636,13 +616,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00026" summary="movie play page">
-      <created>1538445098661</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1538445098661</updated>
-    </task>
     <task id="LOCAL-00027" summary="movie play page in every page,you can click play button to play movie">
       <created>1538445135233</created>
       <option name="number" value="00027" />
@@ -979,21 +952,28 @@
       <option name="project" value="LOCAL" />
       <updated>1538795984458</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="button w and edit in role_list  for database is over">
+      <created>1538796233707</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1538796233708</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="24" width="826" height="561" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.292607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29209185" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38197425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249226" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24872449" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45916796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35130972" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1031,7 +1011,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="movie add over&#10;" />
     <MESSAGE value="movie add over[bug]&#10;&lt;return redirect(url_for(&quot;admin.movie_add&quot;))&gt;&#10;ignore add&quot;url_for&quot;&#10;" />
     <MESSAGE value="movie list appear,but not edit and delete" />
     <MESSAGE value="movie list in button del over" />
@@ -1056,7 +1035,8 @@
     <MESSAGE value="solve view.py in function role_add()  bug &#10;&lt;print(data)&gt; is not appear in recnentry.&#10;and then asve in database" />
     <MESSAGE value="role lis is ok ,just need button in del and edit" />
     <MESSAGE value="button with del and edit in role_list is over" />
-    <option name="LAST_COMMIT_MESSAGE" value="button with del and edit in role_list is over" />
+    <MESSAGE value="button w and edit in role_list  for database is over" />
+    <option name="LAST_COMMIT_MESSAGE" value="button w and edit in role_list  for database is over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1371,16 +1351,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="19">
+          <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
+          <folding>
+            <element signature="e#520#1565#0" expanded="false" />
+            <element signature="e#1667#2063#0" expanded="false" />
+            <element signature="e#2170#4536#0" expanded="false" />
+            <element signature="e#4639#5186#0" expanded="false" />
+            <element signature="e#5291#6239#0" expanded="false" />
+            <element signature="e#6344#6993#0" expanded="false" />
+            <element signature="e#7101#7763#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="626" column="19" lean-forward="true" selection-start-line="626" selection-start-column="19" selection-end-line="626" selection-end-column="19" />
+        <state relative-caret-position="95">
+          <caret line="698" column="14" lean-forward="false" selection-start-line="698" selection-start-column="14" selection-end-line="698" selection-end-column="14" />
           <folding>
             <element signature="e#15#34#0" expanded="true" />
             <element signature="e#3451#4566#0" expanded="false" />
@@ -1388,10 +1376,12 @@
             <element signature="e#10769#11487#0" expanded="false" />
             <element signature="e#12274#13083#0" expanded="false" />
             <element signature="e#17950#18159#0" expanded="false" />
-            <element signature="e#19504#19818#0" expanded="false" />
-            <element signature="e#19931#20140#0" expanded="false" />
-            <element signature="e#20247#20464#0" expanded="false" />
-            <element signature="e#20581#20970#0" expanded="false" />
+            <element signature="e#18278#18496#0" expanded="false" />
+            <element signature="e#18616#19270#0" expanded="false" />
+            <element signature="e#19506#19820#0" expanded="false" />
+            <element signature="e#19933#20142#0" expanded="false" />
+            <element signature="e#20249#20466#0" expanded="false" />
+            <element signature="e#20583#20972#0" expanded="false" />
           </folding>
         </state>
       </provider>
