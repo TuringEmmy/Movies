@@ -42,7 +42,7 @@ class RegistForm(FlaskForm):
         validators=[
             # 验证账号不能为空
             DataRequired("请输入手机号码"),
-            Regexp("1[3458]\\d[9]", message="手机号码格式不正确")
+            Regexp("1[3458]\\d{9}", message="手机号码格式不正确")
         ],
         description='手机号码',
         # 附加选项
@@ -55,8 +55,7 @@ class RegistForm(FlaskForm):
     pwd = PasswordField(
         label="密码",
         validators=[
-            DataRequired("请输入密码"),
-            Email("邮箱格式不正确！")
+            DataRequired("请输入密码")
         ],
         description="密码",
         render_kw={
