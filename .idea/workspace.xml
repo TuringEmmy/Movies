@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="modifyPassword&#9;&#9;page beging&#10;---------------------------------------&#10;module&#9;&#9;&#9;&#9;User&#10;form&#9;&#9;&#9;&#9;PwdFrom&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@user_login_req">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/ui/home_page.html" />
+    <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/forms.py" afterPath="$PROJECT_DIR$/app/home/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views.py" afterPath="$PROJECT_DIR$/app/home/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/animation.html" afterPath="$PROJECT_DIR$/app/templates/home/animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/loginlog.html" afterPath="$PROJECT_DIR$/app/templates/home/loginlog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/menu.html" afterPath="$PROJECT_DIR$/app/templates/home/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/pwd.html" afterPath="$PROJECT_DIR$/app/templates/home/pwd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/ui/admin_page.html" afterPath="$PROJECT_DIR$/app/templates/ui/admin_page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/index.html" afterPath="$PROJECT_DIR$/app/templates/home/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Movies$views.coverage" NAME="views Coverage Results" MODIFIED="1538297694884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/home" />
     <SUITE FILE_PATH="coverage/Movies$models.coverage" NAME="models Coverage Results" MODIFIED="1538546320949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/Movies$manager.coverage" NAME="manager Coverage Results" MODIFIED="1538827389736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Movies$manager.coverage" NAME="manager Coverage Results" MODIFIED="1538832462540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Movies$te.coverage" NAME="te Coverage Results" MODIFIED="1538665854414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -35,8 +28,8 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/home/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="237" column="5" lean-forward="true" selection-start-line="237" selection-start-column="5" selection-end-line="237" selection-end-column="5" />
+            <state relative-caret-position="-81">
+              <caret line="218" column="36" lean-forward="false" selection-start-line="218" selection-start-column="36" selection-end-line="218" selection-end-column="36" />
               <folding>
                 <element signature="e#23#54#0" expanded="true" />
                 <element signature="e#404#2671#0" expanded="false" />
@@ -46,31 +39,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/home/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="114" column="60" lean-forward="true" selection-start-line="114" selection-start-column="60" selection-end-line="114" selection-end-column="60" />
+            <state relative-caret-position="188">
+              <caret line="216" column="19" lean-forward="false" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="19" />
               <folding>
                 <element signature="e#15#33#0" expanded="true" />
-                <element signature="e#509#731#0" expanded="false" />
-                <element signature="e#778#938#0" expanded="false" />
-                <element signature="e#1161#1862#0" expanded="false" />
-                <element signature="e#1912#2013#0" expanded="false" />
-                <element signature="e#2090#2586#0" expanded="false" />
-                <element signature="e#4616#5174#0" expanded="false" />
-                <element signature="e#5570#5865#0" expanded="false" />
+                <element signature="e#514#736#0" expanded="false" />
+                <element signature="e#783#943#0" expanded="false" />
+                <element signature="e#1166#1867#0" expanded="false" />
+                <element signature="e#1917#2018#0" expanded="false" />
+                <element signature="e#2095#2591#0" expanded="false" />
+                <element signature="e#2761#4449#0" expanded="false" />
+                <element signature="e#4621#5179#0" expanded="false" />
+                <element signature="e#5575#5870#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animation.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/home/animation.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/home/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="23" column="62" lean-forward="false" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
-              <folding />
+            <state relative-caret-position="92">
+              <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+              <folding>
+                <element signature="e#862#880#0#HTML" expanded="true" />
+                <element signature="e#923#941#0#HTML" expanded="true" />
+                <element signature="e#1366#1372#0#HTML" expanded="true" />
+                <element signature="e#1462#1468#0#HTML" expanded="true" />
+                <element signature="e#2059#2065#0#HTML" expanded="true" />
+                <element signature="e#2624#2630#0#HTML" expanded="true" />
+                <element signature="e#3021#3027#0#HTML" expanded="true" />
+                <element signature="e#3603#3609#0#HTML" expanded="true" />
+                <element signature="e#4060#4066#0#HTML" expanded="true" />
+                <element signature="e#4163#5122#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,6 +98,7 @@
       <find>user</find>
       <find>def u</find>
       <find>def user</find>
+      <find>index</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/templates/admin/coment_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/oplog_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" />
@@ -147,14 +152,15 @@
         <option value="$PROJECT_DIR$/app/templates/home/layout.html" />
         <option value="$PROJECT_DIR$/app/templates/home/home.html" />
         <option value="$PROJECT_DIR$/app/templates/home/pwd.html" />
-        <option value="$PROJECT_DIR$/app/home/forms.py" />
         <option value="$PROJECT_DIR$/app/templates/home/menu.html" />
         <option value="$PROJECT_DIR$/app/templates/home/loginlog.html" />
         <option value="$PROJECT_DIR$/app/templates/ui/home_page.html" />
         <option value="$PROJECT_DIR$/app/templates/ui/admin_page.html" />
-        <option value="$PROJECT_DIR$/app/home/views.py" />
         <option value="$PROJECT_DIR$/app/templates/home/animation.html" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/app/home/forms.py" />
+        <option value="$PROJECT_DIR$/app/home/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/home/index.html" />
       </list>
     </option>
   </component>
@@ -167,8 +173,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="24" />
-    <option name="width" value="1327" />
-    <option name="height" value="601" />
+    <option name="width" value="698" />
+    <option name="height" value="574" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -292,28 +298,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -690,20 +674,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00037" summary="BG  moviecol page">
-      <created>1538469970679</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1538469970679</updated>
-    </task>
-    <task id="LOCAL-00038" summary="BG  3 logs  page">
-      <created>1538471933430</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1538471933430</updated>
-    </task>
     <task id="LOCAL-00039" summary="BG  role and auth  page bulid in Oct 2 afternoon">
       <created>1538473164089</created>
       <option name="number" value="00039" />
@@ -1033,20 +1003,34 @@
       <option name="project" value="LOCAL" />
       <updated>1538826991757</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="loginlog and preview is over">
+      <created>1538831665456</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1538831665456</updated>
+    </task>
+    <task id="LOCAL-00087" summary="loginlog and preview is over">
+      <created>1538831849750</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1538831849750</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="24" width="1327" height="601" extended-state="6" />
+    <frame x="35" y="24" width="698" height="574" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46692607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46640316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24901186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40711462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24728851" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45746693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1085,7 +1069,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="preview is over in Oct 4" />
     <MESSAGE value="User will begin&#10;module&#9;&#9;User&#10;form&#9;&#9;no&#10;requestMethod&#9;GET,POST&#10;requestControl&#9;@admin_login_req" />
     <MESSAGE value="UserList is appeared in webPage&#10;" />
     <MESSAGE value="del and view in userList-Page over" />
@@ -1110,11 +1093,19 @@
     <MESSAGE value="user login is over" />
     <MESSAGE value="user infor modify is ok,be careful in code struction&#10;&#10;be careful everyday" />
     <MESSAGE value="modifyPassword&#9;&#9;page beging&#10;---------------------------------------&#10;module&#9;&#9;&#9;&#9;User&#10;form&#9;&#9;&#9;&#9;PwdFrom&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@user_login_req" />
-    <option name="LAST_COMMIT_MESSAGE" value="modifyPassword&#9;&#9;page beging&#10;---------------------------------------&#10;module&#9;&#9;&#9;&#9;User&#10;form&#9;&#9;&#9;&#9;PwdFrom&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@user_login_req" />
+    <MESSAGE value="loginlog and preview is over" />
+    <option name="LAST_COMMIT_MESSAGE" value="loginlog and preview is over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="jinja2-line">
+          <url>file://$PROJECT_DIR$/app/templates/home/index.html</url>
+          <line>36</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1372,14 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home/layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1505,18 +1488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="237" column="5" lean-forward="true" selection-start-line="237" selection-start-column="5" selection-end-line="237" selection-end-column="5" />
-          <folding>
-            <element signature="e#23#54#0" expanded="true" />
-            <element signature="e#404#2671#0" expanded="false" />
-            <element signature="e#2706#3383#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/movies/lib/python3.5/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -1533,19 +1504,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="218" column="36" lean-forward="false" selection-start-line="218" selection-start-column="36" selection-end-line="218" selection-end-column="36" />
+          <folding>
+            <element signature="e#23#54#0" expanded="true" />
+            <element signature="e#404#2671#0" expanded="false" />
+            <element signature="e#2706#3383#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/home/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="114" column="60" lean-forward="true" selection-start-line="114" selection-start-column="60" selection-end-line="114" selection-end-column="60" />
+        <state relative-caret-position="188">
+          <caret line="216" column="19" lean-forward="false" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="19" />
           <folding>
             <element signature="e#15#33#0" expanded="true" />
-            <element signature="e#509#731#0" expanded="false" />
-            <element signature="e#778#938#0" expanded="false" />
-            <element signature="e#1161#1862#0" expanded="false" />
-            <element signature="e#1912#2013#0" expanded="false" />
-            <element signature="e#2090#2586#0" expanded="false" />
-            <element signature="e#4616#5174#0" expanded="false" />
-            <element signature="e#5570#5865#0" expanded="false" />
+            <element signature="e#514#736#0" expanded="false" />
+            <element signature="e#783#943#0" expanded="false" />
+            <element signature="e#1166#1867#0" expanded="false" />
+            <element signature="e#1917#2018#0" expanded="false" />
+            <element signature="e#2095#2591#0" expanded="false" />
+            <element signature="e#2761#4449#0" expanded="false" />
+            <element signature="e#4621#5179#0" expanded="false" />
+            <element signature="e#5575#5870#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+          <folding>
+            <element signature="e#862#880#0#HTML" expanded="true" />
+            <element signature="e#923#941#0#HTML" expanded="true" />
+            <element signature="e#1366#1372#0#HTML" expanded="true" />
+            <element signature="e#1462#1468#0#HTML" expanded="true" />
+            <element signature="e#2059#2065#0#HTML" expanded="true" />
+            <element signature="e#2624#2630#0#HTML" expanded="true" />
+            <element signature="e#3021#3027#0#HTML" expanded="true" />
+            <element signature="e#3603#3609#0#HTML" expanded="true" />
+            <element signature="e#4060#4066#0#HTML" expanded="true" />
+            <element signature="e#4163#5122#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

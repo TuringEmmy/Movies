@@ -2,7 +2,7 @@
 from . import home
 from flask import render_template, redirect, url_for, flash, session, request
 from app.home.forms import RegistForm, LoginForm, UserdetailForm, PwdForm
-from app.models import User, Userlog, Preview
+from app.models import User, Userlog, Preview, Tag
 
 # 导入密码加密的工具
 from werkzeug.security import generate_password_hash
@@ -200,12 +200,23 @@ def moviecol():
     return render_template("home/moviecol.html")
 
 
-# 列表
+# 首页对标签进行筛选
 @home.route("/")
-@user_login_req
 def index():
-    # return "<h1 style='color:green'>This is home</h1>"
-    return render_template("home/index.html")
+    tags = Tag.query.all()
+    tag_id = request.args.get("tag_id", 0)
+    star = request.args.get("star", 0)
+    time = request.args.get("time", 0)
+    play_num = request.args.get("play_num", 0)
+    comment_num = request.args.get("comment_num", 0)
+    choice = dict(
+        tag_id=tag_id,
+        star=star,
+        time=time,
+        play_num=play_num,
+        comment_num=comment_num
+    )
+    return render_template("home/index.html", tags=tags, choice=choice)
 
 
 # 动画:上映预告

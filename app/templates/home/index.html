@@ -1,6 +1,6 @@
 {% extends "home/layout.html" %}
 
-{% block content%}
+{% block content %}
     <!--热门电影-->
     <section id="hotmovie" style="margin-top:76px">
         <div class="container">
@@ -22,73 +22,62 @@
                         <tr>
                             <td style="width:10%;">电影标签</td>
                             <td style="width:90%;">
-                                <a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;标签一</a>
-                                &nbsp;
-                                <a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;标签一</a>
-                                &nbsp;
-                                <a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;标签一</a>
-                                &nbsp;
-                                <a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;标签一</a>
-                                &nbsp;
-                                <a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;标签一</a>
+                                {% for v in tags %}
+                                    <a class="label label-info"
+                                       href="{{ url_for('home.index') }}?tag_id={{ v.id }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num={{ choice['comment_num'] }}"><span
+                                            class="glyphicon glyphicon-tag"></span>&nbsp;{{ v.name }}
+                                    </a>
+                                    &nbsp;
+                                {% endfor %}
+
                         </tr>
                         <tr>
                             <td>电影星级</td>
                             <td>
-                                <a class="label label-warning"><span
-                                        class="glyphicon glyphicon-star"></span>&nbsp;一星</a>
-                                &nbsp;
-                                <a class="label label-warning"><span
-                                        class="glyphicon glyphicon-star"></span>&nbsp;二星</a>
-                                &nbsp;
-                                <a class="label label-warning"><span
-                                        class="glyphicon glyphicon-star"></span>&nbsp;三星</a>
-                                &nbsp;
-                                <a class="label label-warning"><span
-                                        class="glyphicon glyphicon-star"></span>&nbsp;四星</a>
-                                &nbsp;
-                                <a class="label label-warning"><span
-                                        class="glyphicon glyphicon-star"></span>&nbsp;五星</a>
+                                {% for v in range(1,6) %}
+
+                                    <a class="label label-warning"
+                                       href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ v }}&time={{ choice['time'] }}&play_num=1&comment_num={{ choice['comment_num'] }}"><span
+                                            class="glyphicon glyphicon-star"></span>&nbsp;{{ v }}星</a>
+                                {% endfor %}
                             </td>
                         </tr>
                         <tr>
                             <td>上映时间</td>
                             <td>
-                                <a class="label label-default"><span
+                                <a class="label label-default"
+                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time=1&play_num=2&comment_num={{ choice['comment_num'] }}"><span
                                         class="glyphicon glyphicon-time"></span>&nbsp;最近</span>
                                 </a>
-                                &nbsp;
                                 <a class="label label-default"><span
-                                        class="glyphicon glyphicon-time"></span>&nbsp;2017</a>
-                                &nbsp;
-                                <a class="label label-default"><span
-                                        class="glyphicon glyphicon-time"></span>&nbsp;2016</a>
-                                &nbsp;
-                                <a class="label label-default"><span
-                                        class="glyphicon glyphicon-time"></span>&nbsp;2015</a>
-                                &nbsp;
-                                <a class="label label-default"><span
-                                        class="glyphicon glyphicon-time"></span>&nbsp;更早</span>
+                                        class="glyphicon glyphicon-time"
+                                        href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time=1&play_num=2&comment_num={{ choice['comment_num'] }}"></span>&nbsp;&nbsp;更早</span>
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>播放数量</td>
                             <td>
-                                <a class="label label-success"><span class="glyphicon glyphicon-arrow-down"></span>&nbsp;从高到底</span>
+                                <a class="label label-success"
+                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num=1&comment_num={{ choice['comment_num'] }}><span class="
+                                   glyphicon glyphicon-arrow-down" "></span>&nbsp;&nbsp;从高到底</span>
                                 </a>
                                 &nbsp;
-                                <a class="label label-danger"><span
-                                        class="glyphicon glyphicon-arrow-up"></span>&nbsp;从低到高</a>
+                                <a class="label label-danger"
+                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num=2&comment_num={{ choice['comment_num'] }}><span
+                                        class=" glyphicon glyphicon-arrow-up" "></span>&nbsp;&nbsp;从低到高</a>
                             </td>
                         </tr>
                         <tr>
                             <td>评论数量</td>
                             <td>
-                                <a class="label label-success"><span class="glyphicon glyphicon-arrow-down"></span>&nbsp;从高到底</span>
+                                <a class="label label-success"
+                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num=1"><span
+                                        class="glyphicon glyphicon-arrow-down"></span>&nbsp;从高到底</span>
                                 </a>
                                 &nbsp;
-                                <a class="label label-danger"><span
+                                <a class="label label-danger"
+                                   href="{{ url_for('home.index') }}?tag_id={{ choice['tag_id'] }}&star={{ choice['star'] }}&time={{ choice['time'] }}&play_num={{ choice['play_num'] }}&comment_num=2"><span
                                         class="glyphicon glyphicon-arrow-up"></span>&nbsp;从低到高</a>
                             </td>
                         </tr>
@@ -110,7 +99,8 @@
                                     <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
                                 </div>
                             </div>
-                            <a href="{{ url_for('home.play') }}" class="btn btn-primary" target="_blank" role="button"><span
+                            <a href="{{ url_for('home.play') }}" class="btn btn-primary" target="_blank"
+                               role="button"><span
                                     class="glyphicon glyphicon-play"></span>&nbsp;播放</a>
                         </div>
                     </div>
