@@ -1,8 +1,8 @@
 # coding=utf-8
 from . import home
 from flask import render_template, redirect, url_for, flash, session, request
-from app.home.forms import RegistForm, LoginForm, UserdetailForm
-from app.models import User, Userlog
+from app.home.forms import RegistForm, LoginForm, UserdetailForm, PwdForm
+from app.models import User, Userlog, Preview
 
 # 导入密码加密的工具
 from werkzeug.security import generate_password_hash
@@ -30,9 +30,10 @@ def user_login_req(f):
 
 # 修改文件名称
 def change_filename(filename):
-    fileinfo=os.path.splitext(filename)
-    filename=datetime.datetime.now().strftime("%Y%m%d%H%M%S")+str(uuid.uuid4().hex)+fileinfo[-1]
+    fileinfo = os.path.splitext(filename)
+    filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S") + str(uuid.uuid4().hex) + fileinfo[-1]
     return filename
+
 
 # # 主页
 # @home.route("/")
@@ -91,11 +92,14 @@ def regist():
         db.session.add(user)
         db.session.commit()
         flash("注册成功", "ok")
+        return redirect(url_for("home.login"))
     return render_template("home/regist.html", form=form)
 
 
+# --------------------------------------User--------------------------------------
 # 用户
 @home.route('/user/', methods=["POST", "GET"])
+@user_login_req
 def user():
     form = UserdetailForm()
     # user是为了，修改用户信息的原始值
@@ -108,19 +112,19 @@ def user():
         form.info.data = user.info
     if form.validate_on_submit():
         data = form.data
-        file_face=secure_filename(form.face.data.filename)
+        file_face = secure_filename(form.face.data.filename)
         if not os.path.exists(app.config["FC_DIR"]):
             os.makedirs(app.config["FC_DIR"])
-            os.chmod(app.config["FC_DIR"],'rw')
-        user.face=change_filename(file_face)
-        form.face.data.save(app.config["FC_DIR"]+user.face)
+            os.chmod(app.config["FC_DIR"], 'rw')
+        user.face = change_filename(file_face)
+        form.face.data.save(app.config["FC_DIR"] + user.face)
 
         # 前提是不能重复
-        name_count=User.query.filter_by(name=data["name"]).count()
-        if data["name"]!=user.name and name_count==1:
-            flash("昵称已经存在","err")
+        name_count = User.query.filter_by(name=data["name"]).count()
+        if data["name"] != user.name and name_count == 1:
+            flash("昵称已经存在", "err")
             return redirect(url_for("home.user"))
-        user.name=data["name"]
+        user.name = data["name"]
 
         email_count = User.query.filter_by(email=data["email"]).count()
         if data["email"] != user.email and email_count == 1:
@@ -137,56 +141,91 @@ def user():
         user.info = data["info"]
         db.session.add(user)
         db.session.commit()
-        flash("修改资料成功","ok")
+        flash("修改资料成功", "ok")
         return redirect(url_for("home.user"))
     return render_template("home/user.html", form=form, user=user)
 
 
+# -------------------------------------password-------------------------------------
 # 修改密码
-@home.route('/pwd/')
+@home.route('/pwd/', methods=["GET", "POST"])
+@user_login_req
 def pwd():
-    return render_template("home/pwd.html")
+    form = PwdForm()
+    if form.validate_on_submit():
+        data = form.data
+        # 查询admin
+        user = User.query.filter_by(name=session['user']).first()
+        if not user.check_password(data["old_pwd"]):
+            flash("旧密码错误！请重新登录!", "err")
+            return redirect(url_for("home.pwd"))
+        user.pwd = generate_password_hash(data["new_pwd"])
+        db.session.add(user)
+        db.session.commit()
+        flash("修改密码成功！请重新登录!", "ok")
+        return redirect(url_for("home.logout"))
+    return render_template("home/pwd.html", form=form)
 
 
+# -------------------------------comment------------------------------------
 # 评论记录
 @home.route('/comments/')
+@user_login_req
 def comments():
     return render_template("home/comments.html")
 
 
-# 登陆日志
-@home.route('/loginlog/')
-def loginlog():
-    return render_template("home/loginlog.html")
+# ----------------------------------------loginlog------------------------------------------
+# 会员登陆日志
+@home.route('/loginlog/<int:page>', methods=["GET"])
+@user_login_req
+def loginlog(page=None):
+    if page is None:
+        page = 1
+    page_data = Userlog.query.filter_by(
+        user_id=int(session["user_id"])
+    ).join(
+        User
+    ).order_by(
+        Userlog.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("home/loginlog.html", page_data=page_data)
 
 
+# ---------------------------------------------moviecol------------------------------------------
 # 电影收藏
 @home.route('/moviecol/')
+@user_login_req
 def moviecol():
     return render_template("home/moviecol.html")
 
 
 # 列表
 @home.route("/")
+@user_login_req
 def index():
     # return "<h1 style='color:green'>This is home</h1>"
     return render_template("home/index.html")
 
 
-# 动画
+# 动画:上映预告
 @home.route('/animation/')
+@user_login_req
 def animation():
-    return render_template("home/animation.html")
+    data = Preview.query.all()
+    return render_template("home/animation.html", data=data)
 
 
 # 搜索页面
 @home.route('/search/')
+@user_login_req
 def search():
     return render_template("home/search.html")
 
 
 # 电影详情
 @home.route('/play/')
+@user_login_req
 def play():
     return render_template("home/play.html")
 

@@ -9,7 +9,7 @@ app.config["SECRET_KEY"] = "turingemmmytyuringemmy"
 
 # 设置上传路径,tatic/uploads次文件线面存放图片，视频信息
 app.config["UP_DIR"]= os.path.join(os.path.abspath(os.path.dirname(__file__)),"static/uploads/")
-app.config["FC_DIR"]= os.path.join(os.path.abspath(os.path.dirname(__file__)),"static/uploads/users")
+app.config["FC_DIR"]= os.path.join(os.path.abspath(os.path.dirname(__file__)),"static/uploads/users/")
 
 app.debug = True
 db = SQLAlchemy(app)
