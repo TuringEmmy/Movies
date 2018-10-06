@@ -206,7 +206,7 @@ class UserdetailForm(FlaskForm):
         }
 
     )
-# ---------------------------------Password-------------------------------------------
+# ---------------------------------Password----------------------------------------
 class PwdForm(FlaskForm):
     old_pwd = PasswordField(
         label="旧密码",
