@@ -270,11 +270,13 @@ def animation():
 
 
 # 搜索页面
-@home.route('/search/')
+@home.route('/search/<int:page>')
 @user_login_req
-def search():
-    
-    return render_template("home/search.html")
+def search(page=None):
+    if page is None:
+        page =1
+    key =request.args.get("key","")
+    return render_template("home/search.html",key=key)
 
 
 # 电影详情
