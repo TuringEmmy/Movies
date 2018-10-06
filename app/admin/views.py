@@ -54,6 +54,7 @@ def index():
     return render_template("admin/index.html")
 
 
+# ---------------------------------------------------------------------login-------------------------------=========================
 # 管理员登录页面
 @admin.route('/login/', methods=["GET", "POST"])
 def login():
@@ -211,7 +212,7 @@ def tag_edit(id=None):
     return render_template("admin/tag_edit.html", form=form, tag=tag)
 
 
-# --------------------------------------电影模块--------------------------
+# --------------------------------------电影模块--------------------------=======================================================================
 # 添加电影
 @admin.route('/movie/add/', methods=["POST", "GET"])
 @admin_login_req
@@ -342,7 +343,7 @@ def movie_edit(id=None):
     return render_template("admin/movie_edit.html", form=form, movie=movie)
 
 
-# -------------------------------Preview-------------------------------------
+# -------------------------------Preview-------------------------------------=======================================================================
 # 预告添加
 @admin.route('/preview/add/', methods=["GET", "POST"])
 @admin_login_req
@@ -420,7 +421,7 @@ def preview_edit(id):
     return render_template("admin/preview_edit.html", form=form, preview=preview)
 
 
-# -----------------------------------User---------------------------------------
+# -----------------------------------User---------------------------------------========================================================
 # 会员列表
 @admin.route('/user/list/<int:page>', methods=["GET"])
 @admin_login_req
@@ -452,7 +453,7 @@ def user_del(id=None):
     return redirect(url_for("admin.user_list", page=1))
 
 
-# ----------------------------------Comment--------------------------------------------
+# ----------------------------------Comment--------------------------------------------==================================================
 # 电影评论
 @admin.route('/comment/list/<int:page>/', methods=["GET"])
 @admin_login_req
@@ -514,7 +515,7 @@ def moviecol_del(id=None):
     return redirect(url_for("admin.moviecol_list", page=1))
 
 
-# ---------------------------------log---------------------------------
+# ---------------------------------log---------------------------------============================================================
 # 操作日志
 @admin.route('/oplog/list/<int:page>', methods=["GET"])
 @admin_login_req
@@ -563,7 +564,7 @@ def userloginlog_list(page=None):
     return render_template("admin/userloginlog_list.html", page_data=page_data)
 
 
-# ------------------------------------Role-----------------------------------------
+# ------------------------------------Role-----------------------------------------================================================
 # 角色添加
 @admin.route('/role/add/', methods=["GET", "POST"])
 @admin_login_req
@@ -584,7 +585,7 @@ def role_add():
 
 
 # 角色列表
-@admin.route('/role/list/<int:page>/',methods=["GET"])
+@admin.route('/role/list/<int:page>/', methods=["GET"])
 @admin_login_req
 def role_list(page=None):
     if page is None:
@@ -592,10 +593,42 @@ def role_list(page=None):
     page_data = Role.query.order_by(
         Role.addtime.desc()
     ).paginate(page=page, per_page=10)
-    return render_template("admin/role_list.html",page_data=page_data)
+    return render_template("admin/role_list.html", page_data=page_data)
 
 
-# -----------------------------------------Auth--------------------------------------------------
+# 角色列表<Button del>
+@admin.route('/role/del/<int:id>/', methods=["GET"])
+@admin_login_req
+def role_del(id=None):
+    if id is None:
+        id = 1
+    role = Role.query.filter_by(id=id).first_or_404()
+    db.session.delete(role)
+    db.session.commit()
+    flash("删除角色成功！", "ok")
+    return redirect(url_for("admin.role_list", page=1))
+
+
+# 预告列表<修改>
+@admin.route('/role/edit/<int:id>', methods=["GET", "POST"])
+@admin_login_req
+def role_edit(id=None):
+    # 实例化form表单
+    form = RoleForm()
+    role = Role.query.get_or_404(id)
+    if request.method == "GET":
+        # 注意：这里取得的auths是以都好分割的，用到split进行分割
+        # 但是呢,分割出来多额是字符串列表，需要对其进行整形转换
+        # 只有使用map,先转换成整形，在转换成列表
+        auths = role.auths
+        form.auths.data = list(map(lambda v: int(v), auths.split(",")))
+    if form.validate_on_submit():
+        data = form.data
+        flash("修改预告成功", "ok")
+    return render_template("admin/role_edit.html", form=form, role=role)
+
+
+# -----------------------------------------Auth---------------------------------------------------======================================
 # 权限添加
 @admin.route('/auth/add/', methods=["GET", "POST"])
 @admin_login_req
