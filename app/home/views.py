@@ -169,10 +169,22 @@ def pwd():
 
 # -------------------------------comment------------------------------------
 # 评论记录
-@home.route('/comments/')
+@home.route('/comments/<int:page>/')
 @user_login_req
-def comments():
-    return render_template("home/comments.html")
+def comments(page=None):
+    if page is None:
+        page = 1
+    page_data = Comment.query.join(
+        Movie
+    ).join(
+        User
+    ).filter(
+        Movie.id == Comment.movie_id,
+        User.id == session["user_id"]
+    ).order_by(
+        Comment.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("home/comments.html",page_data=page_data)
 
 
 # ----------------------------------------loginlog------------------------------------------
