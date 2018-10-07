@@ -336,7 +336,8 @@ def search(page=None):
     ).order_by(
         Movie.addtime.desc()
     ).paginate(page=page, per_page=10)
-    # page_data.key = key
+    # 关键字搜索需要保留索索狂内容不能变
+    page_data.key = key
     return render_template("home/search.html", key=key, movie_count=movie_count, page_data=page_data)
 
 

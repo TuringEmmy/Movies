@@ -38,8 +38,13 @@
                             <tr>
                                 <td class="td_bd">头像：</td>
                                 <td>
+                                    {% if user.face %}
                                     <img src="{{ url_for('static',filename='uploads/users/'+user.face) }}"
                                          class="img-responsive" alt="">
+                                    {% else %}
+                                    <img data-src="holder.js/100x100"
+                                         class="img-responsive" alt="">
+                                    {% endif %}
                                 </td>
                             </tr>
                             <tr>
