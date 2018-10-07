@@ -2,10 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/.nojekyll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/.eslintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/demo/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/demo/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/demo/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/demo/modernizr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/dist/DPlayer.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/dist/DPlayer.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/dist/DPlayer.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/dist/DPlayer.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/CNAME" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/ecosystem.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/landing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/support.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/zh-Hans/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/zh-Hans/ecosystem.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/docs/zh-Hans/support.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/camera.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/comment-off.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/comment.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/full-web.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/full.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/loading.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/pallette.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/pause.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/play.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/right.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/send.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/setting.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/subtitle.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/volume-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/volume-off.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/assets/volume-up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/balloon.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/bezel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/controller.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/danmaku.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/global.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/index.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/info-panel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/logo.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/menu.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/notice.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/player.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/subtitle.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/css/video.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/bar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/bezel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/comment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/contextmenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/danmaku.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/fullscreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/hotkey.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/i18n.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/icons.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/info-panel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/options.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/player.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/subtitle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/template.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/thumbnails.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/timer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/js/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/template/player.art" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/src/template/video.art" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/webpack/dev.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/webpack/postcss.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/webpack/prod.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/dplayer/yarn.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/home/video.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views.py" afterPath="$PROJECT_DIR$/app/home/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/menu.html" afterPath="$PROJECT_DIR$/app/templates/home/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/play.html" afterPath="$PROJECT_DIR$/app/templates/home/play.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/request.txt" afterPath="$PROJECT_DIR$/request.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +101,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Movies$views.coverage" NAME="views Coverage Results" MODIFIED="1538297694884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/home" />
     <SUITE FILE_PATH="coverage/Movies$models.coverage" NAME="models Coverage Results" MODIFIED="1538546320949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/Movies$manager.coverage" NAME="manager Coverage Results" MODIFIED="1538918718294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Movies$manager.coverage" NAME="manager Coverage Results" MODIFIED="1538926942634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Movies$te.coverage" NAME="te Coverage Results" MODIFIED="1538665854414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -26,81 +110,53 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/home/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="248" column="19" lean-forward="false" selection-start-line="248" selection-start-column="19" selection-end-line="248" selection-end-column="19" />
+            <state relative-caret-position="1287">
+              <caret line="484" column="32" lean-forward="false" selection-start-line="484" selection-start-column="32" selection-end-line="484" selection-end-column="32" />
               <folding>
                 <element signature="e#15#33#0" expanded="true" />
-                <element signature="e#553#775#0" expanded="false" />
-                <element signature="e#822#982#0" expanded="false" />
-                <element signature="e#1205#1906#0" expanded="false" />
-                <element signature="e#1956#2057#0" expanded="false" />
-                <element signature="e#2134#2630#0" expanded="false" />
-                <element signature="e#2800#4488#0" expanded="false" />
-                <element signature="e#4660#5218#0" expanded="false" />
-                <element signature="e#5944#6239#0" expanded="false" />
-                <element signature="e#6426#6980#0" expanded="false" />
-                <element signature="e#7620#9251#0" expanded="false" />
-                <element signature="e#9662#10119#0" expanded="false" />
-                <marker date="1538925120773" expanded="false" signature="5382:5741" ph="..." />
-                <marker date="1538925120773" expanded="false" signature="10314:11610" ph="..." />
+                <element signature="e#580#802#0" expanded="false" />
+                <element signature="e#849#1009#0" expanded="false" />
+                <element signature="e#1232#1933#0" expanded="false" />
+                <element signature="e#1983#2084#0" expanded="false" />
+                <element signature="e#2161#2657#0" expanded="false" />
+                <element signature="e#2827#4515#0" expanded="false" />
+                <element signature="e#4687#5245#0" expanded="false" />
+                <element signature="e#5971#6266#0" expanded="false" />
+                <element signature="e#6453#7007#0" expanded="false" />
+                <element signature="e#7098#7452#0" expanded="false" />
+                <element signature="e#7647#9278#0" expanded="false" />
+                <element signature="e#9689#10146#0" expanded="false" />
+                <marker date="1538926942475" expanded="false" signature="5409:5768" ph="..." />
+                <marker date="1538926942475" expanded="false" signature="10341:11637" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="moviecol.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/home/moviecol.html">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="29" column="119" lean-forward="false" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
+            <state relative-caret-position="83">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#15#55#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/home/menu.html">
+      <file leaf-file-name="video.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/home/video.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="13" />
+            <state relative-caret-position="266">
+              <caret line="215" column="72" lean-forward="false" selection-start-line="215" selection-start-column="72" selection-end-line="215" selection-end-column="72" />
               <folding>
-                <element signature="e#828#859#0" expanded="false" />
-                <element signature="e#1044#1399#0" expanded="false" />
-                <element signature="e#1429#1784#0" expanded="false" />
-                <element signature="e#2815#3171#0" expanded="false" />
-                <element signature="e#3205#3635#0" expanded="false" />
-                <element signature="e#4133#4540#0" expanded="false" />
-                <element signature="e#4571#4966#0" expanded="false" />
-                <element signature="e#4999#5780#0" expanded="false" />
-                <element signature="e#5820#6179#0" expanded="false" />
-                <element signature="e#6213#7142#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="play.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
-              <folding>
-                <element signature="e#8444#8464#0#HTML" expanded="true" />
+                <element signature="e#1992#2026#0#HTML" expanded="true" />
+                <element signature="e#12084#12879#0#HTML" expanded="false" />
+                <element signature="e#12884#13831#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -138,8 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/te.py" />
-        <option value="$PROJECT_DIR$/app/templates/admin/tag_add.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/tad_edit.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/tag_edit.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/movie_edit.html" />
@@ -173,7 +227,6 @@
         <option value="$PROJECT_DIR$/app/templates/home/pwd.html" />
         <option value="$PROJECT_DIR$/app/templates/home/loginlog.html" />
         <option value="$PROJECT_DIR$/app/templates/home/animation.html" />
-        <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/templates/home/404.html" />
         <option value="$PROJECT_DIR$/app/templates/home/home.html" />
         <option value="$PROJECT_DIR$/app/templates/home/layout.html" />
@@ -188,7 +241,10 @@
         <option value="$PROJECT_DIR$/app/templates/home/play.html" />
         <option value="$PROJECT_DIR$/app/templates/home/menu.html" />
         <option value="$PROJECT_DIR$/app/templates/home/moviecol.html" />
+        <option value="$PROJECT_DIR$/app/templates/home/video.html" />
+        <option value="$PROJECT_DIR$/request.txt" />
         <option value="$PROJECT_DIR$/app/home/views.py" />
+        <option value="$PROJECT_DIR$/app/__init__.py" />
       </list>
     </option>
   </component>
@@ -326,6 +382,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -361,11 +457,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static/dplayer" />
+      <recent name="$PROJECT_DIR$/app/static" />
+      <recent name="$PROJECT_DIR$/app/templates/home" />
       <recent name="$PROJECT_DIR$/app/templates/ui" />
       <recent name="$PROJECT_DIR$/app/templates/admin" />
-      <recent name="$PROJECT_DIR$/app/static/uploads" />
-      <recent name="$PROJECT_DIR$/app/static/base/css" />
-      <recent name="$PROJECT_DIR$/app/static/anim" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/static" />
@@ -683,13 +779,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
-    </task>
-    <task id="LOCAL-00059" summary="User will begin&#10;module&#9;&#9;User&#10;form&#9;&#9;no&#10;requestMethod&#9;GET,POST&#10;requestControl&#9;@admin_login_req">
-      <created>1538658367200</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1538658367200</updated>
     </task>
     <task id="LOCAL-00060" summary="UserList is appeared in webPage&#10;">
       <created>1538659834430</created>
@@ -1027,22 +1116,29 @@
       <option name="project" value="LOCAL" />
       <updated>1538919955838</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="movie col is ok">
+      <created>1538925171762</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1538925171762</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="24" width="1327" height="601" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41160592" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37657866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24901186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21541502" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24728851" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45746693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45558086" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35130972" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1079,7 +1175,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="admin list page is ok&#10;" />
     <MESSAGE value="Access Rights control" />
     <MESSAGE value="register is ok" />
     <MESSAGE value="register is  for database is ok" />
@@ -1104,7 +1199,8 @@
     <MESSAGE value="a bug is found in comment just for word ''cotent' not 'comment'" />
     <MESSAGE value="find a bug in play page for comment &lt;word commentum need to write commentnum&gt;" />
     <MESSAGE value="add aall commentnum count ({{ movie.commentum }})" />
-    <option name="LAST_COMMIT_MESSAGE" value="add aall commentnum count ({{ movie.commentum }})" />
+    <MESSAGE value="movie col is ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="movie col is ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1113,41 +1209,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/user_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="36" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="52" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/comment_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="78" column="60" lean-forward="true" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1327,13 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="369" column="13" lean-forward="false" selection-start-line="369" selection-start-column="13" selection-end-line="369" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="92" lean-forward="false" selection-start-line="11" selection-start-column="92" selection-end-line="11" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -1519,25 +1573,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/home/video.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="215" column="72" lean-forward="false" selection-start-line="215" selection-start-column="72" selection-end-line="215" selection-end-column="72" />
+          <folding>
+            <element signature="e#1992#2026#0#HTML" expanded="true" />
+            <element signature="e#12084#12879#0#HTML" expanded="false" />
+            <element signature="e#12884#13831#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/movies/lib/python3.5/site-packages/flask/ext/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/dplayer/src/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/dplayer/yarn.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/home/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="248" column="19" lean-forward="false" selection-start-line="248" selection-start-column="19" selection-end-line="248" selection-end-column="19" />
+        <state relative-caret-position="1287">
+          <caret line="484" column="32" lean-forward="false" selection-start-line="484" selection-start-column="32" selection-end-line="484" selection-end-column="32" />
           <folding>
             <element signature="e#15#33#0" expanded="true" />
-            <element signature="e#553#775#0" expanded="false" />
-            <element signature="e#822#982#0" expanded="false" />
-            <element signature="e#1205#1906#0" expanded="false" />
-            <element signature="e#1956#2057#0" expanded="false" />
-            <element signature="e#2134#2630#0" expanded="false" />
-            <element signature="e#2800#4488#0" expanded="false" />
-            <element signature="e#4660#5218#0" expanded="false" />
-            <element signature="e#5944#6239#0" expanded="false" />
-            <element signature="e#6426#6980#0" expanded="false" />
-            <element signature="e#7620#9251#0" expanded="false" />
-            <element signature="e#9662#10119#0" expanded="false" />
-            <marker date="1538925120773" expanded="false" signature="5382:5741" ph="..." />
-            <marker date="1538925120773" expanded="false" signature="10314:11610" ph="..." />
+            <element signature="e#580#802#0" expanded="false" />
+            <element signature="e#849#1009#0" expanded="false" />
+            <element signature="e#1232#1933#0" expanded="false" />
+            <element signature="e#1983#2084#0" expanded="false" />
+            <element signature="e#2161#2657#0" expanded="false" />
+            <element signature="e#2827#4515#0" expanded="false" />
+            <element signature="e#4687#5245#0" expanded="false" />
+            <element signature="e#5971#6266#0" expanded="false" />
+            <element signature="e#6453#7007#0" expanded="false" />
+            <element signature="e#7098#7452#0" expanded="false" />
+            <element signature="e#7647#9278#0" expanded="false" />
+            <element signature="e#9689#10146#0" expanded="false" />
+            <marker date="1538926942475" expanded="false" signature="5409:5768" ph="..." />
+            <marker date="1538926942475" expanded="false" signature="10341:11637" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#15#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
