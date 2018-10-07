@@ -103,13 +103,16 @@
                     <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span>&nbsp;电影评论</h3>
                 </div>
                 <div class="panel-body">
+                    {#                    说明没有登陆#}
+                    {% if "user" not in session %}
                     <div class="alert alert-danger alert-dismissible" role="alert">
                         <button type="button" class="close" data-dismiss="alert">
                             <span aria-hidden="true">×</span>
                             <span class="sr-only">Close</span>
                         </button>
-                        <strong>请先<a href="login.html" target="_blank" class="text-info">登录</a>，才可参与评论！</strong>
+                        <strong>请先<a href="{{ url_for('home.login') }}" target="_blank" class="text-info">登录</a>，才可参与评论！</strong>
                     </div>
+                    {%  endif %}
                     <ol class="breadcrumb" style="margin-top:6px;">
                         <li>全部评论(5)</li>
                     </ol>
