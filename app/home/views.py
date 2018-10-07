@@ -201,7 +201,7 @@ def moviecol():
 
 
 # 首页对标签进行筛选
-@home.route("/<int:page>/",methods=["GET"])
+@home.route("/<int:page>/", methods=["GET"])
 def index(page=None):
     tags = Tag.query.all()
     page_data = Movie.query
@@ -249,7 +249,7 @@ def index(page=None):
                 Movie.commentum.asc()
             )
     if page is None:
-        page=1
+        page = 1
     page_data = page_data.paginate(page=page, per_page=10)
     choice = dict(
         tag_id=tag_id,
@@ -270,12 +270,20 @@ def animation():
 
 # 搜索页面
 @home.route('/search/<int:page>')
-@user_login_req
 def search(page=None):
     if page is None:
-        page =1
-    key =request.args.get("key","")
-    return render_template("home/search.html",key=key)
+        page = 1
+    key = request.args.get("key", "")
+    movie_count = Movie.query.filter(
+        Movie.title.ilike('%' + key + '%')
+    ).count()
+    page_data = Movie.query.filter(
+        Movie.title.ilike('%' + key + '%')
+    ).order_by(
+        Movie.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    # page_data.key = key
+    return render_template("home/search.html", key=key, movie_count=movie_count,page_data=page_data)
 
 
 # 电影详情
