@@ -283,14 +283,15 @@ def search(page=None):
         Movie.addtime.desc()
     ).paginate(page=page, per_page=10)
     # page_data.key = key
-    return render_template("home/search.html", key=key, movie_count=movie_count,page_data=page_data)
+    return render_template("home/search.html", key=key, movie_count=movie_count, page_data=page_data)
 
 
 # 电影详情
-@home.route('/play/')
-@user_login_req
-def play():
-    return render_template("home/play.html")
+@home.route('/play/<int:id>')
+def play(id=None):
+    movie = Movie.query.get_or_404(int(id))
+
+    return render_template("home/play.html", movie=movie)
 
 # 404页面
 # 注意这个页面不是在蓝图的页面进行的,而是初始化文件当中进行的
