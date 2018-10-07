@@ -209,6 +209,7 @@ def loginlog(page=None):
 @home.route('/moviecol/')
 @user_login_req
 def moviecol():
+
     return render_template("home/moviecol.html")
 
 
@@ -340,6 +341,8 @@ def play(id=None, page=None):
         db.session.commit()
         # 记得一定要修改movied的播放数量加1
         movie.commentum += 1
+        db.session.add(movie)
+        db.session.commit()
         flash("添加评论成功", "ok")
         return redirect(url_for("home.play", id=movie.id,page=1))
     db.session.add(movie)

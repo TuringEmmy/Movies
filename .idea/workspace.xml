@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/comments.html" afterPath="$PROJECT_DIR$/app/templates/home/comments.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views.py" afterPath="$PROJECT_DIR$/app/home/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/play.html" afterPath="$PROJECT_DIR$/app/templates/home/play.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,16 +25,37 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/home/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="185" column="38" lean-forward="true" selection-start-line="185" selection-start-column="38" selection-end-line="185" selection-end-column="38" />
+            <state relative-caret-position="284">
+              <caret line="342" column="23" lean-forward="false" selection-start-line="342" selection-start-column="23" selection-end-line="342" selection-end-column="23" />
               <folding>
                 <element signature="e#15#33#0" expanded="true" />
                 <element signature="e#5933#6228#0" expanded="false" />
-                <element signature="e#6637#8268#0" expanded="false" />
-                <element signature="e#8679#9136#0" expanded="false" />
+                <element signature="e#6638#8269#0" expanded="false" />
+                <element signature="e#8680#9137#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="13" />
+              <folding>
+                <element signature="e#828#859#0" expanded="false" />
+                <element signature="e#1044#1399#0" expanded="false" />
+                <element signature="e#1429#1784#0" expanded="false" />
+                <element signature="e#2815#3171#0" expanded="false" />
+                <element signature="e#3205#3635#0" expanded="false" />
+                <element signature="e#4133#4540#0" expanded="false" />
+                <element signature="e#4571#4966#0" expanded="false" />
+                <element signature="e#4999#5780#0" expanded="false" />
+                <element signature="e#5820#6179#0" expanded="false" />
+                <element signature="e#6213#7142#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -42,23 +64,9 @@
       <file leaf-file-name="play.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="151" column="119" lean-forward="true" selection-start-line="151" selection-start-column="58" selection-end-line="151" selection-end-column="119" />
+            <state relative-caret-position="135">
+              <caret line="85" column="50" lean-forward="false" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comments.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/home/comments.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-              <folding>
-                <element signature="e#1006#1012#0#HTML" expanded="true" />
-                <element signature="e#1972#2016#0#HTML" expanded="true" />
-                <element signature="e#2213#2257#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -140,12 +148,12 @@
         <option value="$PROJECT_DIR$/app/templates/home/index.html" />
         <option value="$PROJECT_DIR$/app/templates/home/search.html" />
         <option value="$PROJECT_DIR$/app/templates/ui/comment_page.html" />
-        <option value="$PROJECT_DIR$/app/templates/home/play.html" />
         <option value="$PROJECT_DIR$/app/templates/home/menu.html" />
         <option value="$PROJECT_DIR$/app/templates/ui/admin_page.html" />
         <option value="$PROJECT_DIR$/app/templates/ui/home_page.html" />
-        <option value="$PROJECT_DIR$/app/home/views.py" />
         <option value="$PROJECT_DIR$/app/templates/home/comments.html" />
+        <option value="$PROJECT_DIR$/app/templates/home/play.html" />
+        <option value="$PROJECT_DIR$/app/home/views.py" />
       </list>
     </option>
   </component>
@@ -641,13 +649,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00056" summary="Preview List  over, but picture is too big&#10;&#10;battle it,just &lt;style=&quot;width: 150px;&gt; in preview_list.html">
-      <created>1538655698423</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1538655698428</updated>
-    </task>
     <task id="LOCAL-00057" summary="preview_list  del is over at  del button">
       <created>1538656322818</created>
       <option name="number" value="00057" />
@@ -984,14 +985,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538918694081</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="a bug is found in comment just for word ''cotent' not 'comment'">
+      <created>1538919100993</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1538919100993</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="24" width="1327" height="601" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20155641" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20155641" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1036,7 +1044,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="button w and edit in role_list  for database is over" />
     <MESSAGE value="admin manager begin &#10;module&#9;&#9;&#9;&#9;Admin&#10;form&#9;&#9;&#9;&#9;AdminForm&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@admin_login_req&#10;" />
     <MESSAGE value="admin add is ok;but need to appear it in page&#10;&#10;" />
     <MESSAGE value="admin list page is ok&#10;" />
@@ -1061,7 +1068,8 @@
     <MESSAGE value="cpmment list is ok,pay attention in safe" />
     <MESSAGE value="movie comment is ok, but need comment by yourself" />
     <MESSAGE value="comment by yourself is ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="comment by yourself is ok" />
+    <MESSAGE value="a bug is found in comment just for word ''cotent' not 'comment'" />
+    <option name="LAST_COMMIT_MESSAGE" value="a bug is found in comment just for word ''cotent' not 'comment'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1259,26 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#828#859#0" expanded="false" />
-            <element signature="e#1044#1399#0" expanded="false" />
-            <element signature="e#1429#1784#0" expanded="false" />
-            <element signature="e#1816#2779#0" expanded="false" />
-            <element signature="e#2815#3171#0" expanded="false" />
-            <element signature="e#3205#3635#0" expanded="false" />
-            <element signature="e#4133#4540#0" expanded="false" />
-            <element signature="e#4571#4966#0" expanded="false" />
-            <element signature="e#4999#5780#0" expanded="false" />
-            <element signature="e#5820#6179#0" expanded="false" />
-            <element signature="e#6213#7142#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home/regist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-165">
@@ -1420,14 +1408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="151" column="119" lean-forward="true" selection-start-line="151" selection-start-column="58" selection-end-line="151" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/ui/comment_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1460,19 +1440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="185" column="38" lean-forward="true" selection-start-line="185" selection-start-column="38" selection-end-line="185" selection-end-column="38" />
-          <folding>
-            <element signature="e#15#33#0" expanded="true" />
-            <element signature="e#5933#6228#0" expanded="false" />
-            <element signature="e#6637#8268#0" expanded="false" />
-            <element signature="e#8679#9136#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home/comments.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1481,6 +1448,46 @@
             <element signature="e#1006#1012#0#HTML" expanded="true" />
             <element signature="e#1972#2016#0#HTML" expanded="true" />
             <element signature="e#2213#2257#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="13" />
+          <folding>
+            <element signature="e#828#859#0" expanded="false" />
+            <element signature="e#1044#1399#0" expanded="false" />
+            <element signature="e#1429#1784#0" expanded="false" />
+            <element signature="e#2815#3171#0" expanded="false" />
+            <element signature="e#3205#3635#0" expanded="false" />
+            <element signature="e#4133#4540#0" expanded="false" />
+            <element signature="e#4571#4966#0" expanded="false" />
+            <element signature="e#4999#5780#0" expanded="false" />
+            <element signature="e#5820#6179#0" expanded="false" />
+            <element signature="e#6213#7142#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="85" column="50" lean-forward="false" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="342" column="23" lean-forward="false" selection-start-line="342" selection-start-column="23" selection-end-line="342" selection-end-column="23" />
+          <folding>
+            <element signature="e#15#33#0" expanded="true" />
+            <element signature="e#5933#6228#0" expanded="false" />
+            <element signature="e#6638#8269#0" expanded="false" />
+            <element signature="e#8680#9137#0" expanded="false" />
           </folding>
         </state>
       </provider>
