@@ -263,7 +263,6 @@ def index(page=None):
 
 # 动画:上映预告
 @home.route('/animation/')
-@user_login_req
 def animation():
     data = Preview.query.all()
     return render_template("home/animation.html", data=data)
