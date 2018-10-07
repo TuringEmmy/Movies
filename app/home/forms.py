@@ -206,6 +206,8 @@ class UserdetailForm(FlaskForm):
         }
 
     )
+
+
 # ---------------------------------Password----------------------------------------
 class PwdForm(FlaskForm):
     old_pwd = PasswordField(
@@ -237,4 +239,24 @@ class PwdForm(FlaskForm):
         }
     )
 
+
 # ----------------------------------------------CommentForm-------------------------------
+
+class Commentform(FlaskForm):
+    content = TextAreaField(
+        label="评论内容",
+        validators=[
+            DataRequired("请输入内容"),
+        ],
+        description="内容",
+        render_kw={
+            "id": "input_content"
+        }
+    )
+    submit = SubmitField(
+        "提交评论",
+        render_kw={
+            "class": "btn btn-success",
+            "id": "btn-sub"
+        }
+    )

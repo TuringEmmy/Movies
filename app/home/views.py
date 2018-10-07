@@ -1,8 +1,8 @@
 # coding=utf-8
 from . import home
 from flask import render_template, redirect, url_for, flash, session, request
-from app.home.forms import RegistForm, LoginForm, UserdetailForm, PwdForm
-from app.models import User, Userlog, Preview, Tag, Movie
+from app.home.forms import RegistForm, LoginForm, UserdetailForm, PwdForm, Commentform
+from app.models import User, Userlog, Preview, Tag, Movie, Comment
 
 # 导入密码加密的工具
 from werkzeug.security import generate_password_hash
@@ -199,6 +199,7 @@ def loginlog(page=None):
 def moviecol():
     return render_template("home/moviecol.html")
 
+
 # --------------------------------------------------index---------------------------------------------------
 # 首页对标签进行筛选
 @home.route("/<int:page>/", methods=["GET"])
@@ -261,7 +262,6 @@ def index(page=None):
     return render_template("home/index.html", tags=tags, choice=choice, page_data=page_data)
 
 
-
 # ---------------------------------------------animation------------------------------------------------
 # 动画:上映预告
 @home.route('/animation/')
@@ -289,18 +289,50 @@ def search(page=None):
     return render_template("home/search.html", key=key, movie_count=movie_count, page_data=page_data)
 
 
-
-
 # ---------------------------------------------------play-------------------------------
 # 电影详情
-@home.route('/play/<int:id>')
-def play(id=None):
+@home.route('/play/<int:id>/<int:page>/', methods=["GET", "POST"])
+def play(id=None, page=None):
     movie = Movie.query.join(Tag).filter(
-        Tag.id==Movie.tag_id,
-        Movie.id==int(id)
+        Tag.id == Movie.tag_id,
+        Movie.id == int(id)
     ).first_or_404()
 
-    return render_template("home/play.html", movie=movie)
+    # -------------------comment--------------------------
+    if page is None:
+        page = 1
+    page_data = Comment.query.join(
+        Movie
+    ).join(
+        User
+    ).filter(
+        Movie.id == movie.id,
+        # User.id == session["user_id"]
+        # 上面这个行代码错误,因为是要看到所有的用户哦,呵呵呵
+        User.id==Comment.user_id
+    ).order_by(
+        Comment.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    # -------------------comment--------------------------
+    movie.playnum += 1
+    # 提交评论
+    form = Commentform()
+    if "user" in session and form.validate_on_submit():
+        data = form.data
+        comment = Comment(
+            content=data["content"],
+            movie_id=movie.id,
+            user_id=session["user_id"]
+        )
+        db.session.add(comment)
+        db.session.commit()
+        # 记得一定要修改movied的播放数量加1
+        movie.commentum += 1
+        flash("添加评论成功", "ok")
+        return redirect(url_for("home.play", id=movie.id,page=1))
+    db.session.add(movie)
+    db.session.commit()
+    return render_template("home/play.html", movie=movie, form=form,page_data=page_data)
 
 # 404页面
 # 注意这个页面不是在蓝图的页面进行的,而是初始化文件当中进行的
