@@ -199,7 +199,7 @@ def loginlog(page=None):
 def moviecol():
     return render_template("home/moviecol.html")
 
-
+# --------------------------------------------------index---------------------------------------------------
 # 首页对标签进行筛选
 @home.route("/<int:page>/", methods=["GET"])
 def index(page=None):
@@ -261,6 +261,8 @@ def index(page=None):
     return render_template("home/index.html", tags=tags, choice=choice, page_data=page_data)
 
 
+
+# ---------------------------------------------animation------------------------------------------------
 # 动画:上映预告
 @home.route('/animation/')
 def animation():
@@ -268,6 +270,7 @@ def animation():
     return render_template("home/animation.html", data=data)
 
 
+# ------------------------------------------search------------------------------------
 # 搜索页面
 @home.route('/search/<int:page>')
 def search(page=None):
@@ -286,10 +289,16 @@ def search(page=None):
     return render_template("home/search.html", key=key, movie_count=movie_count, page_data=page_data)
 
 
+
+
+# ---------------------------------------------------play-------------------------------
 # 电影详情
 @home.route('/play/<int:id>')
 def play(id=None):
-    movie = Movie.query.get_or_404(int(id))
+    movie = Movie.query.join(Tag).filter(
+        Tag.id==Movie.tag_id,
+        Movie.id==int(id)
+    ).first_or_404()
 
     return render_template("home/play.html", movie=movie)
 
