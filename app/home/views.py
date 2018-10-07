@@ -2,7 +2,7 @@
 from . import home
 from flask import render_template, redirect, url_for, flash, session, request
 from app.home.forms import RegistForm, LoginForm, UserdetailForm, PwdForm, Commentform
-from app.models import User, Userlog, Preview, Tag, Movie, Comment
+from app.models import User, Userlog, Preview, Tag, Movie, Comment, Moviecol
 
 # 导入密码加密的工具
 from werkzeug.security import generate_password_hash
@@ -184,7 +184,7 @@ def comments(page=None):
     ).order_by(
         Comment.addtime.desc()
     ).paginate(page=page, per_page=10)
-    return render_template("home/comments.html",page_data=page_data)
+    return render_template("home/comments.html", page_data=page_data)
 
 
 # ----------------------------------------loginlog------------------------------------------
@@ -205,12 +205,49 @@ def loginlog(page=None):
 
 
 # ---------------------------------------------moviecol------------------------------------------
-# 电影收藏
-@home.route('/moviecol/')
+@home.route('/moviecol/add', methods=["GET"])
 @user_login_req
-def moviecol():
+def moviecol_add():
+    user_id = request.args.get("user_id", "")
+    movie_id = request.args.get("movie_id", "")
+    moviecol = Moviecol.query.filter_by(
+        user_id=int(user_id),
+        movie_id=int(movie_id)
+    ).count()
+    if moviecol == 1:
+        data = dict(ok=0)
+    if moviecol == 0:
+        # 没有收藏的情况
+        moviecol = Moviecol(
+            user_id=int(user_id),
+            movie_id=int(movie_id)
+        )
+        db.session.add(moviecol)
+        db.session.commit()
+        data = dict(ok=1)
+    # 使用ajax的方式,异步进行
+    import json
 
-    return render_template("home/moviecol.html")
+    return json.dumps(data)
+
+
+# 电影收藏
+@home.route('/moviecol/<int:page>')
+@user_login_req
+def moviecol(page=None):
+    if page is None:
+        page = 1
+    page_data = Moviecol.query.join(
+        Movie
+    ).join(
+        User
+    ).filter(
+        Movie.id == Moviecol.movie_id,
+        User.id == session["user_id"]
+    ).order_by(
+        Movie.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("home/moviecol.html", page_data=page_data)
 
 
 # --------------------------------------------------index---------------------------------------------------
@@ -322,7 +359,7 @@ def play(id=None, page=None):
         Movie.id == movie.id,
         # User.id == session["user_id"]
         # 上面这个行代码错误,因为是要看到所有的用户哦,呵呵呵
-        User.id==Comment.user_id
+        User.id == Comment.user_id
     ).order_by(
         Comment.addtime.desc()
     ).paginate(page=page, per_page=10)
@@ -344,10 +381,10 @@ def play(id=None, page=None):
         db.session.add(movie)
         db.session.commit()
         flash("添加评论成功", "ok")
-        return redirect(url_for("home.play", id=movie.id,page=1))
+        return redirect(url_for("home.play", id=movie.id, page=1))
     db.session.add(movie)
     db.session.commit()
-    return render_template("home/play.html", movie=movie, form=form,page_data=page_data)
+    return render_template("home/play.html", movie=movie, form=form, page_data=page_data)
 
 # 404页面
 # 注意这个页面不是在蓝图的页面进行的,而是初始化文件当中进行的

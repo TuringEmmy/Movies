@@ -143,30 +143,38 @@
                             {{ form.submit }}
                             <a class="btn btn-danger" id="btn-col"><span class="glyphicon glyphicon-heart"></span>&nbsp;收藏电影</a>
                         </form>
+                        <div class="col-md-12">
+                            <font style="color: green" id="show_col_msg" ></font>
+                        </div>
+                        {# 清除悬浮#}
+                        <div class="clearfix"></div>
                     {% endif %}
                     <ul class="commentList">
                         {% for v in page_data.items %}
-                        <li class="item cl">
-                            <a href="user.html">
-                                <i class="avatar size-L radius">
-                                    <img alt="50x50" src="{{ url_for('static',filename='uploads/users/'+v.user.face) }}" class="img-circle"
-                                         style="border:1px solid #abcdef;width: 50px;">
-                                </i>
-                            </a>
-                            <div class="comment-main">
-                                <header class="comment-header">
-                                    <div class="comment-meta">
-                                        <a class="comment-author" href="{{ url_for('home.user') }}">{{ v.user.name }}</a>
-                                        评论于
-                                        <time title="{{ v.addtime }}" datetime="{{ v.addtime }}">{{ v.addtime }}
-                                        </time>
+                            <li class="item cl">
+                                <a href="user.html">
+                                    <i class="avatar size-L radius">
+                                        <img alt="50x50"
+                                             src="{{ url_for('static',filename='uploads/users/'+v.user.face) }}"
+                                             class="img-circle"
+                                             style="border:1px solid #abcdef;width: 50px;">
+                                    </i>
+                                </a>
+                                <div class="comment-main">
+                                    <header class="comment-header">
+                                        <div class="comment-meta">
+                                            <a class="comment-author"
+                                               href="{{ url_for('home.user') }}">{{ v.user.name }}</a>
+                                            评论于
+                                            <time title="{{ v.addtime }}" datetime="{{ v.addtime }}">{{ v.addtime }}
+                                            </time>
+                                        </div>
+                                    </header>
+                                    <div class="comment-body">
+                                        <p>{{ v.content |safe }}</p>
                                     </div>
-                                </header>
-                                <div class="comment-body">
-                                    <p>{{ v.content |safe}}</p>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
                         {% endfor %}
                     </ul>
                     <div class="col-md-12 text-center">
@@ -216,5 +224,36 @@
             height: 500,
             width: 774,
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn-col").click(function () {
+                var movie_id ={{ movie.id }};
+                var user_id ={{ session['user_id'] }};
+                $.ajax({
+                    url: "{{ url_for('home.moviecol_add') }}",
+                    type: "GET",
+                    data: "movie_id=" + movie_id + "&user_id=" + user_id,
+                    {#                返回的类型#}
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.ok == 1) {
+                            $("#show_col_msg").empty();
+                            $("#show_col_msg").append("收藏成功!");
+                        } else {
+                            $("#show_col_msg").empty();
+                            $("#show_col_msg").append("已经收藏!");
+                        }
+                    }
+                })
+            });
+        });
+
+
+
+
+
+
+
     </script>
 {% endblock %}

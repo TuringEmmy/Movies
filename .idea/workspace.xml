@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views.py" afterPath="$PROJECT_DIR$/app/home/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/menu.html" afterPath="$PROJECT_DIR$/app/templates/home/menu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/play.html" afterPath="$PROJECT_DIR$/app/templates/home/play.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,17 +26,49 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/home/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="337" column="12" lean-forward="false" selection-start-line="337" selection-start-column="12" selection-end-line="337" selection-end-column="12" />
+            <state relative-caret-position="288">
+              <caret line="248" column="19" lean-forward="false" selection-start-line="248" selection-start-column="19" selection-end-line="248" selection-end-column="19" />
               <folding>
                 <element signature="e#15#33#0" expanded="true" />
-                <element signature="e#5933#6228#0" expanded="false" />
-                <element signature="e#6638#8269#0" expanded="false" />
-                <element signature="e#8680#9137#0" expanded="false" />
+                <element signature="e#553#775#0" expanded="false" />
+                <element signature="e#822#982#0" expanded="false" />
+                <element signature="e#1205#1906#0" expanded="false" />
+                <element signature="e#1956#2057#0" expanded="false" />
+                <element signature="e#2134#2630#0" expanded="false" />
+                <element signature="e#2800#4488#0" expanded="false" />
+                <element signature="e#4660#5218#0" expanded="false" />
+                <element signature="e#5944#6239#0" expanded="false" />
+                <element signature="e#6426#6980#0" expanded="false" />
+                <element signature="e#7620#9251#0" expanded="false" />
+                <element signature="e#9662#10119#0" expanded="false" />
+                <marker date="1538925120773" expanded="false" signature="5382:5741" ph="..." />
+                <marker date="1538925120773" expanded="false" signature="10314:11610" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moviecol.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/home/moviecol.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="29" column="119" lean-forward="false" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/home/menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,12 +94,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="play.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="play.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="116" column="55" lean-forward="false" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="55" />
-              <folding />
+            <state relative-caret-position="288">
+              <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
+              <folding>
+                <element signature="e#8444#8464#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/request.txt" />
         <option value="$PROJECT_DIR$/te.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/tag_add.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/tad_edit.html" />
@@ -147,12 +182,13 @@
         <option value="$PROJECT_DIR$/app/templates/home/index.html" />
         <option value="$PROJECT_DIR$/app/templates/home/search.html" />
         <option value="$PROJECT_DIR$/app/templates/ui/comment_page.html" />
-        <option value="$PROJECT_DIR$/app/templates/home/menu.html" />
         <option value="$PROJECT_DIR$/app/templates/ui/admin_page.html" />
         <option value="$PROJECT_DIR$/app/templates/ui/home_page.html" />
         <option value="$PROJECT_DIR$/app/templates/home/comments.html" />
-        <option value="$PROJECT_DIR$/app/home/views.py" />
         <option value="$PROJECT_DIR$/app/templates/home/play.html" />
+        <option value="$PROJECT_DIR$/app/templates/home/menu.html" />
+        <option value="$PROJECT_DIR$/app/templates/home/moviecol.html" />
+        <option value="$PROJECT_DIR$/app/home/views.py" />
       </list>
     </option>
   </component>
@@ -165,8 +201,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="24" />
-    <option name="width" value="671" />
-    <option name="height" value="543" />
+    <option name="width" value="1327" />
+    <option name="height" value="601" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -648,13 +684,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00058" summary="preview is over in Oct 4">
-      <created>1538658064666</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1538658064666</updated>
-    </task>
     <task id="LOCAL-00059" summary="User will begin&#10;module&#9;&#9;User&#10;form&#9;&#9;no&#10;requestMethod&#9;GET,POST&#10;requestControl&#9;@admin_login_req">
       <created>1538658367200</created>
       <option name="number" value="00059" />
@@ -991,20 +1020,27 @@
       <option name="project" value="LOCAL" />
       <updated>1538919631181</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="add aall commentnum count ({{ movie.commentum }})">
+      <created>1538919955838</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1538919955838</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="24" width="671" height="543" extended-state="6" />
+    <frame x="35" y="24" width="1327" height="601" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4117647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41160592" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.243083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24901186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24728851" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45746693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1043,7 +1079,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="admin add is ok;but need to appear it in page&#10;&#10;" />
     <MESSAGE value="admin list page is ok&#10;" />
     <MESSAGE value="Access Rights control" />
     <MESSAGE value="register is ok" />
@@ -1068,22 +1103,16 @@
     <MESSAGE value="comment by yourself is ok" />
     <MESSAGE value="a bug is found in comment just for word ''cotent' not 'comment'" />
     <MESSAGE value="find a bug in play page for comment &lt;word commentum need to write commentnum&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="find a bug in play page for comment &lt;word commentum need to write commentnum&gt;" />
+    <MESSAGE value="add aall commentnum count ({{ movie.commentum }})" />
+    <option name="LAST_COMMIT_MESSAGE" value="add aall commentnum count ({{ movie.commentum }})" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/user_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="40" column="107" lean-forward="false" selection-start-line="40" selection-start-column="107" selection-end-line="40" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/user_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -1431,14 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="72" lean-forward="false" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home/comments.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1470,24 +1491,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/views.py">
+    <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="337" column="12" lean-forward="false" selection-start-line="337" selection-start-column="12" selection-end-line="337" selection-end-column="12" />
+        <state relative-caret-position="288">
+          <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
           <folding>
-            <element signature="e#15#33#0" expanded="true" />
-            <element signature="e#5933#6228#0" expanded="false" />
-            <element signature="e#6638#8269#0" expanded="false" />
-            <element signature="e#8680#9137#0" expanded="false" />
+            <element signature="e#8444#8464#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/home/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="116" column="55" lean-forward="false" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="55" />
+        <state relative-caret-position="210">
+          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/home/moviecol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="29" column="119" lean-forward="false" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="248" column="19" lean-forward="false" selection-start-line="248" selection-start-column="19" selection-end-line="248" selection-end-column="19" />
+          <folding>
+            <element signature="e#15#33#0" expanded="true" />
+            <element signature="e#553#775#0" expanded="false" />
+            <element signature="e#822#982#0" expanded="false" />
+            <element signature="e#1205#1906#0" expanded="false" />
+            <element signature="e#1956#2057#0" expanded="false" />
+            <element signature="e#2134#2630#0" expanded="false" />
+            <element signature="e#2800#4488#0" expanded="false" />
+            <element signature="e#4660#5218#0" expanded="false" />
+            <element signature="e#5944#6239#0" expanded="false" />
+            <element signature="e#6426#6980#0" expanded="false" />
+            <element signature="e#7620#9251#0" expanded="false" />
+            <element signature="e#9662#10119#0" expanded="false" />
+            <marker date="1538925120773" expanded="false" signature="5382:5741" ph="..." />
+            <marker date="1538925120773" expanded="false" signature="10314:11610" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
