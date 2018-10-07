@@ -114,7 +114,7 @@
                         </div>
                     {% endif %}
                     <ol class="breadcrumb" style="margin-top:6px;">
-                        <li>全部评论(5)</li>
+                        <li>全部评论({{ movie.commentum }})</li>
                     </ol>
                     {% if "user" in session %}
                         {% for msg in get_flashed_messages(category_filter=["ok"]) %}
