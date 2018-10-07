@@ -26,7 +26,9 @@
                 <div class="panel-heading">
                     <h3 class="panel-title"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp;电影介绍</h3>
                 </div>
-                <div class="panel-body" style="height:459px;">
+                {#                <div class="panel-body" style="height:459px;">#}
+                {#            下面代码可以实现，简介过多有滚动条#}
+                <div class="panel-body" style="height:459px;overflow:scroll;">
                     <table class="table">
                         <tr>
                             <td style="width:30%;color:#ccc;font-weight:bold;font-style:italic;">
@@ -144,7 +146,7 @@
                             <a class="btn btn-danger" id="btn-col"><span class="glyphicon glyphicon-heart"></span>&nbsp;收藏电影</a>
                         </form>
                         <div class="col-md-12">
-                            <font style="color: green" id="show_col_msg" ></font>
+                            <font style="color: green" id="show_col_msg"></font>
                         </div>
                         {# 清除悬浮#}
                         <div class="clearfix"></div>
@@ -155,15 +157,15 @@
                                 <a href="user.html">
                                     <i class="avatar size-L radius">
                                         {% if not v.user.face %}
-                                        <img alt="50x50"
-                                             data-src="holder.js/50x50"
-                                             class="img-circle"
-                                             style="border:1px solid #abcdef;width: 50px;">
+                                            <img alt="50x50"
+                                                 data-src="holder.js/50x50"
+                                                 class="img-circle"
+                                                 style="border:1px solid #abcdef;width: 50px;">
                                         {% else %}
-                                        <img alt="50x50"
-                                             src="{{ url_for('static',filename='uploads/users/'+v.user.face) }}"
-                                             class="img-circle"
-                                             style="border:1px solid #abcdef;width: 50px;">
+                                            <img alt="50x50"
+                                                 src="{{ url_for('static',filename='uploads/users/'+v.user.face) }}"
+                                                 class="img-circle"
+                                                 style="border:1px solid #abcdef;width: 50px;">
                                         {% endif %}
                                     </i>
                                 </a>
@@ -255,11 +257,6 @@
                 })
             });
         });
-
-
-
-
-
 
 
     </script>
