@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views.py" afterPath="$PROJECT_DIR$/app/home/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/comments.html" afterPath="$PROJECT_DIR$/app/templates/home/comments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/menu.html" afterPath="$PROJECT_DIR$/app/templates/home/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/ui/admin_page.html" afterPath="$PROJECT_DIR$/app/templates/ui/admin_page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/ui/home_page.html" afterPath="$PROJECT_DIR$/app/templates/ui/home_page.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,7 +15,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Movies$views.coverage" NAME="views Coverage Results" MODIFIED="1538297694884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/home" />
     <SUITE FILE_PATH="coverage/Movies$models.coverage" NAME="models Coverage Results" MODIFIED="1538546320949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/Movies$manager.coverage" NAME="manager Coverage Results" MODIFIED="1538915680232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Movies$manager.coverage" NAME="manager Coverage Results" MODIFIED="1538918718294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Movies$te.coverage" NAME="te Coverage Results" MODIFIED="1538665854414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -56,9 +52,13 @@
       <file leaf-file-name="comments.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/home/comments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+              <folding>
+                <element signature="e#1006#1012#0#HTML" expanded="true" />
+                <element signature="e#1972#2016#0#HTML" expanded="true" />
+                <element signature="e#2213#2257#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -641,13 +641,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00055" summary="Preview List  over, but picture is too big">
-      <created>1538655510931</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1538655510931</updated>
-    </task>
     <task id="LOCAL-00056" summary="Preview List  over, but picture is too big&#10;&#10;battle it,just &lt;style=&quot;width: 150px;&gt; in preview_list.html">
       <created>1538655698423</created>
       <option name="number" value="00056" />
@@ -984,14 +977,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538916906001</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="comment by yourself is ok">
+      <created>1538918694081</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1538918694081</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="24" width="1327" height="601" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20155641" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20155641" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1036,7 +1036,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="button with del and edit in role_list is over" />
     <MESSAGE value="button w and edit in role_list  for database is over" />
     <MESSAGE value="admin manager begin &#10;module&#9;&#9;&#9;&#9;Admin&#10;form&#9;&#9;&#9;&#9;AdminForm&#10;requestMethods&#9;&#9;GET,POST&#10;requestControl&#9;&#9;@admin_login_req&#10;" />
     <MESSAGE value="admin add is ok;but need to appear it in page&#10;&#10;" />
@@ -1061,7 +1060,8 @@
     <MESSAGE value="comment box   appear 'login' in play.html" />
     <MESSAGE value="cpmment list is ok,pay attention in safe" />
     <MESSAGE value="movie comment is ok, but need comment by yourself" />
-    <option name="LAST_COMMIT_MESSAGE" value="movie comment is ok, but need comment by yourself" />
+    <MESSAGE value="comment by yourself is ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment by yourself is ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1475,9 +1475,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home/comments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="210">
+          <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+          <folding>
+            <element signature="e#1006#1012#0#HTML" expanded="true" />
+            <element signature="e#1972#2016#0#HTML" expanded="true" />
+            <element signature="e#2213#2257#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

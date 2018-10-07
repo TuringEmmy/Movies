@@ -12,7 +12,7 @@
 
 {% block content %}
     {% include "home/menu.html" %}
-   <div class="col-md-9">
+    <div class="col-md-9">
         <div class="panel panel-warning">
             <div class="panel-heading">
                 <h3 class="panel-title"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;评论记录</h3>
@@ -23,7 +23,17 @@
                         <li class="item cl">
                             <a href="user.html">
                                 <i class="avatar size-L radius">
-                                    <img alt="50x50" src="{{ url_for('static',filename='uploads/users/'+v.user.face) }}" class="img-circle" style="border:1px solid #abcdef;width: 50px">
+                                    {#                                    <img alt="50x50" src="{{ url_for('static',filename='uploads/users/'+v.user.face) }}"#}
+                                    {#                                         class="img-circle" style="border:1px solid #abcdef;width: 50px">#}
+                                    {% if v.user.face %}
+                                        <img alt="50x50"
+                                             src="{{ url_for('static',filename='uploads/users/'+v.user.face) }}"
+                                             class="img-circle"
+                                             style="border:1px solid #abcdef;width:50px;">
+                                    {% else %}
+                                        <img alt="50x50" data-src="holder.js/50x50" class="img-circle"
+                                             style="border:1px solid #abcdef;width:50px;">
+                                    {% endif %}
                                 </i>
                             </a>
                             <div class="comment-main">
@@ -35,19 +45,19 @@
                                     </div>
                                 </header>
                                 <div class="comment-body">
-                                    <p>{{ v.comment|safe}</p>
+                                    <p>{{ v.content|safe }}</p>
                                 </div>
                             </div>
                         </li>
                     {% endfor %}
-                    </ul>
-                    <div class="col-md-12 text-center">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                               {{ pg.page(page_data,'home.comments') }}
-                            </ul>
-                        </nav>
-                    </div>
+                </ul>
+                <div class="col-md-12 text-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            {{ pg.page(page_data,'home.comments') }}
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
