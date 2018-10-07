@@ -1,5 +1,5 @@
 {% extends "home/home.html" %}
-
+{% import "ui/comment_page.html" as pg %}
 {% block css %}
     <!--播放页面-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='jwplayer/skins/stormtrooper.css') }}">
@@ -170,31 +170,7 @@
                         {% endfor %}
                     </ul>
                     <div class="col-md-12 text-center">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="First">
-                                        <span aria-hidden="true">首页</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">上一页</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1&nbsp;/&nbsp;10</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">下一页</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" aria-label="Last">
-                                        <span aria-hidden="true">尾页</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                        {{ pg.page(page_data,'home.play',movie.id) }}
                     </div>
                 </div>
             </div>
