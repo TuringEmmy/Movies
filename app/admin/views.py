@@ -35,7 +35,6 @@ def admin_login_req(f):
         if "admin" not in session:
             return redirect(url_for("admin.login", next=request.url))
         return f(*args, **kwargs)
-
     return decorated_function
 
 
@@ -43,7 +42,7 @@ def admin_login_req(f):
 def admin_auth(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        admin == Admin.query.join(
+        admin = Admin.query.join(
             Role
         ).filter(
             Role.id == Admin.role_id,
@@ -59,7 +58,6 @@ def admin_auth(f):
         if str(rule) not in urls:
             abort(404)
         return f(*args, **kwargs)
-
     return decorated_function
 
 
@@ -74,7 +72,6 @@ def change_filename(filename):
 
 @admin.route("/")
 @admin_login_req
-@admin_auth
 def index():
     return render_template("admin/index.html")
 
