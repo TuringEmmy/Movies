@@ -439,7 +439,7 @@ def video(id=None, page=None):
     return render_template("home/video.html", movie=movie, form=form, page_data=page_data)
 
 # -----------------------------------------弹幕---------------------------------------------------------------------------------
-@home.route("/tm/", methods=["GET", "POST"])
+@home.route("/tm/v3/", methods=["GET", "POST"])
 def tm():
     import json
     if request.method == "GET":
@@ -462,7 +462,8 @@ def tm():
         resp = json.dumps(res)
     if request.method == "POST":
         #添加弹幕
-        data = json.loads(request.get_data())
+        print(request.get_data().decode())
+        data = json.loads(request.get_data().decode())
         msg = {
             "__v": 0,
             "author": data["author"],
@@ -482,6 +483,8 @@ def tm():
             "data": msg
         }
         resp = json.dumps(res)
-        # 将其推入到redis的队列当中
-        rd.lpush("movie" + str(data["player"]), json.dumps(msg))
+        # print(2)
+        # 将其推入到redis的队列 当中
+        rd.lpush("movie", json.dumps(msg))
+        # print(1)
     return Response(resp, mimetype='application/json')

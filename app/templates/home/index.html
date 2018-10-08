@@ -89,15 +89,15 @@
                         <div class="movielist text-center">
                             <!--<img data-original="holder.js/262x166"
                                      class="img-responsive lazy center-block" alt="">-->
-                            <img src="{{ url_for('static',filename='uploads/'+v.logo) }}6"
+                            <img src="{{ url_for('static',filename='uploads/'+v.logo) }}"
                                  class="img-responsive center-block" alt="">
                             <div class="text-left" style="margin-left:auto;margin-right:auto;width:210px;">
                                 <span style="color:#999;font-style: italic;">{{ v.title }}</span><br>
                                 <div>
-                                    {% for val in range(1,v.star+1) %}
+                                    {% for val in range(1,v.star + 1) %}
                                         <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
                                     {% endfor %}
-                                    {% for val in range(1,5-v.star+1) %}
+                                    {% for val in range(1,5-v.star + 1) %}
                                         <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
                                     {% endfor %}
                                 </div>

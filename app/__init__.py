@@ -4,20 +4,21 @@ from flask_sqlalchemy import SQLAlchemy
 # 用于弹幕的
 from flask.ext.redis import FlaskRedis
 import os
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:mysql@127.0.0.1:3306/movies"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 app.config["SECRET_KEY"] = "turingemmmytyuringemmy"
-# 配置弹幕的-------------------------------------------------------------
-app.config["REDIS_URL"]="redis://127.0.0.1:6379/0"
-# 设置上传路径,tatic/uploads次文件线面存放图片，视频信息
-app.config["UP_DIR"]= os.path.join(os.path.abspath(os.path.dirname(__file__)),"static/uploads/")
-app.config["FC_DIR"]= os.path.join(os.path.abspath(os.path.dirname(__file__)),"static/uploads/users/")
+# 配置弹幕的-------------------------------------------------------------------------------------------------------------
+app.config["REDIS_URL"] = "redis://localhost:6379/0"
+# 设置上传路径,static/uploads次文件线面存放图片，视频信息
+app.config["UP_DIR"] = os.path.join(os.path.abspath(os.path.dirname(__file__)), "static/uploads/")
+app.config["FC_DIR"] = os.path.join(os.path.abspath(os.path.dirname(__file__)), "static/uploads/users/")
 
 app.debug = True
 db = SQLAlchemy(app)
-# 创建一个redis对象----------------------------------------------------------------
-rd=FlaskRedis(app)
+# 创建一个redis对象-------------------------------------------------------------------------------------------------------
+rd = FlaskRedis(app)
 
 from app.home import home as home_blueprint
 from app.admin import admin as admin_blueprint
