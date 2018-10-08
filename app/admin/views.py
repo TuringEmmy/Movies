@@ -709,7 +709,7 @@ def auth_list(page=None):
     return render_template("admin/auth_list.html", page_data=page_data)
 
 
-# 权限列表
+# 权限列表<删除>
 @admin.route('/auth/del/<int:id>/', methods=["GET"])
 @admin_login_req
 @admin_auth
