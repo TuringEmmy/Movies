@@ -276,7 +276,7 @@ def movie_add():
             tag_id=int(data["tag_id"]),
             area=data["area"],
             release_time=data["release_time"],
-            length=data["length"],
+            length=data["length"]
         )
         db.session.add(movie)
         db.session.commit()
@@ -607,8 +607,8 @@ def userloginlog_list(page=None):
 # ------------------------------------Role-----------------------------------------================================================
 # 角色添加
 @admin.route('/role/add/', methods=["GET", "POST"])
-# @admin_login_req
-@admin_auth
+@admin_login_req
+# @admin_auth
 def role_add():
     form = RoleForm()
     if form.validate_on_submit():
@@ -628,7 +628,7 @@ def role_add():
 # 角色列表
 @admin.route('/role/list/<int:page>/', methods=["GET"])
 @admin_login_req
-@admin_auth
+# @admin_auth
 def role_list(page=None):
     if page is None:
         page = 1
@@ -654,7 +654,7 @@ def role_del(id=None):
 # 预告列表<修改>
 @admin.route('/role/edit/<int:id>', methods=["GET", "POST"])
 @admin_login_req
-@admin_auth
+# @admin_auth
 def role_edit(id=None):
     # 实例化form表单
     form = RoleForm()

@@ -379,7 +379,7 @@ def play(id=None, page=None):
         db.session.add(comment)
         db.session.commit()
         # 记得一定要修改movied的播放数量加1
-        movie.commentum += 1
+        movie.commentnum += 1
         db.session.add(movie)
         db.session.commit()
         flash("添加评论成功", "ok")
@@ -429,7 +429,7 @@ def video(id=None, page=None):
         db.session.add(comment)
         db.session.commit()
         # 记得一定要修改movied的播放数量加1
-        movie.commentum += 1
+        movie.commentnum += 1
         db.session.add(movie)
         db.session.commit()
         flash("添加评论成功", "ok")

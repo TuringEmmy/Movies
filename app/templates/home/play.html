@@ -80,12 +80,13 @@
                                 <span class="glyphicon glyphicon-play"></span>&nbsp;播放数量
                             </td>
                             <td>{{ movie.playnum }}</td>
+
                         </tr>
                         <tr>
                             <td style="color:#ccc;font-weight:bold;font-style:italic;">
                                 <span class="glyphicon glyphicon-comment"></span>&nbsp;评论数量
                             </td>
-                            <td>{{ movie.commentum }}</td>
+                            <td>{{ movie.commentnum }}</td>
                         </tr>
                         <tr>
                             <td style="color:#ccc;font-weight:bold;font-style:italic;">
@@ -116,7 +117,7 @@
                         </div>
                     {% endif %}
                     <ol class="breadcrumb" style="margin-top:6px;">
-                        <li>全部评论({{ movie.commentum }})</li>
+                        <li>全部评论({{ movie.commentnum }})</li>
                     </ol>
                     {% if "user" in session %}
                         {% for msg in get_flashed_messages(category_filter=["ok"]) %}

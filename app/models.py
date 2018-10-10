@@ -82,7 +82,7 @@ class Movie(db.Model):
     # 播放量
     playnum = db.Column(db.BigInteger)
     # 评论量
-    commentum = db.Column(db.BigInteger)
+    commentnum = db.Column(db.BigInteger)
     # 所属标签
     tag_id = db.Column(db.Integer, db.ForeignKey("tag.id"))
     # 上映地区
