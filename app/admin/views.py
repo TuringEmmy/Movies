@@ -316,6 +316,8 @@ def movie_del(id=None):
     flash("删除电影成功", "ok")
     return redirect(url_for("admin.movie_list", page=1))
 
+movie_url_del=''
+movie_logo_del=''
 
 # 编辑修改电影
 @admin.route('/movie/edit/<int:id>', methods=["POST", "GET"])
@@ -350,12 +352,14 @@ def movie_edit(id=None):
         if form.url.data.filename != "":  # 不为空，说明更改过了图片
             file_url = secure_filename(form.url.data.filename)
             movie.url = change_filename(file_url)
+            movie_url_del=movie.url
             form.url.data.save(app.config["UP_DIR"] + movie.url)
 
             # --------------logo
         if form.logo.data.filename != "":  # 不为空，说明更改过了logo
             file_logo = secure_filename(form.logo.data.filename)
             movie.logo = change_filename(file_logo)
+            movie_logo_del=movie.logo
             form.logo.data.save(app.config["UP_DIR"] + movie.logo)
 
         movie.star = data["star"]

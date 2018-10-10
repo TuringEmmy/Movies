@@ -4,10 +4,6 @@
     <list default="true" id="401d88e6-54b0-4de6-b18c-00b132e5e584" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/views.py" afterPath="$PROJECT_DIR$/app/admin/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/views.py" afterPath="$PROJECT_DIR$/app/home/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models.py" afterPath="$PROJECT_DIR$/app/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/play.html" afterPath="$PROJECT_DIR$/app/templates/home/play.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home/video.html" afterPath="$PROJECT_DIR$/app/templates/home/video.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,22 +64,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/home/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-              <folding>
-                <element signature="e#404#2671#0" expanded="false" />
-                <element signature="e#2706#3383#0" expanded="false" />
-                <element signature="e#3503#4931#0" expanded="false" />
-                <element signature="e#5048#5670#0" expanded="false" />
-                <element signature="e#5799#6154#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="video.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/home/video.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="play.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="play.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
+            <state relative-caret-position="-916">
               <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
               <folding>
                 <element signature="e#1653#1659#0#HTML" expanded="true" />
@@ -119,51 +99,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies.moviecol" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/c2d860a8/115b1b00-9911-4d05-a5bd-bce395454cc9/movies.moviecol">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movies.movie" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/c2d860a8/115b1b00-9911-4d05-a5bd-bce395454cc9/movies.movie">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/home/home.html">
+      <file leaf-file-name="auth_edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/auth_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
-              <caret line="91" column="9" lean-forward="false" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+            <state relative-caret-position="-45">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="auth_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/auth_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="323" column="14" lean-forward="false" selection-start-line="323" selection-start-column="4" selection-end-line="323" selection-end-column="14" />
+            <state relative-caret-position="165">
+              <caret line="346" column="20" lean-forward="true" selection-start-line="346" selection-start-column="20" selection-end-line="346" selection-end-column="20" />
               <folding>
                 <element signature="e#1071#1697#0" expanded="false" />
                 <element signature="e#1744#1956#0" expanded="false" />
@@ -175,67 +135,62 @@
                 <element signature="e#5899#6210#0" expanded="false" />
                 <element signature="e#6338#7028#0" expanded="false" />
                 <element signature="e#8715#9044#0" expanded="false" />
-                <element signature="e#9166#9395#0" expanded="false" />
-                <element signature="e#11655#12373#0" expanded="false" />
-                <element signature="e#12501#12719#0" expanded="false" />
-                <element signature="e#12870#13053#0" expanded="false" />
-                <element signature="e#13188#13997#0" expanded="false" />
-                <element signature="e#14260#14469#0" expanded="false" />
-                <element signature="e#14591#14690#0" expanded="false" />
-                <element signature="e#14826#14997#0" expanded="false" />
-                <element signature="e#15268#15624#0" expanded="false" />
-                <element signature="e#15766#15949#0" expanded="false" />
-                <element signature="e#16070#16431#0" expanded="false" />
-                <element signature="e#16584#16771#0" expanded="false" />
-                <element signature="e#16774#16905#0" expanded="false" />
-                <element signature="e#17031#17319#0" expanded="false" />
-                <element signature="e#17466#17771#0" expanded="false" />
-                <element signature="e#17916#18214#0" expanded="false" />
-                <element signature="e#18459#18874#0" expanded="false" />
-                <element signature="e#19001#19210#0" expanded="false" />
-                <element signature="e#19331#19549#0" expanded="false" />
-                <element signature="e#19683#20337#0" expanded="false" />
-                <element signature="e#20587#20901#0" expanded="false" />
-                <element signature="e#21028#21237#0" expanded="false" />
-                <element signature="e#21362#21579#0" expanded="false" />
-                <element signature="e#21712#22101#0" expanded="false" />
-                <element signature="e#22309#22795#0" expanded="false" />
-                <element signature="e#22924#23208#0" expanded="false" />
+                <element signature="e#11764#12482#0" expanded="false" />
+                <element signature="e#12610#12828#0" expanded="false" />
+                <element signature="e#12979#13162#0" expanded="false" />
+                <element signature="e#13297#14106#0" expanded="false" />
+                <element signature="e#14369#14578#0" expanded="false" />
+                <element signature="e#14700#14799#0" expanded="false" />
+                <element signature="e#14935#15106#0" expanded="false" />
+                <element signature="e#15377#15733#0" expanded="false" />
+                <element signature="e#15875#16058#0" expanded="false" />
+                <element signature="e#16179#16540#0" expanded="false" />
+                <element signature="e#16693#16880#0" expanded="false" />
+                <element signature="e#16883#17014#0" expanded="false" />
+                <element signature="e#17140#17428#0" expanded="false" />
+                <element signature="e#17575#17880#0" expanded="false" />
+                <element signature="e#18025#18323#0" expanded="false" />
+                <element signature="e#18568#18983#0" expanded="false" />
+                <element signature="e#19110#19319#0" expanded="false" />
+                <element signature="e#19440#19658#0" expanded="false" />
+                <element signature="e#19792#20446#0" expanded="false" />
+                <element signature="e#20696#21010#0" expanded="false" />
+                <element signature="e#21137#21346#0" expanded="false" />
+                <element signature="e#21471#21688#0" expanded="false" />
+                <element signature="e#21821#22210#0" expanded="false" />
+                <element signature="e#22418#22904#0" expanded="false" />
+                <element signature="e#23033#23317#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movie_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_edit.html">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="165" column="16" lean-forward="true" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
+            <state relative-caret-position="180">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models.py">
+      <file leaf-file-name="movie_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="91" column="9" lean-forward="false" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-              <folding>
-                <element signature="e#82#1006#0" expanded="false" />
-                <element signature="e#828#859#0" expanded="false" />
-                <element signature="e#904#1003#0" expanded="false" />
-                <element signature="e#1044#1399#0" expanded="false" />
-                <element signature="e#1429#1784#0" expanded="false" />
-                <element signature="e#2816#3172#0" expanded="false" />
-                <element signature="e#3206#3636#0" expanded="false" />
-                <element signature="e#3671#4103#0" expanded="false" />
-                <element signature="e#4134#4541#0" expanded="false" />
-                <element signature="e#4572#4967#0" expanded="false" />
-                <element signature="e#5000#5781#0" expanded="false" />
-                <element signature="e#5821#6180#0" expanded="false" />
-                <element signature="e#6214#7143#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="85" column="73" lean-forward="true" selection-start-line="85" selection-start-column="73" selection-end-line="85" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -330,9 +285,9 @@
         <option value="$PROJECT_DIR$/manager.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/home/views.py" />
-        <option value="$PROJECT_DIR$/app/admin/views.py" />
         <option value="$PROJECT_DIR$/app/templates/home/play.html" />
         <option value="$PROJECT_DIR$/app/templates/home/video.html" />
+        <option value="$PROJECT_DIR$/app/admin/views.py" />
       </list>
     </option>
   </component>
@@ -344,9 +299,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
-    <option name="y" value="24" />
-    <option name="width" value="1327" />
-    <option name="height" value="601" />
+    <option name="y" value="52" />
+    <option name="width" value="1317" />
+    <option name="height" value="543" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -391,78 +346,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -803,13 +686,6 @@
       <option name="presentableId" value="Default" />
       <updated>1538292066690</updated>
     </task>
-    <task id="LOCAL-00066" summary="moviecol is over">
-      <created>1538705598963</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1538705598964</updated>
-    </task>
     <task id="LOCAL-00067" summary="moviecol is over">
       <created>1538705918073</created>
       <option name="number" value="00067" />
@@ -1146,17 +1022,24 @@
       <option name="project" value="LOCAL" />
       <updated>1539135034553</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="repare add movie by admin">
+      <created>1539138486959</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1539138486962</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="24" width="1327" height="601" extended-state="6" />
-    <editor active="false" />
+    <frame x="35" y="52" width="1317" height="543" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37861046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18961447" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09211554" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22326307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29025844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1198,7 +1081,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="loginlog and preview is over" />
     <MESSAGE value="solve index.html ont eqponse click" />
     <MESSAGE value="index.html  for url add&lt;page=1&gt; in every page about href=&quot;{{url_for('home.index',page=1)}}&quot;" />
     <MESSAGE value="pagination is ok" />
@@ -1223,7 +1105,8 @@
     <MESSAGE value="have a questions in auth" />
     <MESSAGE value="over for this project" />
     <MESSAGE value="repear coommten_col page" />
-    <option name="LAST_COMMIT_MESSAGE" value="repear coommten_col page" />
+    <MESSAGE value="repare add movie by admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="repare add movie by admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1232,34 +1115,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/home/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ui/admin_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="26" column="47" lean-forward="false" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ui/comment_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/movies/lib/python3.5/site-packages/flask/ext/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1389,13 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/movies/lib/python3.5/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="298" column="17" lean-forward="false" selection-start-line="298" selection-start-column="17" selection-end-line="298" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/movies/lib/python3.5/site-packages/flask_redis/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1439,27 +1287,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding>
-            <element signature="e#15#55#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1582,51 +1413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="323" column="14" lean-forward="false" selection-start-line="323" selection-start-column="4" selection-end-line="323" selection-end-column="14" />
-          <folding>
-            <element signature="e#1071#1697#0" expanded="false" />
-            <element signature="e#1744#1956#0" expanded="false" />
-            <element signature="e#2265#3254#0" expanded="false" />
-            <element signature="e#3327#3445#0" expanded="false" />
-            <element signature="e#3536#4031#0" expanded="false" />
-            <element signature="e#4242#5357#0" expanded="false" />
-            <element signature="e#5507#5747#0" expanded="false" />
-            <element signature="e#5899#6210#0" expanded="false" />
-            <element signature="e#6338#7028#0" expanded="false" />
-            <element signature="e#8715#9044#0" expanded="false" />
-            <element signature="e#9166#9395#0" expanded="false" />
-            <element signature="e#11655#12373#0" expanded="false" />
-            <element signature="e#12501#12719#0" expanded="false" />
-            <element signature="e#12870#13053#0" expanded="false" />
-            <element signature="e#13188#13997#0" expanded="false" />
-            <element signature="e#14260#14469#0" expanded="false" />
-            <element signature="e#14591#14690#0" expanded="false" />
-            <element signature="e#14826#14997#0" expanded="false" />
-            <element signature="e#15268#15624#0" expanded="false" />
-            <element signature="e#15766#15949#0" expanded="false" />
-            <element signature="e#16070#16431#0" expanded="false" />
-            <element signature="e#16584#16771#0" expanded="false" />
-            <element signature="e#16774#16905#0" expanded="false" />
-            <element signature="e#17031#17319#0" expanded="false" />
-            <element signature="e#17466#17771#0" expanded="false" />
-            <element signature="e#17916#18214#0" expanded="false" />
-            <element signature="e#18459#18874#0" expanded="false" />
-            <element signature="e#19001#19210#0" expanded="false" />
-            <element signature="e#19331#19549#0" expanded="false" />
-            <element signature="e#19683#20337#0" expanded="false" />
-            <element signature="e#20587#20901#0" expanded="false" />
-            <element signature="e#21028#21237#0" expanded="false" />
-            <element signature="e#21362#21579#0" expanded="false" />
-            <element signature="e#21712#22101#0" expanded="false" />
-            <element signature="e#22309#22795#0" expanded="false" />
-            <element signature="e#22924#23208#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1681,17 +1467,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home/video.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="133" column="43" lean-forward="true" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/auth_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/movie_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="85" column="73" lean-forward="true" selection-start-line="85" selection-start-column="73" selection-end-line="85" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/movies/lib/python3.5/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="369" column="13" lean-forward="false" selection-start-line="369" selection-start-column="13" selection-end-line="369" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/auth_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home/play.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
+        <state relative-caret-position="-916">
           <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
           <folding>
             <element signature="e#1653#1659#0#HTML" expanded="true" />
@@ -1708,6 +1534,66 @@
             <element signature="e#5856#5862#0#HTML" expanded="true" />
             <element signature="e#8304#8310#0#HTML" expanded="true" />
             <element signature="e#8471#8477#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/home/video.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="133" column="43" lean-forward="true" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/movies/lib/python3.5/site-packages/wtforms/fields/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="320" column="17" lean-forward="false" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="346" column="20" lean-forward="true" selection-start-line="346" selection-start-column="20" selection-end-line="346" selection-end-column="20" />
+          <folding>
+            <element signature="e#1071#1697#0" expanded="false" />
+            <element signature="e#1744#1956#0" expanded="false" />
+            <element signature="e#2265#3254#0" expanded="false" />
+            <element signature="e#3327#3445#0" expanded="false" />
+            <element signature="e#3536#4031#0" expanded="false" />
+            <element signature="e#4242#5357#0" expanded="false" />
+            <element signature="e#5507#5747#0" expanded="false" />
+            <element signature="e#5899#6210#0" expanded="false" />
+            <element signature="e#6338#7028#0" expanded="false" />
+            <element signature="e#8715#9044#0" expanded="false" />
+            <element signature="e#11764#12482#0" expanded="false" />
+            <element signature="e#12610#12828#0" expanded="false" />
+            <element signature="e#12979#13162#0" expanded="false" />
+            <element signature="e#13297#14106#0" expanded="false" />
+            <element signature="e#14369#14578#0" expanded="false" />
+            <element signature="e#14700#14799#0" expanded="false" />
+            <element signature="e#14935#15106#0" expanded="false" />
+            <element signature="e#15377#15733#0" expanded="false" />
+            <element signature="e#15875#16058#0" expanded="false" />
+            <element signature="e#16179#16540#0" expanded="false" />
+            <element signature="e#16693#16880#0" expanded="false" />
+            <element signature="e#16883#17014#0" expanded="false" />
+            <element signature="e#17140#17428#0" expanded="false" />
+            <element signature="e#17575#17880#0" expanded="false" />
+            <element signature="e#18025#18323#0" expanded="false" />
+            <element signature="e#18568#18983#0" expanded="false" />
+            <element signature="e#19110#19319#0" expanded="false" />
+            <element signature="e#19440#19658#0" expanded="false" />
+            <element signature="e#19792#20446#0" expanded="false" />
+            <element signature="e#20696#21010#0" expanded="false" />
+            <element signature="e#21137#21346#0" expanded="false" />
+            <element signature="e#21471#21688#0" expanded="false" />
+            <element signature="e#21821#22210#0" expanded="false" />
+            <element signature="e#22418#22904#0" expanded="false" />
+            <element signature="e#23033#23317#0" expanded="false" />
           </folding>
         </state>
       </provider>
