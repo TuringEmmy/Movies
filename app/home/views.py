@@ -294,11 +294,11 @@ def index(page=None):
     if comment_num != 0:
         if int(comment_num) == 1:
             page_data = page_data.order_by(
-                Movie.commentum.desc()
+                Movie.commentnum.desc()
             )
         else:
             page_data = page_data.order_by(
-                Movie.commentum.asc()
+                Movie.commentnum.asc()
             )
     if page is None:
         page = 1
@@ -473,9 +473,9 @@ def tm():
             "type": data['type'],
             "ip": request.remote_addr,
             "_id": datetime.datetime.now().strftime("%Y%m%d%H%M%S") + uuid.uuid4().hex,
-            "player": [
-                data["player"]
-            ]
+            # "player": [
+            #     data["player"]
+            # ]
         }
         # 疯长成响应的格式
         res = {
